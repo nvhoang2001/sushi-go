@@ -1,0 +1,2401 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Đăng ký</title>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/assets/imgs/favicon/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/assets/imgs/favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/assets/imgs/favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/assets/imgs/favicon/site.webmanifest" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="./assets/css/styles.css" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+			integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+			crossorigin="anonymous"
+			defer
+		></script>
+
+		<script src="./assets/scripts/common.js" defer></script>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"
+			defer
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js" defer></script>
+		<script defer src="./assets/scripts/order.js"></script>
+	</head>
+	<body class="tw-bg-neutral-07">
+		<main id="main" class="tw-min-h-screen tw-relative">
+			<header class="tw-mb-1 tw-bg-neutral-08">
+				<div class="tw-flex tw-justify-between tw-items-center tw-p-4 md:tw-hidden">
+					<div class="tw-flex tw-items-center tw-justify-start tw-gap-3">
+						<button id="go-back" class="btn tw-p-0 tw-border-0 tw-leading-[0]">
+							<object
+								class="svg-icon tw-pointer-events-none"
+								type="image/svg+xml"
+								data="/assets/imgs/icons/arrow-left-small.svg"
+								width="24"
+								height="24"
+								data-attributes='{"path":{"fill":"neutral.02"}}'
+							>
+								<img
+									src="/assets/imgs/icons/arrow-left-small.svg"
+									alt=""
+									width="24"
+									height="24"
+								/>
+							</object>
+						</button>
+
+						<p class="tw-m-0 tw-TitleT2---Bold !tw-font-semibold tw-text-neutral-01">
+							Đặt hàng
+						</p>
+					</div>
+					<div></div>
+				</div>
+
+				<div
+					class="tw-hidden md:tw-flex tw-justify-between tw-max-w-7xl tw-mx-auto tw-items-center"
+				>
+					<div
+						class="input-group tw-px-4 tw-py-3 tw-w-[470px] focus-within:tw-bg-white tw-bg-neutral-07 tw-rounded-lg tw-border tw-border-neutral-07 focus-within:tw-border-neutral-04 tw-border-solid tw-Body-TextB2---Regular tw-items-center"
+					>
+						<button type="button" class="input-group-text tw-border-0 tw-p-0 tw-mr-2">
+							<img
+								src="./assets/imgs/icons/search.svg"
+								alt=""
+								width="20"
+								height="20"
+								class="tw-w-5 tw-h-5"
+							/>
+						</button>
+						<input
+							type="text"
+							class="form-control tw-p-0 tw-border-0 tw-bg-transparent focus:[box-shadow:none] tw-Body-TextB2---Regular"
+							placeholder="Tìm kiếm món ăn"
+							aria-label="Tìm kiếm món ăn"
+						/>
+					</div>
+
+					<a href="/index.html">
+						<img
+							src="./assets/imgs/logo.svg"
+							alt=""
+							width="80"
+							height="80"
+							class="tw-w-20 tw-h-20"
+						/>
+					</a>
+
+					<div class="tw-flex tw-gap-6">
+						<button
+							class="btn btn-light tw-bg-transparent tw-max-w-56 tw-flex tw-items-center tw-gap-3 tw-p-0 tw-border-0 hover:tw-bg-transparent active:!tw-bg-transparent"
+							data-bs-target="#map-location-search"
+							data-bs-toggle="modal"
+						>
+							<div class="tw-p-1.5 tw-bg-neutral-07 tw-rounded-lg tw-leading-[0]">
+								<img
+									src="./assets/imgs/icons/location-pin-2-outline.svg"
+									width="16"
+									height="16"
+									alt=""
+								/>
+							</div>
+							<div
+								class="tw-flex tw-items-start tw-flex-col tw-flex-auto tw-min-w-0 tw-w-full"
+							>
+								<p class="tw-mb-0 tw-CaptionC2---Regular tw-text-neutral-03">
+									Địa chỉ của bạn:
+								</p>
+								<p
+									class="tw-max-w-full tw-m-0 tw-inline-block tw-flex-auto tw-overflow-hidden tw-whitespace-nowrap tw-overflow-ellipsis tw-CaptionC1---Medium tw-text-neutral-01"
+								>
+									<span> Vui lòng chọn địa chỉ để đặt món nhanh nhất! </span>
+									<span>
+										32 Ngách 5/72, Đ.Hoàng Quốc Việt, P.Nghĩa Đô, Q.Cầu Giấy, Hà
+										Nội
+									</span>
+								</p>
+							</div>
+						</button>
+
+						<button
+							class="btn btn-light tw-bg-transparent tw-p-0 tw-border-0 tw-flex tw-gap-3 tw-items-center hover:tw-bg-transparent active:!tw-bg-transparent"
+							data-bs-toggle="offcanvas"
+							data-bs-target="#shopping-cart"
+						>
+							<div class="tw-p-1.5 tw-bg-neutral-07 tw-rounded-lg tw-leading-[0]">
+								<img
+									src="./assets/imgs/icons/shopping-basket-gray.svg"
+									width="16"
+									height="16"
+									alt=""
+								/>
+							</div>
+							<div
+								class="tw-flex tw-items-start tw-flex-col tw-flex-auto tw-min-w-0 tw-w-full"
+							>
+								<p class="tw-mb-0 tw-CaptionC2---Regular tw-text-neutral-03">
+									Giỏ hàng
+								</p>
+								<p
+									class="tw-max-w-full tw-m-0 tw-inline-block tw-flex-auto tw-overflow-hidden tw-whitespace-nowrap tw-overflow-ellipsis tw-CaptionC1---Medium tw-text-neutral-01"
+								>
+									0 món ăn
+								</p>
+							</div>
+						</button>
+
+						<button
+							class="btn btn-light tw-bg-transparent tw-p-0 tw-border-0 tw-flex tw-gap-3 tw-items-center hover:tw-bg-transparent active:!tw-bg-transparent"
+							data-bs-toggle="popover"
+							data-popover-html="true"
+							data-popover-target="account-menu"
+						>
+							<div class="tw-p-1.5 tw-bg-primary-05 tw-rounded-lg tw-leading-[0]">
+								<img
+									src="./assets/imgs/icons/user-red.svg"
+									width="16"
+									height="16"
+									alt=""
+								/>
+							</div>
+							<div
+								class="tw-flex tw-items-start tw-flex-col tw-flex-auto tw-min-w-0 tw-w-full"
+							>
+								<p class="tw-mb-0 tw-CaptionC2---Regular tw-text-neutral-03">
+									Tài khoản
+								</p>
+								<p
+									class="tw-max-w-full tw-m-0 tw-inline-block tw-flex-auto tw-overflow-hidden tw-whitespace-nowrap tw-overflow-ellipsis tw-CaptionC1---Medium tw-text-neutral-01"
+								>
+									Đăng nhập
+								</p>
+							</div>
+						</button>
+					</div>
+				</div>
+			</header>
+			<nav
+				class="tw-hidden md:tw-block tw-py-3 tw-mb-5 tw-max-w-screen-xl tw-mx-auto"
+				aria-label="breadcrumb"
+			>
+				<ol class="breadcrumb tw-Body-TextB2---SemiBold !tw-mb-0">
+					<li class="breadcrumb-item">
+						<a class="tw-no-underline tw-text-neutral-03" href="/index.html"
+							>Trang chủ</a
+						>
+					</li>
+					<li class="breadcrumb-item active" aria-current="page">
+						<span class="tw-text-neutral-01"> Thanh toán </span>
+					</li>
+				</ol>
+			</nav>
+			<div
+				class="md:tw-max-w-6xl md:tw-mx-auto md:tw-mb-16 md:tw-flex md:tw-items-start md:tw-gap-4"
+			>
+				<div class="md:tw-flex-auto">
+					<div
+						class="tw-p-4 tw-bg-neutral-08 tw-mb-1 md:tw-p-0 md:tw-mb-0 tw-rounded-tl-lg tw-rounded-tr-lg"
+					>
+						<p
+							class="tw-flex tw-gap-2 tw-items-center tw-CaptionC1---Medium tw-text-neutral-03 tw-mb-4 md:tw-Body-TextB1---Medium md:tw-gap-3 md:tw-p-5 tw-border-0 tw-border-b tw-border-solid tw-border-neutral-06"
+						>
+							<img
+								src="./assets/imgs/icons/package.svg"
+								alt=""
+								width="16"
+								height="16"
+								class="tw-w-4 tw-h-4 md:tw-w-5 md:tw-h-5"
+							/>
+							<span> Hình thức giao nhận </span>
+						</p>
+
+						<div
+							class="btn-group tw-gap-3 tw-w-full md:tw-mx-5 md:tw-border-0 md:tw-border-b md:tw-border-solid md:tw-border-b-neutral-06 md:tw-pb-4 md:tw-w-[calc(100%-40px)]"
+							role="group"
+						>
+							<input
+								type="radio"
+								class="btn-check [&:checked+.btn]:tw-bg-transparent [&:checked+.btn]:tw-text-neutral-01"
+								name="receive-method"
+								id="method-delivery"
+								autocomplete="off"
+								checked
+							/>
+							<label
+								class="btn btn-outline-danger tw-py-3 tw-border-neutral-06 !tw-rounded-lg tw-w-1/2 tw-Body-TextB2---Medium tw-text-neutral-01"
+								for="method-delivery"
+							>
+								<img
+									src="./assets/imgs/icons/express-delivery.svg"
+									alt=""
+									width="20"
+									height="20"
+									class="tw-w-5 tw-h-5 tw-mr-2"
+								/>
+								<span> Giao hàng tận nơi </span>
+							</label>
+
+							<input
+								type="radio"
+								class="btn-check [&:checked+.btn]:tw-bg-transparent [&:checked+.btn]:tw-text-neutral-01"
+								name="receive-method"
+								id="method-self"
+								autocomplete="off"
+							/>
+							<label
+								class="btn btn-outline-danger tw-py-3 tw-border-neutral-06 !tw-rounded-lg tw-w-1/2 tw-Body-TextB2---Medium tw-text-neutral-01"
+								for="method-self"
+							>
+								<img
+									src="./assets/imgs/icons/location-seft.svg"
+									alt=""
+									width="20"
+									height="20"
+									class="tw-w-5 tw-h-5 tw-mr-2"
+								/>
+
+								<span>Tự đến lấy</span></label
+							>
+						</div>
+					</div>
+
+					<div class="tw-p-4 tw-bg-neutral-08 tw-mb-1 tw-rounded-bl-lg tw-rounded-br-lg">
+						<div
+							class="tw-flex tw-items-center tw-gap-2 tw-pb-4 tw-mb-4 tw-border-0 tw-border-b tw-border-b-neutral-06 tw-border-solid"
+						>
+							<div class="tw-flex-auto">
+								<p
+									class="tw-flex tw-gap-2 tw-items-center tw-CaptionC1---Medium tw-text-neutral-03 tw-mb-2"
+								>
+									<img
+										src="./assets/imgs/icons/location-pin-2-gray.svg"
+										alt=""
+										width="16"
+										height="16"
+										class="tw-w-4 tw-h-4 md:tw-hidden"
+									/>
+									<span>
+										Địa chỉ giao hàng
+										<span class="tw-text-primary-01 tw-hidden md:tw-inline"
+											>*</span
+										></span
+									>
+								</p>
+
+								<p class="tw-Body-TextB2---Medium tw-text-neutral-01 tw-mb-0">
+									32 Ngách 5/72, Đ.Hoàng Quốc Việt, P.Nghĩa Đô, Q.Cầu Giấy, Hà Nội
+								</p>
+							</div>
+
+							<button
+								type="button"
+								class="btn btn-light tw-border-0 tw-p-0 tw-w-6 tw-h-6"
+								data-bs-target="#receive-address-select-modal"
+								data-bs-toggle="modal"
+							>
+								<img
+									class="tw-align-baseline"
+									src="./assets/imgs/icons/angle-right-small.svg"
+									alt=""
+									width="24"
+									height="24"
+								/>
+							</button>
+						</div>
+
+						<div>
+							<p
+								class="tw-flex tw-gap-2 tw-items-center tw-CaptionC1---Medium tw-text-neutral-03 tw-mb-2"
+							>
+								<img
+									src="./assets/imgs/icons/location-pin-2-gray.svg"
+									alt=""
+									width="16"
+									height="16"
+									class="tw-w-4 tw-h-4 md:tw-hidden"
+								/>
+								<span>
+									Nhận hàng tại chi nhánh
+									<span class="tw-text-primary-01 tw-hidden md:tw-inline"
+										>*</span
+									></span
+								>
+							</p>
+
+							<select class="form-select tw-mb-3">
+								<option selected>Hà Nội</option>
+								<option value="1">One</option>
+							</select>
+
+							<div
+								class="tw-mb-4 tw-bg-neutral-07 form tw-px-4 tw-py-3 [&>div:last-child]:tw-border-b-0 [&>div:last-child]:tw-mb-0 [&>div:last-child]:tw-pb-0"
+							>
+								<div
+									class="form-check tw-pb-3 tw-mb-3 tw-flex tw-items-center tw-gap-3 tw-border-0 tw-border-b tw-border-solid tw-border-b-neutral-06"
+								>
+									<input
+										class="form-check-input ratio-input"
+										type="radio"
+										name="receive-address"
+										id="address-1"
+									/>
+									<label
+										class="form-check-label tw-Body-TextB2---Regular tw-text-neutral-01"
+										for="address-1"
+									>
+										120 Trần Thái Tông, P.Dịch Vọng Hậu, Q.Cầu Giấy, Tp.Hà Nội
+									</label>
+								</div>
+								<div
+									class="form-check tw-pb-3 tw-mb-3 tw-flex tw-items-center tw-gap-3 tw-border-0 tw-border-b tw-border-solid tw-border-b-neutral-06"
+								>
+									<input
+										class="form-check-input ratio-input"
+										type="radio"
+										name="receive-address"
+										id="address-2"
+										checked
+									/>
+									<label
+										class="form-check-label tw-Body-TextB2---Regular tw-text-neutral-01"
+										for="address-2"
+									>
+										16 Đ.Xuân Thuỷ, P.Dịch Vọng Hậu, Q.Cầu Giấy, Tp.Hà Nội
+									</label>
+								</div>
+								<div
+									class="form-check tw-pb-3 tw-mb-3 tw-flex tw-items-center tw-gap-3 tw-border-0 tw-border-b tw-border-solid tw-border-b-neutral-06"
+								>
+									<input
+										class="form-check-input ratio-input"
+										type="radio"
+										name="receive-address"
+										id="address-3"
+										checked
+									/>
+									<label
+										class="form-check-label tw-Body-TextB2---Regular tw-text-neutral-01"
+										for="address-3"
+									>
+										170 Nguyễn Hy Quang, P.Ô Chợ Dừa, Q.Đống Đa, Tp. Hà Nội
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<label
+								for="receive-phone-number"
+								class="form-label tw-Body-TextB2---Medium tw-text-neutral-02 md:tw-CaptionC1---Medium"
+								>Số điện thoại nhận hàng <span class="tw-text-primary-01">*</span>
+							</label>
+							<input
+								type="text"
+								class="form-control tw-Body-TextB2---Regular placeholder:tw-text-neutral-03 tw-text-neutral-01 tw-bg-neutral-07 tw-border tw-border-neutral-07 tw-px-4 tw-py-3 tw-rounded-lg focus:[box-shadow:none] focus:tw-bg-white focus:tw-border-neutral-04"
+								name="receive-phone-number"
+								id="receive-phone-number"
+								placeholder="Nhập số điện thoại nhận hàng"
+							/>
+						</div>
+
+						<div
+							class="tw-hidden md:tw-flex tw-gap-4 tw-pt-4 tw-mt-4 tw-border-0 tw-border-t tw-border-t-neutral-06 tw-border-solid"
+						>
+							<div class="tw-flex-auto">
+								<label
+									for="receive-date"
+									class="form-label tw-Body-TextB2---Medium tw-text-neutral-02 md:tw-CaptionC1---Medium"
+									>Ngày nhận hàng <span class="tw-text-primary-01">*</span>
+								</label>
+								<input
+									type="date"
+									class="form-control tw-Body-TextB2---Regular placeholder:tw-text-neutral-03 tw-text-neutral-01 tw-bg-neutral-07 tw-border tw-border-neutral-07 tw-px-4 tw-py-3 tw-rounded-lg focus:[box-shadow:none] focus:tw-bg-white focus:tw-border-neutral-04"
+									name="receive-date"
+									id="receive-date"
+								/>
+							</div>
+							<div class="tw-flex-auto">
+								<label
+									for="receive-time"
+									class="form-label tw-Body-TextB2---Medium tw-text-neutral-02 md:tw-CaptionC1---Medium"
+									>Giờ nhận hàng <span class="tw-text-primary-01">*</span>
+								</label>
+								<input
+									type="time"
+									class="form-control tw-Body-TextB2---Regular placeholder:tw-text-neutral-03 tw-text-neutral-01 tw-bg-neutral-07 tw-border tw-border-neutral-07 tw-px-4 tw-py-3 tw-rounded-lg focus:[box-shadow:none] focus:tw-bg-white focus:tw-border-neutral-04"
+									name="receive-time"
+									id="receive-time"
+								/>
+							</div>
+						</div>
+					</div>
+
+					<div class="tw-p-4 tw-bg-neutral-08 tw-mb-1 md:tw-hidden">
+						<div class="tw-flex tw-items-center tw-gap-2">
+							<div class="tw-flex-auto">
+								<p
+									class="tw-flex tw-gap-2 tw-items-center tw-CaptionC1---Medium tw-text-neutral-03 tw-mb-2"
+								>
+									<img
+										src="./assets/imgs/icons/clock.svg"
+										alt=""
+										width="16"
+										height="16"
+										class="tw-w-4 tw-h-4"
+									/>
+									<span> Thời gian nhận hàng </span>
+								</p>
+
+								<p class="tw-Body-TextB2---Medium tw-text-neutral-01 tw-mb-0">
+									<input
+										type="datetime-local"
+										class="form-control"
+										id="receive-time"
+										name="receive-time"
+										min="2024-08-07T00:00"
+									/>
+								</p>
+							</div>
+
+							<!-- <button type="button" class="btn btn-light tw-border-0 tw-p-0 tw-w-6 tw-h-6">
+					<img
+						class="tw-align-baseline"
+						src="./assets/imgs/icons/angle-right-small.svg"
+						alt=""
+						width="24"
+						height="24"
+					/>
+				</button> -->
+						</div>
+					</div>
+
+					<div class="tw-p-4 tw-bg-neutral-08 tw-mb-1 md:tw-hidden">
+						<p
+							class="tw-flex tw-gap-2 tw-items-center tw-CaptionC1---Medium tw-text-neutral-03 tw-mb-4"
+						>
+							<img
+								src="./assets/imgs/icons/shopping-basket-check-gray.svg"
+								alt=""
+								width="16"
+								height="16"
+								class="tw-w-4 tw-h-4"
+							/>
+							<span> Món ăn đã chọn </span>
+						</p>
+
+						<ul
+							class="tw-list-none tw-p-0 [&>li:last-child]:tw-border-b-0 [&>li:last-child]:tw-mb-0 [&>li:last-child]:tw-pb-0"
+						>
+							<li
+								class="tw-py-4 tw-mb-4 tw-border-0 tw-border-b tw-border-solid tw-border-b-neutral-06"
+							>
+								<div class="tw-flex tw-gap-3 tw-items-center">
+									<img
+										src="./assets/imgs/order-sample.png"
+										alt=""
+										width="56"
+										height="56"
+										class="tw-w-14 tw-h-14 tw-rounded-lg"
+									/>
+
+									<div class="tw-flex-auto tw-min-w-0">
+										<p
+											class="tw-Body-TextB2---SemiBold tw-text-neutral-01 tw-mb-0.5 tw-line-clamp-2 tw-text-ellipsis"
+										>
+											Combo Temari 4 món
+										</p>
+										<p
+											class="tw-CaptionC2---Regular tw-text-neutral-03 tw-mb-1 tw-whitespace-nowrap tw-overflow-hidden tw-text-ellipsis"
+										>
+											Lorem ipsum dolor sit amet consectetur ullamcorper.
+										</p>
+
+										<p
+											class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-0"
+										>
+											660.000<span class="tw-underline">đ</span>
+										</p>
+									</div>
+
+									<div class="tw-flex tw-gap-3 tw-items-center">
+										<button
+											class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+										>
+											<img
+												src="./assets/imgs/icons/minus.svg"
+												alt=""
+												width="16"
+												height="16"
+												class="tw-w-4 tw-h-4"
+											/>
+										</button>
+										<span class="tw-Body-TextB1---Bold"> 0 </span>
+										<button
+											class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+										>
+											<img
+												src="./assets/imgs/icons/plus-black.svg"
+												alt=""
+												width="16"
+												height="16"
+												class="tw-w-4 tw-h-4"
+											/>
+										</button>
+									</div>
+								</div>
+
+								<div class="tw-mt-3">
+									<p
+										class="tw-w-full tw-CaptionC1---Regular tw-text-neutral-02 tw-mb-0"
+									>
+										<strong class="tw-font-bold">Ghi chú:</strong> dolor sit
+										amet consectetur. Sed id arcu semper morbi alimn justo a
+										sit. Mi turpis volutpat pretium.
+									</p>
+								</div>
+							</li>
+							<li
+								class="tw-py-4 tw-mb-4 tw-border-0 tw-border-b tw-border-solid tw-border-b-neutral-06"
+							>
+								<div class="tw-flex tw-gap-3 tw-items-center">
+									<img
+										src="./assets/imgs/order-sample.png"
+										alt=""
+										width="56"
+										height="56"
+										class="tw-w-14 tw-h-14 tw-rounded-lg"
+									/>
+
+									<div class="tw-flex-auto tw-min-w-0">
+										<p
+											class="tw-Body-TextB2---SemiBold tw-text-neutral-01 tw-mb-0.5 tw-line-clamp-2 tw-text-ellipsis"
+										>
+											Combo Temari 4 món
+										</p>
+										<p
+											class="tw-CaptionC2---Regular tw-text-neutral-03 tw-mb-1 tw-whitespace-nowrap tw-overflow-hidden tw-text-ellipsis"
+										>
+											Lorem ipsum dolor sit amet consectetur ullamcorper.
+										</p>
+
+										<p
+											class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-0"
+										>
+											660.000<span class="tw-underline">đ</span>
+										</p>
+									</div>
+
+									<div class="tw-flex tw-gap-3 tw-items-center">
+										<button
+											class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+										>
+											<img
+												src="./assets/imgs/icons/minus.svg"
+												alt=""
+												width="16"
+												height="16"
+												class="tw-w-4 tw-h-4"
+											/>
+										</button>
+										<span class="tw-Body-TextB1---Bold"> 0 </span>
+										<button
+											class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+										>
+											<img
+												src="./assets/imgs/icons/plus-black.svg"
+												alt=""
+												width="16"
+												height="16"
+												class="tw-w-4 tw-h-4"
+											/>
+										</button>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="tw-p-4 tw-bg-neutral-08 tw-mb-1 md:tw-hidden">
+						<div class="tw-flex tw-items-center tw-gap-2">
+							<div class="tw-flex-auto">
+								<p
+									class="tw-flex tw-gap-2 tw-items-center tw-CaptionC1---Medium tw-text-neutral-03 tw-mb-2"
+								>
+									<img
+										src="./assets/imgs/icons/coupon-percent.svg"
+										alt=""
+										width="16"
+										height="16"
+										class="tw-w-4 tw-h-4"
+									/>
+									<span> Thêm voucher </span>
+								</p>
+							</div>
+
+							<button
+								type="button"
+								class="btn btn-light tw-border-0 tw-p-0 tw-w-6 tw-h-6"
+								data-bs-target="#voucher-selection-modal"
+								data-bs-toggle="modal"
+							>
+								<img
+									class="tw-align-baseline"
+									src="./assets/imgs/icons/angle-right-small.svg"
+									alt=""
+									width="24"
+									height="24"
+								/>
+							</button>
+						</div>
+
+						<div class="tw-flex tw-items-center tw-gap-2">
+							<div class="tw-flex-auto">
+								<p
+									class="tw-flex tw-gap-2 tw-items-center tw-CaptionC1---Medium tw-text-primary-01 tw-mb-2"
+								>
+									<img
+										src="./assets/imgs/icons/coupon-percent-red.svg"
+										alt=""
+										width="16"
+										height="16"
+										class="tw-w-4 tw-h-4"
+									/>
+									<span> FREESHIP-GIAM25K </span>
+								</p>
+							</div>
+
+							<button
+								type="button"
+								class="btn btn-light tw-bg-neutral-07 tw-border-0 tw-leading-[0] tw-w-6 tw-h-6 tw-p-1 tw-rounded-full"
+							>
+								<img
+									class="tw-align-baseline"
+									src="./assets/imgs/icons/times.svg"
+									alt=""
+									width="16"
+									height="16"
+								/>
+							</button>
+						</div>
+					</div>
+
+					<div class="tw-p-4 tw-bg-neutral-08 tw-mb-1 md:tw-hidden">
+						<p
+							class="tw-flex tw-gap-2 tw-items-center tw-CaptionC1---Medium tw-text-neutral-03 tw-mb-4"
+						>
+							<img
+								src="./assets/imgs/icons/invoice-gray.svg"
+								alt=""
+								width="16"
+								height="16"
+								class="tw-w-4 tw-h-4"
+							/>
+							<span> Tổng thanh toán </span>
+						</p>
+
+						<div>
+							<div class="tw-Body-TextB2---Regular tw-flex tw-justify-between">
+								<p class="tw-mb-0">Tạm tính (3 món ăn)</p>
+								<p class="tw-mb-0 tw-font-semibold">2.400.000đ</p>
+							</div>
+							<div class="tw-Body-TextB2---Regular tw-flex tw-justify-between">
+								<p class="tw-mb-0">Phí giao hàng</p>
+								<p class="tw-mb-0 tw-font-semibold">30.000đ</p>
+							</div>
+							<div class="tw-Body-TextB2---Regular tw-flex tw-justify-between">
+								<p class="tw-mb-0">Voucher giảm giá</p>
+								<p class="tw-mb-0 tw-font-semibold">-30.000đ</p>
+							</div>
+							<div class="tw-Body-TextB2---Regular tw-flex tw-justify-between">
+								<p class="tw-mb-0">Tổng số tiền</p>
+								<p class="tw-mb-0 tw-font-semibold">2.430.000đ</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="tw-bg-neutral-08 tw-rounded-lg tw-hidden md:tw-block tw-my-4">
+						<div
+							class="tw-px-5 tw-py-4 tw-border-0 tw-border-b tw-border-b-neutral-06 tw-border-solid"
+						>
+							<p
+								class="tw-flex tw-gap-3 tw-items-center tw-Body-TextB1---Medium tw-text-neutral-03 tw-mb-0"
+							>
+								<img
+									src="./assets/imgs/icons/wallet.svg"
+									alt=""
+									width="20"
+									height="20"
+									class="tw-w-5 tw-h-5"
+								/>
+								<span> Phương thức thanh toán </span>
+							</p>
+						</div>
+
+						<ul
+							class="tw-list-none tw-px-5 tw-py-4 tw-flex tw-flex-col tw-w-full tw-gap-3 tw-mb-0"
+						>
+							<li
+								class="form-check tw-bg-neutral-08 tw-border tw-border-solid tw-border-neutral-06 tw-rounded-lg tw-px-4 tw-py-3.5"
+							>
+								<label
+									class="form-check-label tw-flex tw-items-center tw-gap-3"
+									for="payment-method-cash"
+								>
+									<img
+										src="./assets/imgs/icons/cash-method.svg"
+										width="24"
+										height="24"
+										class="tw-w-6 tw-h-6"
+										alt=""
+									/>
+									<p
+										class="tw-flex-auto tw-Body-TextB2---SemiBold tw-text-neutral-01 tw-mb-0"
+									>
+										Thanh toán khi nhận hàng - COD
+									</p>
+
+									<input
+										class="form-check-input !tw-float-none !tw-ml-0 tw-mt-0 ratio-check checked:tw-border-primary-01 checked:tw-bg-primary-01 checked:[box-shadow:none]"
+										type="radio"
+										name="vouncher-select"
+										id="payment-method-cash"
+									/>
+								</label>
+							</li>
+
+							<li
+								class="form-check tw-bg-neutral-08 tw-border tw-border-solid tw-border-neutral-06 tw-rounded-lg tw-px-4 tw-py-3.5"
+							>
+								<label
+									class="form-check-label tw-flex tw-items-center tw-gap-3"
+									for="vnpay"
+								>
+									<img
+										src="./assets/imgs/icons/vnpay-method.svg"
+										width="24"
+										height="24"
+										class="tw-w-6 tw-h-6"
+										alt=""
+									/>
+									<p
+										class="tw-flex-auto tw-Body-TextB2---SemiBold tw-text-neutral-01 tw-mb-0"
+									>
+										Ví điện tử VNPAY
+									</p>
+
+									<input
+										class="form-check-input !tw-float-none !tw-ml-0 tw-mt-0 ratio-check checked:tw-border-primary-01 checked:tw-bg-primary-01 checked:[box-shadow:none]"
+										type="radio"
+										name="vouncher-select"
+										id="vnpay"
+									/>
+								</label>
+							</li>
+						</ul>
+					</div>
+
+					<div class="tw-p-4 tw-bg-neutral-08 tw-mb-1 md:tw-py-4 md:tw-px-0">
+						<div class="tw-flex tw-items-center tw-gap-2">
+							<div class="tw-flex-auto">
+								<p
+									class="tw-flex tw-gap-2 tw-items-center tw-CaptionC1---Medium tw-text-neutral-03 tw-mb-2 md:tw-Body-TextB1---Medium md:tw-gap-3 md:tw-mb-0 md:tw-px-5 md:tw-pb-4 md:tw-border-0 md:tw-border-b md:tw-border-solid md:tw-border-b-neutral-06"
+								>
+									<img
+										src="./assets/imgs/icons/note.svg"
+										alt=""
+										width="16"
+										height="16"
+										class="tw-w-4 tw-h-4 md:tw-w-5 md:tw-h-5"
+									/>
+									<span> Ghi chú đơn hàng </span>
+								</p>
+							</div>
+
+							<button
+								type="button"
+								class="btn btn-light tw-border-0 tw-p-0 tw-w-6 tw-h-6 md:tw-hidden"
+								data-bs-target="#memo-add-modal"
+								data-bs-toggle="modal"
+							>
+								<img
+									class="tw-align-baseline"
+									src="./assets/imgs/icons/angle-right-small.svg"
+									alt=""
+									width="24"
+									height="24"
+								/>
+							</button>
+						</div>
+
+						<p
+							class="tw-mt-3 tw-mb-0 tw-CaptionC2---Regular tw-text-neutral-01 md:tw-hidden"
+						>
+							Lorem ipsum dolor sit amet consectetur. Et vestibulum posuere tempus
+							purus mollis tincidunt massa. Enim cursus amet condimentum nulla nullam
+							fermentum.
+						</p>
+
+						<div class="tw-w-full tw-hidden md:tw-px-5 md:tw-pt-4 md:tw-block">
+							<textarea
+								class="tw-h-36 tw-w-full tw-resize-none tw-px-4 tw-py-3 tw-border-0 tw-bg-neutral-07 focus:tw-bg-neutral-08"
+								placeholder="Nhập nội dung ghi chú"
+							></textarea>
+						</div>
+					</div>
+
+					<div class="tw-inline-block tw-h-32 md:tw-hidden"></div>
+					<div
+						class="tw-py-3 tw-px-4 tw-fixed tw-left-0 tw-bottom-0 tw-bg-neutral-08 tw-w-full md:tw-hidden"
+					>
+						<div
+							class="tw-Body-TextB1---Medium tw-py-2 tw-flex tw-justify-between tw-mb-2"
+						>
+							<span> Phương thức thanh toán </span>
+							<div class="tw-flex tw-items-center">
+								<img
+									src="./assets/imgs/icons/cash-method.svg"
+									alt=""
+									width="20"
+									height="20"
+									class="tw-mr-2"
+								/>
+								<span class="tw-Body-TextB2---Medium tw-text-neutral-01 tw-mr-3"
+									>Tiền mặt</span
+								>
+								<button
+									type="button"
+									class="btn btn-light tw-border-0 tw-leading-[0] tw-p-0 tw-w-6 tw-h-6"
+									data-bs-target="#payment-method-select-modal"
+									data-bs-toggle="modal"
+								>
+									<img
+										class="tw-align-baseline"
+										src="./assets/imgs/icons/angle-right-small.svg"
+										alt=""
+										width="24"
+										height="24"
+									/>
+								</button>
+							</div>
+						</div>
+
+						<button
+							href="#"
+							class="btn btn-danger tw-bg-primary-01 tw-Body-TextB2---Medium tw-py-3 tw-rounded-lg tw-w-full"
+							data-bs-target="#order-success-modal"
+							data-bs-toggle="modal"
+						>
+							<span> 1.200.000đ </span>
+
+							<span class="before:tw-content-['\00B7']"> Đặt đơn ngay </span>
+						</button>
+					</div>
+				</div>
+
+				<div class="tw-hidden md:tw-block tw-w-96 tw-bg-neutral-08 tw-rounded-lg">
+					<div
+						class="tw-p-5 tw-border-b tw-border-0 tw-border-solid tw-border-neutral-06"
+					>
+						<p
+							class="tw-flex tw-gap-2 tw-items-center tw-CaptionC1---Medium tw-text-neutral-03 tw-mb-4"
+						>
+							<img
+								src="./assets/imgs/icons/shopping-basket-check-gray.svg"
+								alt=""
+								width="16"
+								height="16"
+								class="tw-w-4 tw-h-4"
+							/>
+							<span> Món ăn đã chọn </span>
+						</p>
+
+						<ul
+							class="tw-list-none tw-p-0 tw-mb-0 [&>li:last-child]:tw-border-b-0 [&>li:last-child]:tw-mb-0 [&>li:last-child]:tw-pb-0"
+						>
+							<li
+								class="tw-py-4 tw-border-0 tw-border-b tw-border-solid tw-border-b-neutral-06"
+							>
+								<div class="tw-flex tw-gap-3 tw-items-center">
+									<img
+										src="./assets/imgs/order-sample.png"
+										alt=""
+										width="56"
+										height="56"
+										class="tw-w-14 tw-h-14 tw-rounded-lg"
+									/>
+
+									<div class="tw-flex-auto tw-min-w-0">
+										<p
+											class="tw-Body-TextB2---SemiBold tw-text-neutral-01 tw-mb-0.5 tw-line-clamp-2 tw-text-ellipsis"
+										>
+											Combo Temari 4 món
+										</p>
+										<p
+											class="tw-CaptionC2---Regular tw-text-neutral-03 tw-mb-1 tw-whitespace-nowrap tw-overflow-hidden tw-text-ellipsis"
+										>
+											Lorem ipsum dolor sit amet consectetur ullamcorper.
+										</p>
+
+										<p
+											class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-0"
+										>
+											660.000<span class="tw-underline">đ</span>
+										</p>
+									</div>
+
+									<div class="tw-flex tw-gap-3 tw-items-center">
+										<button
+											class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+										>
+											<img
+												src="./assets/imgs/icons/minus.svg"
+												alt=""
+												width="16"
+												height="16"
+												class="tw-w-4 tw-h-4"
+											/>
+										</button>
+										<span class="tw-Body-TextB1---Bold"> 0 </span>
+										<button
+											class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+										>
+											<img
+												src="./assets/imgs/icons/plus-black.svg"
+												alt=""
+												width="16"
+												height="16"
+												class="tw-w-4 tw-h-4"
+											/>
+										</button>
+									</div>
+								</div>
+
+								<div class="tw-mt-3">
+									<p
+										class="tw-w-full tw-CaptionC1---Regular tw-text-neutral-02 tw-mb-0"
+									>
+										<strong class="tw-font-bold">Ghi chú:</strong> dolor sit
+										amet consectetur. Sed id arcu semper morbi alimn justo a
+										sit. Mi turpis volutpat pretium.
+									</p>
+								</div>
+							</li>
+							<li
+								class="tw-py-4 tw-border-0 tw-border-b tw-border-solid tw-border-b-neutral-06"
+							>
+								<div class="tw-flex tw-gap-3 tw-items-center">
+									<img
+										src="./assets/imgs/order-sample.png"
+										alt=""
+										width="56"
+										height="56"
+										class="tw-w-14 tw-h-14 tw-rounded-lg"
+									/>
+
+									<div class="tw-flex-auto tw-min-w-0">
+										<p
+											class="tw-Body-TextB2---SemiBold tw-text-neutral-01 tw-mb-0.5 tw-line-clamp-2 tw-text-ellipsis"
+										>
+											Combo Temari 4 món
+										</p>
+										<p
+											class="tw-CaptionC2---Regular tw-text-neutral-03 tw-mb-1 tw-whitespace-nowrap tw-overflow-hidden tw-text-ellipsis"
+										>
+											Lorem ipsum dolor sit amet consectetur ullamcorper.
+										</p>
+
+										<p
+											class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-0"
+										>
+											660.000<span class="tw-underline">đ</span>
+										</p>
+									</div>
+
+									<div class="tw-flex tw-gap-3 tw-items-center">
+										<button
+											class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+										>
+											<img
+												src="./assets/imgs/icons/minus.svg"
+												alt=""
+												width="16"
+												height="16"
+												class="tw-w-4 tw-h-4"
+											/>
+										</button>
+										<span class="tw-Body-TextB1---Bold"> 0 </span>
+										<button
+											class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+										>
+											<img
+												src="./assets/imgs/icons/plus-black.svg"
+												alt=""
+												width="16"
+												height="16"
+												class="tw-w-4 tw-h-4"
+											/>
+										</button>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div
+						class="tw-p-5 1 tw-border-b tw-border-0 tw-border-solid tw-border-neutral-06"
+					>
+						<div class="tw-flex tw-items-center tw-gap-2">
+							<div class="tw-flex-auto">
+								<p
+									class="tw-flex tw-gap-2 tw-items-center tw-CaptionC1---Medium tw-text-neutral-03 tw-mb-0"
+								>
+									<img
+										src="./assets/imgs/icons/coupon-percent.svg"
+										alt=""
+										width="16"
+										height="16"
+										class="tw-w-4 tw-h-4"
+									/>
+									<span> Thêm voucher </span>
+								</p>
+							</div>
+
+							<button
+								type="button"
+								class="btn btn-light tw-border-0 tw-p-0 tw-w-6 tw-h-6"
+								data-bs-target="#voucher-selection-modal"
+								data-bs-toggle="modal"
+							>
+								<img
+									class="tw-align-baseline"
+									src="./assets/imgs/icons/angle-right-small.svg"
+									alt=""
+									width="24"
+									height="24"
+								/>
+							</button>
+						</div>
+
+						<div class="tw-flex tw-items-center tw-gap-2">
+							<div class="tw-flex-auto">
+								<p
+									class="tw-flex tw-gap-2 tw-items-center tw-CaptionC1---SemiBold tw-text-primary-01 tw-mb-0"
+								>
+									<img
+										src="./assets/imgs/icons/coupon-percent-red.svg"
+										alt=""
+										width="16"
+										height="16"
+										class="tw-w-4 tw-h-4"
+									/>
+									<span> FREESHIP-GIAM25K </span>
+								</p>
+							</div>
+
+							<button
+								type="button"
+								class="btn btn-light tw-bg-neutral-07 tw-border-0 tw-leading-[0] tw-w-6 tw-h-6 tw-p-1 tw-rounded-full"
+							>
+								<img
+									class="tw-align-baseline"
+									src="./assets/imgs/icons/times.svg"
+									alt=""
+									width="16"
+									height="16"
+								/>
+							</button>
+						</div>
+					</div>
+
+					<div class="tw-p-5">
+						<p
+							class="tw-flex tw-gap-2 tw-items-center tw-CaptionC1---Medium tw-text-neutral-03 tw-mb-4"
+						>
+							<img
+								src="./assets/imgs/icons/invoice-gray.svg"
+								alt=""
+								width="16"
+								height="16"
+								class="tw-w-4 tw-h-4"
+							/>
+							<span> Tổng thanh toán </span>
+						</p>
+
+						<div class="tw-flex tw-flex-col tw-gap-2 tw-mb-4">
+							<div class="tw-Body-TextB2---Regular tw-flex tw-justify-between">
+								<p class="tw-mb-0">Tạm tính (3 món ăn)</p>
+								<p class="tw-mb-0 tw-font-semibold">2.400.000đ</p>
+							</div>
+							<div class="tw-Body-TextB2---Regular tw-flex tw-justify-between">
+								<p class="tw-mb-0">Phí giao hàng</p>
+								<p class="tw-mb-0 tw-font-semibold">30.000đ</p>
+							</div>
+							<div class="tw-Body-TextB2---Regular tw-flex tw-justify-between">
+								<p class="tw-mb-0">Voucher giảm giá</p>
+								<p class="tw-mb-0 tw-font-semibold">-30.000đ</p>
+							</div>
+							<div class="tw-Body-TextB2---Regular tw-flex tw-justify-between">
+								<p class="tw-mb-0">Tổng số tiền</p>
+								<p class="tw-mb-0 tw-font-semibold">2.430.000đ</p>
+							</div>
+						</div>
+
+						<button
+							class="btn btn-danger tw-bg-primary-01 tw-Body-TextB2---Medium tw-py-3 tw-rounded-lg tw-w-full"
+						>
+							<span> 1.200.000đ </span>
+
+							<span class="before:tw-content-['\00B7']"> Đặt đơn ngay </span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div
+				class="tw-w-full tw-h-full tw-flex tw-justify-center tw-items-center tw-min-h-svh"
+				id="order-success-section"
+			>
+				<div class="tw-flex tw-flex-col tw-items-center tw-gap-5 tw-w-[294px]">
+					<img
+						src="./assets/imgs/icons/order-success.svg"
+						alt=""
+						width="80"
+						height="80"
+					/>
+
+					<div class="tw-text-center">
+						<p class="tw-Body-TextB1---Bold tw-text-neutral-01 tw-mb-2">
+							Đặt hàng thành công
+						</p>
+						<p class="tw-Body-TextB2---Regular tw-text-neutral-03 tw-mb-0">
+							Sẽ có nhân viên từ liên hệ để xác nhận Đơn hàng sẽ được giao ngay đến
+							cho bạn!
+						</p>
+					</div>
+
+					<a
+						href="/index.html"
+						class="btn btn-danger tw-py-3 tw-px-5 tw-bg-primary-01 tw-text-neutral-08 tw-Body-TextB2---Medium"
+						>Trang chủ</a
+					>
+				</div>
+			</div>
+
+			<!-- FOOTER -->
+			<footer
+				class="tw-py-5 tw-px-4 tw-bg-neutral-08 md:tw-border-0 md:tw-border-t md:tw-border-solid md:tw-border-neutral-06"
+			>
+				<div class="md:tw-max-w-7xl md:tw-mb-0 md:tw-mx-auto">
+					<div class="tw-mb-3 md:tw-mb-0.5">
+						<img
+							src="./assets/imgs/logo.svg"
+							alt=""
+							height="80"
+							class="tw-h-20 md:tw-h-[107px]"
+						/>
+					</div>
+					<h3 class="tw-Body-TextB1---Bold !tw-font-semibold tw-mb-4 md:tw-mb-6">
+						Công ty TNHH Thương mại quốc tế FBC
+					</h3>
+					<div
+						class="md:tw-flex md:tw-flex-row-reverse md:tw-justify-between md:tw-items-start"
+					>
+						<div
+							class="tw-grid tw-grid-rows-1 tw-grid-cols-12 tw-gap-3 md:tw-flex md:tw-flex-row md:tw-gap-4"
+						>
+							<div class="tw-col-span-6 tw-col-start-auto">
+								<h4 class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-3">
+									Chính sách & Quy định
+								</h4>
+
+								<div class="tw-flex tw-gap-2 tw-flex-col">
+									<a
+										href="#"
+										class="tw-CaptionC1---Regular tw-text-neutral-02 !tw-decoration-current link-underline-primary"
+									>
+										Chính sách & Quy định chung</a
+									>
+									<a
+										href="#"
+										class="tw-CaptionC1---Regular tw-text-neutral-02 !tw-decoration-current link-underline-primary"
+										>Chính sách thanh toán</a
+									>
+									<a
+										href="#"
+										class="tw-CaptionC1---Regular tw-text-neutral-02 !tw-decoration-current link-underline-primary"
+										>Chính sách & Quy định E-Voucher</a
+									>
+								</div>
+							</div>
+
+							<div class="tw-col-span-6 tw-col-start-auto">
+								<h4 class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-3">
+									Dịch vụ khách hàng
+								</h4>
+
+								<div class="tw-flex tw-gap-2 tw-flex-col">
+									<a
+										href="#"
+										class="tw-CaptionC1---Regular tw-text-neutral-02 !tw-decoration-current link-underline-primary"
+									>
+										Chính sách giao hàng</a
+									>
+									<a
+										href="#"
+										class="tw-CaptionC1---Regular tw-text-neutral-02 !tw-decoration-current link-underline-primary"
+										>Chính sách đổi trả và hoàn tiền</a
+									>
+								</div>
+							</div>
+						</div>
+
+						<hr class="tw-text-neutral-06 md:tw-hidden" />
+
+						<div
+							class="tw-grid tw-grid-rows-1 tw-grid-cols-12 tw-gap-3 md:tw-flex md:tw-flex-col md:tw-max-w-[307px] md:tw-gap-4"
+						>
+							<div class="tw-col-span-6 tw-col-start-auto">
+								<div class="tw-mb-3 md:tw-mb-0">
+									<h4 class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-2">
+										Giấy chứng nhận CSĐĐKATTP
+									</h4>
+
+									<p class="tw-CaptionC1---Regular tw-text-neutral-02 tw-mb-0">
+										Số 2895/2018/ATTP-CNĐK do Ban Quản lý An toàn thực phẩm
+										thành phố Hà Nội cấp ngày 05/07/2018
+									</p>
+								</div>
+
+								<div class="tw-mb-3 md:tw-hidden">
+									<h4 class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-2">
+										Địa chỉ
+									</h4>
+
+									<p class="tw-CaptionC1---Regular tw-text-neutral-02 tw-mb-0">
+										04-LK6C, P. Nguyễn Văn Lộc, P. Mộ Lao, Hà Đông, Hà Nội
+									</p>
+								</div>
+							</div>
+
+							<div class="tw-col-span-6 tw-col-start-auto">
+								<div class="tw-mb-3 md:tw-mb-0">
+									<h4 class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-2">
+										Giấy chứng nhận ĐKKD
+									</h4>
+
+									<p class="tw-CaptionC1---Regular tw-text-neutral-02 tw-mb-0">
+										Số ĐKKD 0107098534 cấp ngày 12/11/2015 do Sở Kế Hoạch và Đầu
+										Tư Hà Nội
+									</p>
+								</div>
+
+								<div class="tw-mb-3 md:tw-hidden">
+									<h4 class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-2">
+										Email liên hệ
+									</h4>
+
+									<p
+										class="tw-CaptionC1---Regular tw-text-neutral-02 tw-mb-0 tw-underline"
+									>
+										info@sushigo.com
+									</p>
+								</div>
+
+								<div class="tw-mb-3 md:tw-hidden">
+									<h4 class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-2">
+										Email phản hồi
+									</h4>
+
+									<p
+										class="tw-CaptionC1---Regular tw-text-neutral-02 tw-mb-0 tw-underline"
+									>
+										feedback@sushigo.com
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="tw-hidden md:tw-block tw-max-w-96">
+							<div>
+								<h4 class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-2">
+									Địa chỉ
+								</h4>
+
+								<p class="tw-CaptionC1---Regular tw-text-neutral-02 tw-mb-0">
+									04-LK6C, P. Nguyễn Văn Lộc, P. Mộ Lao, Hà Đông, Hà Nội
+								</p>
+							</div>
+
+							<div class="tw-flex tw-gap-x-4 tw-mt-4">
+								<div class="tw-w-1/2">
+									<h4 class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-2">
+										Email liên hệ
+									</h4>
+
+									<p
+										class="tw-CaptionC1---Regular tw-text-neutral-02 tw-mb-0 tw-underline"
+									>
+										info@sushigo.com
+									</p>
+								</div>
+
+								<div class="tw-w-1/2">
+									<h4 class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-2">
+										Email phản hồi
+									</h4>
+
+									<p
+										class="tw-CaptionC1---Regular tw-text-neutral-02 tw-mb-0 tw-underline"
+									>
+										feedback@sushigo.com
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tw-mb-4 md:tw-mb-0">
+						<img src="./assets/imgs/verified.png" alt="" height="52" />
+					</div>
+
+					<div
+						class="tw-py-4 tw-CaptionC2---Medium tw-text-neutral-02 tw-text-center md:tw-py-0"
+					>
+						Copyrights © 2016 - 2024 Gofood. All Rights Reserved
+					</div>
+				</div>
+			</footer>
+		</main>
+
+		<!-- MODALS -->
+
+		<div
+			class="modal fade"
+			id="memo-add-modal"
+			data-bs-keyboard="false"
+			tabindex="-1"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="tw-flex tw-flex-col tw-items-center tw-gap-4">
+							<div class="tw-flex tw-justify-between tw-items-center tw-w-full">
+								<div class="tw-w-6 tw-h-6 tw-inline-block"></div>
+								<p class="tw-mb-0 tw-TitleT2---Medium !tw-font-semibold">
+									Thêm ghi chú
+								</p>
+								<button
+									class="btn tw-w-6 tw-h-6 tw-p-0 tw-border-0 tw-leading-[0]"
+									data-bs-dismiss="modal"
+								>
+									<img src="./assets/imgs/icons/times.svg" alt="" />
+								</button>
+							</div>
+
+							<div class="tw-w-full">
+								<textarea
+									class="tw-h-36 tw-w-full tw-resize-none tw-px-4 tw-py-3 tw-border-0 tw-bg-neutral-07 focus:tw-bg-neutral-08"
+									placeholder="Nhập nội dung ghi chú"
+								></textarea>
+							</div>
+
+							<div class="tw-gap-3 tw-flex tw-w-full">
+								<button
+									class="btn tw-py-3 tw-w-1/2 tw-bg-neutral-07 tw-rounded-lg tw-border-0 tw-Body-TextB2---Medium tw-text-neutral-02"
+									data-bs-dismiss="modal"
+								>
+									Xoá ghi chú
+								</button>
+								<button
+									class="btn tw-py-3 tw-w-1/2 btn-danger tw-rounded-lg tw-border-0 tw-Body-TextB2---Medium tw-text-neutral-08"
+									data-bs-dismiss="modal"
+								>
+									Lưu
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="modal fade"
+			id="voucher-selection-modal"
+			data-bs-keyboard="false"
+			tabindex="-1"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-fullscreen-sm-down">
+				<div class="modal-content tw-bg-neutral-07 md:tw-overflow-hidden">
+					<div
+						class="modal-header tw-items-start tw-justify-start tw-p-0 tw-flex-col tw-mb-1 tw-bg-neutral-08"
+					>
+						<div
+							class="tw-flex tw-w-full tw-justify-between tw-items-center tw-p-4 tw-border-b-neutral-07"
+						>
+							<button
+								data-bs-dismiss="modal"
+								class="btn tw-p-0 tw-border-0 tw-leading-[0]"
+							>
+								<img
+									src="/assets/imgs/icons/times.svg"
+									alt=""
+									width="24"
+									height="24"
+								/>
+							</button>
+
+							<p
+								class="tw-m-0 tw-TitleT2---Bold !tw-font-semibold tw-text-neutral-01"
+							>
+								Mã giảm giá
+							</p>
+
+							<div class="tw-inline-block tw-h-6 tw-w-6"></div>
+						</div>
+
+						<div class="tw-py-3 tw-px-4 tw-w-full">
+							<input
+								type="text"
+								class="form-control tw-w-full tw-Body-TextB2---Regular placeholder:tw-text-neutral-03 tw-text-neutral-01 tw-bg-neutral-07 tw-border tw-border-neutral-07 tw-px-4 tw-py-3 tw-rounded-lg focus:[box-shadow:none] focus:tw-bg-white focus:tw-border-neutral-04"
+								name="voucher-name"
+								id="voucher-name"
+								placeholder="Nhập mã giảm giá"
+							/>
+						</div>
+					</div>
+
+					<div
+						class="modal-body tw-p-0 tw-flex tw-flex-col md:tw-max-h-[40rem] md:tw-overflow-auto md:tw-relative"
+					>
+						<div
+							id="no-voucher"
+							class="tw-py-60 tw-flex tw-justify-center tw-items-center tw-bg-neutral-08"
+						>
+							<div class="tw-flex tw-flex-col tw-items-center tw-gap-5 tw-w-[294px]">
+								<img
+									src="./assets/imgs/icons/voucher-empty.svg"
+									alt=""
+									width="80"
+									height="80"
+									class="tw-w-20 tw-h-20"
+								/>
+
+								<div class="tw-text-center">
+									<p class="tw-Body-TextB1---Bold tw-text-neutral-01 tw-mb-2">
+										Đăng nhập ngay
+									</p>
+									<p class="tw-Body-TextB2---Medium tw-text-neutral-03 tw-mb-0">
+										Vui lòng đăng nhập để khám phá kho mã giảm giá của bạn!
+									</p>
+								</div>
+
+								<button
+									data-bs-target="#sign-in-modal"
+									data-bs-toggle="modal"
+									class="btn btn-outline-danger tw-py-3 tw-px-4 tw-text-primary-01 tw-Body-TextB2---Medium"
+								>
+									Đăng nhập
+								</button>
+							</div>
+						</div>
+
+						<div id="voucher-list" class="tw-bg-neutral-08 tw-p-4 tw-mb-1 tw-flex-auto">
+							<p class="tw-Body-TextB2---Medium tw-text-neutral-03 tw-mb-4">
+								Mã giảm giá của bạn
+							</p>
+
+							<ul
+								class="tw-list-none tw-p-0 [&>li:last-child_div]:tw-border-b-0 [&>li:last-child_div]:tw-mb-0 [&>li:last-child_div]:tw-pb-0"
+							>
+								<li class="form-check tw-pl-0">
+									<label
+										class="form-check-label tw-flex tw-items-start tw-gap-3"
+										for="vouncher-select"
+									>
+										<img
+											src="./assets/imgs/icons/voucher.svg"
+											width="36"
+											height="36"
+											class="tw-w-9 tw-h-9"
+											alt=""
+										/>
+										<div
+											class="tw-flex tw-items-center tw-flex-auto tw-border-b tw-border-b-neutral-06 tw-border-solid tw-border-0 tw-pb-3 tw-mb-3"
+										>
+											<div class="tw-flex-auto">
+												<p
+													class="tw-Body-TextB2---SemiBold tw-text-neutral-01 tw-mb-0.5"
+												>
+													Giảm 20% cho đơn hàng từ 5.000.000đ
+												</p>
+												<p
+													class="tw-CaptionC2---Medium tw-text-neutral-03 tw-mb-0"
+												>
+													HSD: Đến hết ngày 30 Tháng 6, 2024
+												</p>
+											</div>
+
+											<input
+												class="form-check-input !tw-float-none !tw-ml-0 ratio-check checked:tw-border-primary-01 checked:tw-bg-primary-01 checked:[box-shadow:none]"
+												type="radio"
+												name="vouncher-select"
+												id="vouncher-select"
+											/>
+										</div>
+									</label>
+								</li>
+
+								<li class="form-check tw-pl-0">
+									<label
+										class="form-check-label tw-flex tw-items-start tw-gap-3"
+										for="vouncher-select2"
+									>
+										<img
+											src="./assets/imgs/icons/voucher.svg"
+											width="36"
+											height="36"
+											class="tw-w-9 tw-h-9"
+											alt=""
+										/>
+										<div
+											class="tw-flex tw-items-center tw-flex-auto tw-border-b tw-border-b-neutral-06 tw-border-solid tw-border-0 tw-pb-3 tw-mb-3"
+										>
+											<div class="tw-flex-auto">
+												<p
+													class="tw-Body-TextB2---SemiBold tw-text-neutral-01 tw-mb-0.5"
+												>
+													Giảm 20% cho đơn hàng từ 5.000.000đ
+												</p>
+												<p
+													class="tw-CaptionC2---Medium tw-text-neutral-03 tw-mb-0"
+												>
+													HSD: Đến hết ngày 30 Tháng 6, 2024
+												</p>
+											</div>
+
+											<input
+												class="form-check-input !tw-float-none !tw-ml-0 ratio-check checked:tw-border-primary-01 checked:tw-bg-primary-01 checked:[box-shadow:none]"
+												type="radio"
+												name="vouncher-select"
+												id="vouncher-select2"
+											/>
+										</div>
+									</label>
+								</li>
+							</ul>
+						</div>
+
+						<div
+							class="tw-p-4 tw-bg-neutral-08 tw-mt-auto tw-sticky tw-bottom-0 tw-left-0"
+						>
+							<button
+								class="tw-w-full btn btn-danger tw-py-3 tw-px-5 tw-Body-TextB2---Medium tw-text-neutral-08 tw-rounded-lg"
+								data-bs-dismiss="modal"
+							>
+								Dùng ngay
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="modal fade"
+			id="payment-method-select-modal"
+			data-bs-keyboard="false"
+			tabindex="-1"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-fullscreen-sm-down">
+				<div class="modal-content tw-bg-neutral-07">
+					<div
+						class="modal-header tw-mb-1 tw-bg-neutral-08 tw-flex tw-w-full tw-justify-between tw-items-center tw-p-4 tw-border-b-neutral-07"
+					>
+						<button
+							data-bs-dismiss="modal"
+							class="btn tw-p-0 tw-border-0 tw-leading-[0]"
+						>
+							<img src="/assets/imgs/icons/times.svg" alt="" width="24" height="24" />
+						</button>
+
+						<p class="tw-m-0 tw-TitleT2---Bold !tw-font-semibold tw-text-neutral-01">
+							Phương thức thanh toán
+						</p>
+
+						<div class="tw-inline-block tw-h-6 tw-w-6"></div>
+					</div>
+
+					<div class="modal-body tw-p-0 tw-flex tw-flex-col">
+						<div id="payment-methods" class="tw-flex-auto">
+							<ul class="tw-list-none tw-p-0">
+								<li class="form-check tw-bg-neutral-08 tw-p-4">
+									<label
+										class="form-check-label tw-flex tw-items-center tw-gap-3"
+										for="payment-method-cash"
+									>
+										<img
+											src="./assets/imgs/icons/cash-method.svg"
+											width="24"
+											height="24"
+											class="tw-w-6 tw-h-6"
+											alt=""
+										/>
+										<p
+											class="tw-flex-auto tw-Body-TextB2---SemiBold tw-text-neutral-01 tw-mb-0"
+										>
+											Thanh toán khi nhận hàng - COD
+										</p>
+
+										<input
+											class="form-check-input !tw-float-none !tw-ml-0 tw-mt-0 ratio-check checked:tw-border-primary-01 checked:tw-bg-primary-01 checked:[box-shadow:none]"
+											type="radio"
+											name="vouncher-select"
+											id="payment-method-cash"
+										/>
+									</label>
+								</li>
+
+								<li class="form-check tw-bg-neutral-08 tw-p-4">
+									<label
+										class="form-check-label tw-flex tw-items-center tw-gap-3"
+										for="vnpay"
+									>
+										<img
+											src="./assets/imgs/icons/vnpay-method.svg"
+											width="24"
+											height="24"
+											class="tw-w-6 tw-h-6"
+											alt=""
+										/>
+										<p
+											class="tw-flex-auto tw-Body-TextB2---SemiBold tw-text-neutral-01 tw-mb-0"
+										>
+											Ví điện tử VNPAY
+										</p>
+
+										<input
+											class="form-check-input !tw-float-none !tw-ml-0 tw-mt-0 ratio-check checked:tw-border-primary-01 checked:tw-bg-primary-01 checked:[box-shadow:none]"
+											type="radio"
+											name="vouncher-select"
+											id="vnpay"
+										/>
+									</label>
+								</li>
+							</ul>
+						</div>
+
+						<div class="tw-p-4 tw-bg-neutral-08 tw-mt-auto">
+							<button
+								class="tw-w-full btn btn-danger tw-py-3 tw-px-5 tw-Body-TextB2---Medium tw-text-neutral-08 tw-rounded-lg"
+								data-bs-dismiss="modal"
+							>
+								Đồng ý
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="modal fade"
+			id="receive-address-select-modal"
+			data-bs-keyboard="false"
+			tabindex="-1"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-fullscreen-sm-down">
+				<div class="modal-content tw-bg-neutral-08">
+					<div
+						class="modal-header tw-mb-1 tw-bg-neutral-08 tw-flex md:tw-flex-row-reverse tw-w-full tw-justify-between tw-items-center tw-p-4 tw-border-b-neutral-06 md:tw-px-5"
+					>
+						<button
+							data-bs-dismiss="modal"
+							class="btn tw-p-0 tw-border-0 tw-leading-[0]"
+						>
+							<img src="/assets/imgs/icons/times.svg" alt="" width="24" height="24" />
+						</button>
+
+						<p class="tw-m-0 tw-TitleT2---Bold !tw-font-semibold tw-text-neutral-01">
+							Danh sách địa chỉ
+						</p>
+
+						<div class="tw-inline-block tw-h-6 tw-w-6 md:tw-hidden"></div>
+					</div>
+
+					<div class="modal-body tw-p-0 tw-flex tw-flex-col">
+						<div id="receive-addresses" class="tw-flex-auto">
+							<ul
+								class="tw-list-none tw-p-0 tw-py-5 tw-mb-0 tw-flex tw-flex-col tw-gap-3"
+							>
+								<li class="form-check tw-bg-neutral-08 tw-py-0 tw-p-5">
+									<label
+										class="form-check-label tw-flex tw-items-center tw-gap-3 tw-border tw-border-solid tw-border-neutral-06 tw-p-4"
+										for="delivery-address-1"
+									>
+										<div>
+											<p
+												class="tw-Body-TextB2---SemiBold tw-text-neutral-01 tw-mb-2"
+											>
+												<span> Nguyễn Văn Anh </span>
+												<span class="before:tw-content-['\00B7']">
+													0972877231
+												</span>
+											</p>
+											<p
+												class="tw-flex-auto tw-CaptionC1---Regular tw-text-neutral-01 tw-mb-0"
+											>
+												Số 120 Trần Thái Tông, Phường Dịch Vọng, Quận Cầu
+												Giấy, Thành phố Hà Nội
+											</p>
+										</div>
+
+										<input
+											class="form-check-input !tw-float-none !tw-ml-0 tw-mt-0 ratio-check checked:tw-border-primary-01 checked:tw-bg-primary-01 checked:[box-shadow:none]"
+											type="radio"
+											name="delivery-address"
+											id="delivery-address-1"
+											value="delivery-address-1"
+										/>
+									</label>
+								</li>
+
+								<li class="form-check tw-bg-neutral-08 tw-py-0 tw-p-5">
+									<label
+										class="form-check-label tw-flex tw-items-center tw-gap-3 tw-border tw-border-solid tw-border-neutral-06 tw-p-4"
+										for="delivery-address-2"
+									>
+										<div>
+											<p
+												class="tw-Body-TextB2---SemiBold tw-text-neutral-01 tw-mb-2"
+											>
+												<span> Nguyễn Văn Anh </span>
+												<span class="before:tw-content-['\00B7']">
+													0972877231
+												</span>
+											</p>
+											<p
+												class="tw-flex-auto tw-CaptionC1---Regular tw-text-neutral-01 tw-mb-0"
+											>
+												Số 120 Trần Thái Tông, Phường Dịch Vọng, Quận Cầu
+												Giấy, Thành phố Hà Nội
+											</p>
+										</div>
+
+										<input
+											class="form-check-input !tw-float-none !tw-ml-0 tw-mt-0 ratio-check checked:tw-border-primary-01 checked:tw-bg-primary-01 checked:[box-shadow:none]"
+											type="radio"
+											name="delivery-address"
+											id="delivery-address-2"
+											value="delivery-address-2"
+										/>
+									</label>
+								</li>
+							</ul>
+						</div>
+
+						<div class="tw-p-5 tw-mt-auto">
+							<button
+								class="tw-w-full btn btn-danger tw-py-3 tw-px-5 tw-Body-TextB2---Medium tw-text-neutral-08 tw-rounded-lg"
+								data-bs-dismiss="modal"
+							>
+								Sử dụng
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="modal fade"
+			id="order-success-modal"
+			data-bs-keyboard="false"
+			tabindex="-1"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-fullscreen-sm-down">
+				<div class="modal-content tw-bg-neutral-07">
+					<div class="modal-body tw-p-0 tw-flex tw-justify-center tw-items-center">
+						<div class="tw-flex tw-flex-col tw-items-center tw-gap-5 tw-w-[294px]">
+							<img
+								src="./assets/imgs/icons/order-success.svg"
+								alt=""
+								width="80"
+								height="80"
+							/>
+
+							<div class="tw-text-center">
+								<p class="tw-Body-TextB1---Bold tw-text-neutral-01 tw-mb-2">
+									Đặt hàng thành công
+								</p>
+								<p class="tw-Body-TextB2---Regular tw-text-neutral-03 tw-mb-0">
+									Sẽ có nhân viên từ liên hệ để xác nhận Đơn hàng sẽ được giao
+									ngay đến cho bạn!
+								</p>
+							</div>
+
+							<a
+								href="/index.html"
+								class="btn btn-danger tw-py-3 tw-px-5 tw-bg-primary-01 tw-text-neutral-08 tw-Body-TextB2---Medium"
+								>Trang chủ</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="modal fade"
+			id="map-location-search"
+			data-bs-keyboard="false"
+			tabindex="-1"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-fullscreen-sm-down tw-max-w-[39.5rem]">
+				<div class="modal-content tw-bg-neutral-08">
+					<div
+						class="modal-header tw-flex tw-justify-between tw-items-center tw-p-4 tw-border-b-neutral-07 tw-bg-neutral-08"
+					>
+						<div class="tw-flex tw-justify-between tw-items-center tw-w-full">
+							<div class="tw-flex tw-items-center tw-justify-start tw-gap-3">
+								<button
+									data-bs-dismiss="modal"
+									class="btn tw-p-0 tw-border-0 tw-leading-[0] md:tw-hidden"
+								>
+									<object
+										class="svg-icon tw-pointer-events-none"
+										type="image/svg+xml"
+										data="/assets/imgs/icons/arrow-left-small.svg"
+										width="24"
+										height="24"
+										data-attributes='{"path":{"fill":"neutral.02"}}'
+									>
+										<img
+											src="/assets/imgs/icons/arrow-left-small.svg"
+											alt=""
+											width="24"
+											height="24"
+										/>
+									</object>
+								</button>
+
+								<p
+									class="tw-m-0 tw-TitleT2---Bold !tw-font-semibold tw-text-neutral-01"
+								>
+									Địa chỉ của bạn
+								</p>
+							</div>
+
+							<div>
+								<button
+									data-bs-dismiss="modal"
+									class="btn btn-light tw-p-0 tw-border-0 tw-leading-[0] tw-hidden md:tw-inline-block tw-bg-transparent"
+								>
+									<img
+										src="/assets/imgs/icons/times.svg"
+										alt=""
+										width="24"
+										height="24"
+									/>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="modal-body tw-p-0 md:tw-p-5">
+						<div class="tw-flex tw-h-full tw-flex-col">
+							<div
+								class="tw-pt-2 tw-pb-4 tw-px-4 tw-bg-neutral-08 tw-mb-1 md:tw-pt-0 md:tw-mb-0 md:tw-px-0"
+							>
+								<div
+									class="input-group tw-px-4 tw-py-3 focus-within:tw-bg-white tw-bg-neutral-07 tw-rounded-lg tw-border tw-border-neutral-07 focus-within:tw-border-neutral-04 tw-border-solid tw-Body-TextB2---Regular tw-items-center"
+								>
+									<button
+										type="button"
+										class="input-group-text tw-border-0 tw-p-0 tw-mr-2"
+									>
+										<img
+											src="./assets/imgs/icons/location-pin-2.svg"
+											alt=""
+											width="20"
+											height="20"
+											class="tw-w-5 tw-h-5"
+										/>
+									</button>
+									<input
+										type="text"
+										class="form-control tw-p-0 tw-border-0 tw-bg-transparent focus:[box-shadow:none] tw-Body-TextB2---Regular"
+										placeholder="Địa chỉ nhận hàng"
+										aria-label="Địa chỉ nhận hàng"
+									/>
+								</div>
+							</div>
+
+							<div class="tw-hidden md:tw-block">
+								<hr
+									class="after:tw-content-['Hoặc'] after:tw-relative after:-tw-top-4 after:tw-px-2 tw-text-center tw-border-0 tw-border-t tw-border-t-neutral-06 tw-opacity-100 after:tw-CaptionC1---Medium after:tw-text-neutral-03 tw-overflow-visible after:tw-bg-neutral-08 tw-h-0 tw-my-7 md:tw-mt-0"
+								/>
+
+								<div class="tw-flex tw-gap-3">
+									<input
+										type="radio"
+										class="btn-check [&:checked+.btn]:tw-bg-transparent [&:checked+.btn]:tw-text-neutral-01"
+										name="receive-method"
+										id="method-delivery"
+										autocomplete="off"
+										checked
+									/>
+									<label
+										class="btn btn-outline-danger tw-py-3 tw-flex tw-items-center tw-justify-center tw-gap-2 tw-border-neutral-06 !tw-rounded-lg tw-w-1/2 tw-Body-TextB2---Medium tw-text-neutral-01"
+										for="method-delivery"
+									>
+										<img
+											src="./assets/imgs/icons/location-arrow-circle-red.svg"
+											alt=""
+										/>
+										<span>Sử dụng vị trí của tôi</span>
+									</label>
+
+									<input
+										type="radio"
+										class="btn-check [&:checked+.btn]:tw-bg-transparent [&:checked+.btn]:tw-text-neutral-01"
+										name="receive-method"
+										id="method-self"
+										autocomplete="off"
+									/>
+									<label
+										class="btn btn-outline-danger tw-py-3 tw-flex tw-items-center tw-justify-center tw-gap-2 tw-border-neutral-06 !tw-rounded-lg tw-w-1/2 tw-Body-TextB2---Medium tw-text-neutral-01"
+										for="method-self"
+									>
+										<img
+											src="./assets/imgs/icons/map-location-gray.svg"
+											alt=""
+										/>
+										<span>Chọn vị trí trên bản đồ</span></label
+									>
+								</div>
+
+								<div class="tw-w-full tw-h-[596px]"></div>
+
+								<button
+									class="btn btn-danger tw-bg-primary-01 tw-text-neutral-08 tw-w-full tw-mt-auto tw-py-3 tw-px-4 tw-border-0 tw-border-t tw-border-solid tw-border-t-neutral-07"
+									data-bs-dismiss="modal"
+								>
+									Xác nhận
+								</button>
+							</div>
+
+							<div class="tw-p-4 md:tw-hidden">
+								<button
+									class="btn tw-bg-primary-01 tw-text-neutral-08 tw-w-full tw-mt-auto tw-py-4 tw-px-4 tw-border-0 tw-border-t tw-border-solid tw-border-t-neutral-07"
+								>
+									<span>Sử dụng địa chỉ này</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- OFF-CANVAS -->
+		<div
+			class="offcanvas offcanvas-end [--bs-offcanvas-width:420px]"
+			tabindex="-1"
+			id="shopping-cart"
+		>
+			<div
+				class="offcanvas-header tw-justify-between tw-border-0 tw-border-b tw-border-solid tw-border-neutral-06"
+			>
+				<h5
+					class="offcanvas-title tw-TitleT2---Bold tw-text-neutral-01 tw-flex tw-items-center tw-gap-3"
+				>
+					<img
+						src="./assets/imgs/icons/shopping-basket-red.svg"
+						alt=""
+						width="24"
+						height="24"
+						class="tw-w-6 tw-h-6"
+					/>
+					<span> Giỏ hàng </span>
+				</h5>
+				<button
+					type="button"
+					class="btn btn-light tw-bg-transparent tw-leading-[0] tw-p-0 tw-border-0"
+					data-bs-dismiss="offcanvas"
+				>
+					<img src="./assets/imgs/icons/times.svg" alt="" />
+				</button>
+			</div>
+			<div class="offcanvas-body tw-p-0">
+				<div
+					id="shopping-cart-no-items"
+					class="tw-my-60 tw-flex tw-justify-center tw-items-center"
+				>
+					<div class="tw-flex tw-flex-col tw-items-center tw-gap-5 tw-w-[294px]">
+						<img
+							src="./assets/imgs/icons/empty-cart.svg"
+							alt=""
+							width="80"
+							height="80"
+							class="tw-w-20 tw-h-20"
+						/>
+
+						<div class="tw-text-center">
+							<p class="tw-Body-TextB1---Bold tw-text-neutral-01 tw-mb-2">
+								Giỏ hàng hiện đang trống
+							</p>
+							<p class="tw-Body-TextB2---Medium tw-text-neutral-03 tw-mb-0">
+								Các món ngon dành cho bạn! Chờ chi tham khảo ngay món ăn từ
+								<span class="tw-text-primary-01"> Sushi GO </span>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div id="cart-items" class="tw-flex tw-flex-col tw-h-full tw-relative">
+					<ul
+						class="tw-list-none tw-py-0 tw-px-5 [&>li:last-child]:tw-border-b-0 [&>li:last-child]:tw-mb-0 [&>li:last-child]:tw-pb-0 tw-flex-auto"
+					>
+						<li
+							class="tw-py-4 tw-mb-4 tw-border-0 tw-border-b tw-border-solid tw-border-b-neutral-06"
+						>
+							<div class="tw-flex tw-gap-3 tw-items-center">
+								<img
+									src="./assets/imgs/order-sample.png"
+									alt=""
+									width="56"
+									height="56"
+									class="tw-w-14 tw-h-14 tw-rounded-lg"
+								/>
+
+								<div class="tw-flex-auto tw-min-w-0">
+									<p
+										class="tw-Body-TextB2---SemiBold tw-text-neutral-01 tw-mb-0.5 tw-line-clamp-2 tw-text-ellipsis"
+									>
+										Combo Temari 4 món
+									</p>
+									<p
+										class="tw-CaptionC2---Regular tw-text-neutral-03 tw-mb-1 tw-whitespace-nowrap tw-overflow-hidden tw-text-ellipsis"
+									>
+										Lorem ipsum dolor sit amet consectetur ullamcorper.
+									</p>
+
+									<p class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-0">
+										660.000<span class="tw-underline">đ</span>
+									</p>
+								</div>
+
+								<div class="tw-flex tw-gap-3 tw-items-center">
+									<button
+										class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+									>
+										<img
+											src="./assets/imgs/icons/minus.svg"
+											alt=""
+											width="16"
+											height="16"
+											class="tw-w-4 tw-h-4"
+										/>
+									</button>
+									<span class="tw-Body-TextB1---Bold"> 0 </span>
+									<button
+										class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+									>
+										<img
+											src="./assets/imgs/icons/plus-black.svg"
+											alt=""
+											width="16"
+											height="16"
+											class="tw-w-4 tw-h-4"
+										/>
+									</button>
+								</div>
+							</div>
+
+							<div class="tw-mt-3 input-group">
+								<span
+									class="input-group-text tw-bg-transparent tw-border-0 tw-p-0 tw-items-start"
+								>
+									<img
+										src="./assets/imgs/icons/clipboard-list.svg"
+										alt=""
+										width="16"
+										height="16"
+										class="tw-w-4 tw-h-4"
+									/>
+								</span>
+
+								<textarea
+									class="form-control tw-CaptionC1---Medium placeholder:tw-text-neutral-03 tw-resize-none tw-border-0 tw-bg-transparent focus:[box-shadow:none] tw-py-0 tw-overflow-y-hidden"
+									rows="1"
+									data-autogrow="true"
+									placeholder="Thêm ghi chú..."
+								></textarea>
+							</div>
+						</li>
+
+						<li
+							class="tw-py-4 tw-mb-4 tw-border-0 tw-border-b tw-border-solid tw-border-b-neutral-06"
+						>
+							<div class="tw-flex tw-gap-3 tw-items-center">
+								<img
+									src="./assets/imgs/order-sample.png"
+									alt=""
+									width="56"
+									height="56"
+									class="tw-w-14 tw-h-14 tw-rounded-lg"
+								/>
+
+								<div class="tw-flex-auto tw-min-w-0">
+									<p
+										class="tw-Body-TextB2---SemiBold tw-text-neutral-01 tw-mb-0.5 tw-line-clamp-2 tw-text-ellipsis"
+									>
+										Combo Temari 4 món
+									</p>
+									<p
+										class="tw-CaptionC2---Regular tw-text-neutral-03 tw-mb-1 tw-whitespace-nowrap tw-overflow-hidden tw-text-ellipsis"
+									>
+										Lorem ipsum dolor sit amet consectetur ullamcorper.
+									</p>
+
+									<p class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-0">
+										660.000<span class="tw-underline">đ</span>
+									</p>
+								</div>
+
+								<div class="tw-flex tw-gap-3 tw-items-center">
+									<button
+										class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+									>
+										<img
+											src="./assets/imgs/icons/minus.svg"
+											alt=""
+											width="16"
+											height="16"
+											class="tw-w-4 tw-h-4"
+										/>
+									</button>
+									<span class="tw-Body-TextB1---Bold"> 0 </span>
+									<button
+										class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+									>
+										<img
+											src="./assets/imgs/icons/plus-black.svg"
+											alt=""
+											width="16"
+											height="16"
+											class="tw-w-4 tw-h-4"
+										/>
+									</button>
+								</div>
+							</div>
+
+							<div class="tw-mt-3 input-group tw-flex-nowrap">
+								<span
+									class="input-group-text tw-bg-transparent tw-border-0 tw-p-0 tw-items-start"
+								>
+									<img
+										src="./assets/imgs/icons/clipboard-list.svg"
+										alt=""
+										width="16"
+										height="16"
+										class="tw-w-4 tw-h-4"
+									/>
+								</span>
+
+								<p
+									class="tw-w-full tw-mb-0 tw-px-2 tw-CaptionC1---Regular tw-text-neutral-02"
+								>
+									<strong class="tw-font-bold">Ghi chú:</strong> dolor sit amet
+									consectetur. Sed id arcu semper morbi alimn justo a sit. Mi
+									turpis volutpat pretium.
+								</p>
+							</div>
+						</li>
+					</ul>
+
+					<div
+						class="tw-py-3 tw-px-5 tw-bg-neutral-08 tw-w-full tw-sticky tw-bottom-0 tw-left-0"
+					>
+						<p
+							class="tw-Body-TextB1---Medium tw-py-2 tw-flex tw-justify-between tw-mb-2"
+						>
+							<span> Tổng tiền </span>
+							<span class="tw-font-bold"> 1.200.000đ </span>
+						</p>
+
+						<a
+							href="/order.html"
+							class="btn btn-danger tw-bg-primary-01 tw-Body-TextB2---Medium tw-py-3 tw-rounded-lg tw-w-full"
+						>
+							Đặt hàng ngay
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="!tw-hidden" data-popover-id="account-menu">
+			<div class="tw-rounded-xl tw-overflow-hidden tw-w-[390px]">
+				<section
+					class="tw-bg-gradient-to-br tw-from-primary-03 tw-to-primary-02 tw-px-4 tw-pt-4 tw-pb-5"
+				>
+					<div id="profile-no-sign-in">
+						<div
+							class="tw-flex tw-gap-4 tw-items-center tw-pb-4"
+							id="username-container"
+						>
+							<div class="tw-text-neutral-08 tw-flex-auto">
+								<h3 class="tw-Body-TextB1---Bold tw-mb-1">Sushi GO xin chào!</h3>
+								<p class="tw-CaptionC1---Regular tw-mb-0" id="no-auth-guide">
+									Vui lòng Đăng nhập/Đăng ký để <br />
+									xem thêm thông tin
+								</p>
+								<p id="username" class="tw-m-0 tw-TitleT2---Bold">Nguyễn Văn Anh</p>
+							</div>
+							<div>
+								<img
+									src="./assets/imgs/icons/default-avatar.svg"
+									alt=""
+									width="56"
+									height="56"
+									class="tw-w-14 tw-h-14"
+								/>
+							</div>
+						</div>
+
+						<div
+							id="no-auth-action"
+							class="tw-flex tw-gap-3 tw-Body-TextB2---SemiBold tw-mt-4"
+						>
+							<button
+								class="btn tw-w-1/2 tw-Body-TextB2---SemiBold tw-py-3 tw-bg-neutral-08 tw-text-primary-01"
+								data-bs-target="#sign-in-modal"
+								data-bs-toggle="modal"
+							>
+								Đăng nhập
+							</button>
+							<button
+								data-bs-target="#sign-up-modal"
+								data-bs-toggle="modal"
+								class="btn tw-w-1/2 tw-Body-TextB2---SemiBold btn-outline-light tw-text-neutral-08 tw-border-current tw-py-3"
+							>
+								Đăng ký
+							</button>
+						</div>
+					</div>
+				</section>
+
+				<section class="tw-bg-neutral-08">
+					<ul class="tw-list-none tw-px-4 tw-mb-0" id="menu">
+						<li data-item="profile-info">
+							<button
+								class="btn tw-py-4 tw-px-0 tw-w-full tw-flex tw-justify-start tw-items-center tw-gap-3 active:tw-border-none active:tw-border-0 tw-border-0 tw-Body-TextB1---Medium tw-text-neutral-01"
+							>
+								<img
+									class="tw-w-5 tw-h-5"
+									width="20"
+									height="20"
+									src="./assets/imgs/icons/user-fill.svg"
+									alt=""
+								/>
+								<span> Thông tin cá nhân </span>
+							</button>
+						</li>
+						<li data-item="user-address">
+							<button
+								class="btn tw-py-4 tw-px-0 tw-w-full tw-flex tw-justify-start tw-items-center tw-gap-3 active:tw-border-none active:tw-border-0 tw-border-0 tw-Body-TextB1---Medium tw-text-neutral-01"
+							>
+								<img
+									class="tw-w-5 tw-h-5"
+									width="20"
+									height="20"
+									src="./assets/imgs/icons/location-arrow-circle.svg"
+									alt=""
+								/>
+								<span> Địa chỉ của tôi </span>
+							</button>
+						</li>
+						<li data-item="order-history">
+							<button
+								class="btn tw-py-4 tw-px-0 tw-w-full tw-flex tw-justify-start tw-items-center tw-gap-3 active:tw-border-none active:tw-border-0 tw-border-0 tw-Body-TextB1---Medium tw-text-neutral-01"
+							>
+								<img
+									class="tw-w-5 tw-h-5"
+									width="20"
+									height="20"
+									src="./assets/imgs/icons/time-past.svg"
+									alt=""
+								/>
+								<span> Lịch sử đặt hàng </span>
+							</button>
+						</li>
+						<li data-item="logout">
+							<button
+								class="btn tw-py-4 tw-px-0 tw-w-full tw-flex tw-justify-start tw-items-center tw-gap-3 active:tw-border-none active:tw-border-0 tw-border-0 tw-Body-TextB1---Medium tw-text-neutral-01"
+							>
+								<img
+									class="tw-w-5 tw-h-5"
+									width="20"
+									height="20"
+									src="./assets/imgs/icons/log-out-fill.svg"
+									alt=""
+								/>
+								<span> Đăng xuất </span>
+							</button>
+						</li>
+						<li>
+							<button
+								class="btn"
+								data-bs-target="#signInAlertModal"
+								data-bs-toggle="modal"
+							>
+								Mở cảnh báo đăng nhập
+							</button>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+	</body>
+</html>

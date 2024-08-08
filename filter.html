@@ -1,0 +1,3506 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sushi Go</title>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/assets/imgs/favicon/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/assets/imgs/favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/assets/imgs/favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/assets/imgs/favicon/site.webmanifest" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="./assets/css/styles.css" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+			integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+			crossorigin="anonymous"
+			defer
+		></script>
+
+		<script src="./assets/scripts/common.js" defer></script>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"
+			defer
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js" defer></script>
+		<script src="./assets/scripts/pin-input.js" defer></script>
+
+		<script defer src="./assets/scripts/index.js"></script>
+	</head>
+	<body class="tw-bg-neutral-07 md:tw-bg-neutral-08">
+		<!-- HEADER -->
+		<header class="tw-bg-neutral-08 sticky-top">
+			<div class="tw-flex tw-justify-between tw-items-center tw-px-4 md:tw-hidden">
+				<a
+					role="button"
+					id="profile"
+					href="/profile.html"
+					class="btn btn-light tw-border-0 tw-p-1 tw-py-0.5"
+				>
+					<img src="./assets/imgs/icons/user.svg" alt="" />
+				</a>
+
+				<a href="/">
+					<img src="./assets/imgs/logo.svg" alt="" width="82" height="60" />
+				</a>
+				<button
+					type="button"
+					id="search"
+					class="btn btn-light tw-border-0 tw-p-1 tw-py-0.5"
+				>
+					<img src="./assets/imgs/icons/search.svg" alt="" />
+				</button>
+			</div>
+
+			<div
+				class="tw-hidden md:tw-flex tw-justify-between tw-max-w-7xl tw-mx-auto tw-items-center"
+			>
+				<div
+					class="input-group dropdown tw-px-4 tw-py-3 tw-w-[470px] focus-within:tw-bg-white tw-bg-neutral-07 tw-rounded-lg tw-border tw-border-neutral-07 focus-within:tw-border-neutral-04 tw-border-solid tw-Body-TextB2---Regular tw-items-center"
+				>
+					<button type="button" class="input-group-text tw-border-0 tw-p-0 tw-mr-2">
+						<img
+							src="./assets/imgs/icons/search.svg"
+							alt=""
+							width="20"
+							height="20"
+							class="tw-w-5 tw-h-5"
+						/>
+					</button>
+					<input
+						type="text"
+						data-bs-offset="-45,15"
+						class="form-control dropdown-toggle tw-p-0 tw-border-0 tw-bg-transparent focus:[box-shadow:none] tw-Body-TextB2---Regular"
+						data-bs-toggle="dropdown"
+						data-bs-auto-close="outside"
+						placeholder="Tìm kiếm món ăn"
+						aria-label="Tìm kiếm món ăn"
+					/>
+
+					<ul class="dropdown-menu tw-w-full tw-border-0 tw-p-5">
+						<p
+							class="dropdown-header tw-text-neutral-04 tw-Body-TextB2---SemiBold tw-p-0 tw-mb-4"
+						>
+							Đề xuất gợi ý
+						</p>
+
+						<ul
+							class="tw-flex tw-flex-col tw-gap-4 tw-list-none tw-pl-0 tw-Body-TextB2---Medium tw-text-neutral-01"
+						>
+							<li>
+								<a
+									class="tw-text-inherit tw-no-underline"
+									href="/filter.html?keyword=1"
+									>Combo Sushi gia đình 6 món</a
+								>
+							</li>
+							<li>
+								<a
+									class="tw-text-inherit tw-no-underline"
+									href="/filter.html?keyword=1"
+									>Sushi cá hồi sốt bơ</a
+								>
+							</li>
+							<li>
+								<a
+									class="tw-text-inherit tw-no-underline"
+									href="/filter.html?keyword=1"
+									>Sushi Combo Family - Mix 4</a
+								>
+							</li>
+						</ul>
+					</ul>
+				</div>
+
+				<a href="/index.html">
+					<img
+						src="./assets/imgs/logo.svg"
+						alt=""
+						width="80"
+						height="80"
+						class="tw-w-20 tw-h-20"
+					/>
+				</a>
+
+				<div class="tw-flex tw-gap-6">
+					<button
+						class="btn btn-light tw-bg-transparent tw-max-w-56 tw-flex tw-items-center tw-gap-3 tw-p-0 tw-border-0 hover:tw-bg-transparent active:!tw-bg-transparent"
+						data-bs-target="#map-location-search"
+						data-bs-toggle="modal"
+					>
+						<div class="tw-p-1.5 tw-bg-neutral-07 tw-rounded-lg tw-leading-[0]">
+							<img
+								src="./assets/imgs/icons/location-pin-2-outline.svg"
+								width="16"
+								height="16"
+								alt=""
+							/>
+						</div>
+						<div
+							class="tw-flex tw-items-start tw-flex-col tw-flex-auto tw-min-w-0 tw-w-full"
+						>
+							<p class="tw-mb-0 tw-CaptionC2---Regular tw-text-neutral-03">
+								Địa chỉ của bạn:
+							</p>
+							<p
+								class="tw-max-w-full tw-m-0 tw-inline-block tw-flex-auto tw-overflow-hidden tw-whitespace-nowrap tw-overflow-ellipsis tw-CaptionC1---Medium tw-text-neutral-01"
+							>
+								<span> Vui lòng chọn địa chỉ để đặt món nhanh nhất! </span>
+								<span>
+									32 Ngách 5/72, Đ.Hoàng Quốc Việt, P.Nghĩa Đô, Q.Cầu Giấy, Hà Nội
+								</span>
+							</p>
+						</div>
+					</button>
+
+					<button
+						class="btn btn-light tw-bg-transparent tw-p-0 tw-border-0 tw-flex tw-gap-3 tw-items-center hover:tw-bg-transparent active:!tw-bg-transparent"
+						data-bs-toggle="offcanvas"
+						data-bs-target="#shopping-cart"
+					>
+						<div class="tw-p-1.5 tw-bg-neutral-07 tw-rounded-lg tw-leading-[0]">
+							<img
+								src="./assets/imgs/icons/shopping-basket-gray.svg"
+								width="16"
+								height="16"
+								alt=""
+							/>
+						</div>
+						<div
+							class="tw-flex tw-items-start tw-flex-col tw-flex-auto tw-min-w-0 tw-w-full"
+						>
+							<p class="tw-mb-0 tw-CaptionC2---Regular tw-text-neutral-03">
+								Giỏ hàng
+							</p>
+							<p
+								class="tw-max-w-full tw-m-0 tw-inline-block tw-flex-auto tw-overflow-hidden tw-whitespace-nowrap tw-overflow-ellipsis tw-CaptionC1---Medium tw-text-neutral-01"
+							>
+								0 món ăn
+							</p>
+						</div>
+					</button>
+
+					<button
+						class="btn btn-light tw-bg-transparent tw-p-0 tw-border-0 tw-flex tw-gap-3 tw-items-center hover:tw-bg-transparent active:!tw-bg-transparent"
+						data-bs-toggle="popover"
+						data-popover-html="true"
+						data-popover-target="account-menu"
+					>
+						<div class="tw-p-1.5 tw-bg-primary-05 tw-rounded-lg tw-leading-[0]">
+							<img
+								src="./assets/imgs/icons/user-red.svg"
+								width="16"
+								height="16"
+								alt=""
+							/>
+						</div>
+						<div
+							class="tw-flex tw-items-start tw-flex-col tw-flex-auto tw-min-w-0 tw-w-full"
+						>
+							<p class="tw-mb-0 tw-CaptionC2---Regular tw-text-neutral-03">
+								Tài khoản
+							</p>
+							<p
+								class="tw-max-w-full tw-m-0 tw-inline-block tw-flex-auto tw-overflow-hidden tw-whitespace-nowrap tw-overflow-ellipsis tw-CaptionC1---Medium tw-text-neutral-01"
+							>
+								Đăng nhập
+							</p>
+						</div>
+					</button>
+				</div>
+			</div>
+
+			<div class="!tw-hidden" data-popover-id="account-menu">
+				<div class="tw-rounded-xl tw-overflow-hidden tw-w-[390px]">
+					<section
+						class="tw-bg-gradient-to-br tw-from-primary-03 tw-to-primary-02 tw-px-4 tw-pt-4 tw-pb-5"
+					>
+						<div id="profile-no-sign-in">
+							<div
+								class="tw-flex tw-gap-4 tw-items-center tw-pb-4"
+								id="username-container"
+							>
+								<div class="tw-text-neutral-08 tw-flex-auto">
+									<h3 class="tw-Body-TextB1---Bold tw-mb-1">
+										Sushi GO xin chào!
+									</h3>
+									<p class="tw-CaptionC1---Regular tw-mb-0" id="no-auth-guide">
+										Vui lòng Đăng nhập/Đăng ký để <br />
+										xem thêm thông tin
+									</p>
+									<p id="username" class="tw-m-0 tw-TitleT2---Bold">
+										Nguyễn Văn Anh
+									</p>
+								</div>
+								<div>
+									<img
+										src="./assets/imgs/icons/default-avatar.svg"
+										alt=""
+										width="56"
+										height="56"
+										class="tw-w-14 tw-h-14"
+									/>
+								</div>
+							</div>
+
+							<div
+								id="no-auth-action"
+								class="tw-flex tw-gap-3 tw-Body-TextB2---SemiBold tw-mt-4"
+							>
+								<button
+									class="btn tw-w-1/2 tw-Body-TextB2---SemiBold tw-py-3 tw-bg-neutral-08 tw-text-primary-01"
+									data-bs-target="#sign-in-modal"
+									data-bs-toggle="modal"
+								>
+									Đăng nhập
+								</button>
+								<button
+									data-bs-target="#sign-up-modal"
+									data-bs-toggle="modal"
+									class="btn tw-w-1/2 tw-Body-TextB2---SemiBold btn-outline-light tw-text-neutral-08 tw-border-current tw-py-3"
+								>
+									Đăng ký
+								</button>
+							</div>
+						</div>
+					</section>
+
+					<section class="tw-bg-neutral-08">
+						<ul class="tw-list-none tw-px-4 tw-mb-0" id="menu">
+							<li data-item="profile-info">
+								<button
+									class="btn tw-py-4 tw-px-0 tw-w-full tw-flex tw-justify-start tw-items-center tw-gap-3 active:tw-border-none active:tw-border-0 tw-border-0 tw-Body-TextB1---Medium tw-text-neutral-01"
+								>
+									<img
+										class="tw-w-5 tw-h-5"
+										width="20"
+										height="20"
+										src="./assets/imgs/icons/user-fill.svg"
+										alt=""
+									/>
+									<span> Thông tin cá nhân </span>
+								</button>
+							</li>
+							<li data-item="user-address">
+								<button
+									class="btn tw-py-4 tw-px-0 tw-w-full tw-flex tw-justify-start tw-items-center tw-gap-3 active:tw-border-none active:tw-border-0 tw-border-0 tw-Body-TextB1---Medium tw-text-neutral-01"
+								>
+									<img
+										class="tw-w-5 tw-h-5"
+										width="20"
+										height="20"
+										src="./assets/imgs/icons/location-arrow-circle.svg"
+										alt=""
+									/>
+									<span> Địa chỉ của tôi </span>
+								</button>
+							</li>
+							<li data-item="order-history">
+								<button
+									class="btn tw-py-4 tw-px-0 tw-w-full tw-flex tw-justify-start tw-items-center tw-gap-3 active:tw-border-none active:tw-border-0 tw-border-0 tw-Body-TextB1---Medium tw-text-neutral-01"
+								>
+									<img
+										class="tw-w-5 tw-h-5"
+										width="20"
+										height="20"
+										src="./assets/imgs/icons/time-past.svg"
+										alt=""
+									/>
+									<span> Lịch sử đặt hàng </span>
+								</button>
+							</li>
+							<li data-item="logout">
+								<button
+									class="btn tw-py-4 tw-px-0 tw-w-full tw-flex tw-justify-start tw-items-center tw-gap-3 active:tw-border-none active:tw-border-0 tw-border-0 tw-Body-TextB1---Medium tw-text-neutral-01"
+								>
+									<img
+										class="tw-w-5 tw-h-5"
+										width="20"
+										height="20"
+										src="./assets/imgs/icons/log-out-fill.svg"
+										alt=""
+									/>
+									<span> Đăng xuất </span>
+								</button>
+							</li>
+							<li>
+								<button
+									class="btn"
+									data-bs-target="#signInAlertModal"
+									data-bs-toggle="modal"
+								>
+									Mở cảnh báo đăng nhập
+								</button>
+							</li>
+						</ul>
+					</section>
+				</div>
+			</div>
+		</header>
+		<div>
+			<nav
+				class="tw-hidden md:tw-block tw-py-3 tw-mb-5 tw-max-w-screen-xl tw-mx-auto md:tw-mb-0 md:tw-mt-5"
+				aria-label="breadcrumb"
+			>
+				<ol class="breadcrumb tw-Body-TextB2---SemiBold !tw-mb-0">
+					<li class="breadcrumb-item">
+						<a class="tw-no-underline tw-text-neutral-03" href="/index.html"
+							>Trang chủ</a
+						>
+					</li>
+					<li class="breadcrumb-item active" aria-current="page">
+						<span class="tw-text-neutral-01"> Danh mục </span>
+					</li>
+				</ol>
+			</nav>
+			<!-- CATEGORY -->
+			<div
+				class="sticky-top tw-top-[60px] tw-z-10 tw-py-5 tw-px-4 tw-overflow-auto tw-bg-neutral-08 md:tw-static md:tw-max-w-7xl md:tw-p-0 md:tw-mx-auto md:tw-my-6"
+			>
+				<ul
+					class="tw-list-none tw-p-0 tw-flex tw-min-w-[448px] md:tw-justify-between [&_.active_.btn]:tw-inline-block [&_.active_.btn]:md:tw-hidden"
+				>
+					<li
+						class="[&>.active]:md:tw-bg-neutral-07 [&>.active]:md:tw-rounded-lg [&>.active]:md:tw-border-b-0 [&>.active]:tw-border-b [&>.active]:tw-border-solid [&>.active]:tw-border-b-primary-01 [&>.active]:tw-border-0"
+					>
+						<a
+							class="tw-m-0 tw-no-underline tw-text-neutral-01 tw-inline-block tw-relative md:tw-py-4 md:tw-px-6 md:hover:tw-bg-neutral-07 active"
+							href="/filter.html?category=1"
+						>
+							<button
+								class="btn tw-leading-[0] tw-absolute tw-right-0 tw-top-0 tw-z-[1] tw-p-1 btn-light tw-rounded-full tw-bg-neutral-07 tw-hidden"
+							>
+								<img
+									class=""
+									src="./assets/imgs/icons/times.svg"
+									alt=""
+									width="12"
+									height="12"
+								/>
+							</button>
+
+							<img
+								src="./assets/imgs/SushiSet.png"
+								alt="Sushi Set"
+								width="80"
+								height="80"
+								class="tw-w-20 tw-h-20 md:tw-w-[100px] md:tw-h-[100px]"
+							/>
+							<figcaption>
+								<div class="tw-m-0 tw-text-center">Sushi Set</div>
+							</figcaption>
+						</a>
+					</li>
+					<li
+						class="[&>.active]:md:tw-bg-neutral-07 [&>.active]:md:tw-rounded-lg [&>.active]:md:tw-border-b-0 [&>.active]:tw-border-b [&>.active]:tw-border-solid [&>.active]:tw-border-b-primary-01 [&>.active]:tw-border-0"
+					>
+						<a
+							class="tw-m-0 tw-no-underline tw-text-neutral-01 tw-inline-block tw-relative md:tw-py-4 md:tw-px-6 md:hover:tw-bg-neutral-07"
+							href="/filter.html?category=1"
+						>
+							<button
+								class="btn tw-leading-[0] tw-absolute tw-right-0 tw-top-0 tw-z-[1] tw-p-1 btn-light tw-rounded-full tw-bg-neutral-07 tw-hidden"
+							>
+								<img
+									class=""
+									src="./assets/imgs/icons/times.svg"
+									alt=""
+									width="12"
+									height="12"
+								/>
+							</button>
+							<img
+								src="./assets/imgs/sashimi.png"
+								alt="Sashimi"
+								width="80"
+								height="80"
+								class="tw-w-20 tw-h-20 md:tw-w-[100px] md:tw-h-[100px]"
+							/>
+							<figcaption>
+								<div class="tw-m-0 tw-text-center">Sashimi</div>
+							</figcaption>
+						</a>
+					</li>
+					<li
+						class="[&>.active]:md:tw-bg-neutral-07 [&>.active]:md:tw-rounded-lg [&>.active]:md:tw-border-b-0 [&>.active]:tw-border-b [&>.active]:tw-border-solid [&>.active]:tw-border-b-primary-01 [&>.active]:tw-border-0"
+					>
+						<a
+							class="tw-m-0 tw-no-underline tw-text-neutral-01 tw-inline-block tw-relative md:tw-py-4 md:tw-px-6 md:hover:tw-bg-neutral-07"
+							href="/filter.html?category=1"
+						>
+							<button
+								class="btn tw-leading-[0] tw-absolute tw-right-0 tw-top-0 tw-z-[1] tw-p-1 btn-light tw-rounded-full tw-bg-neutral-07 tw-hidden"
+							>
+								<img
+									class=""
+									src="./assets/imgs/icons/times.svg"
+									alt=""
+									width="12"
+									height="12"
+								/>
+							</button>
+							<img
+								src="./assets/imgs/combo.png"
+								alt="Combo"
+								width="80"
+								height="80"
+								class="tw-w-20 tw-h-20 md:tw-w-[100px] md:tw-h-[100px]"
+							/>
+							<figcaption>
+								<div class="tw-m-0 tw-text-center">Combo</div>
+							</figcaption>
+						</a>
+					</li>
+					<li
+						class="[&>.active]:md:tw-bg-neutral-07 [&>.active]:md:tw-rounded-lg [&>.active]:md:tw-border-b-0 [&>.active]:tw-border-b [&>.active]:tw-border-solid [&>.active]:tw-border-b-primary-01 [&>.active]:tw-border-0"
+					>
+						<a
+							class="tw-m-0 tw-no-underline tw-text-neutral-01 tw-inline-block tw-relative md:tw-py-4 md:tw-px-6 md:hover:tw-bg-neutral-07"
+							href="/filter.html?category=1"
+						>
+							<button
+								class="btn tw-leading-[0] tw-absolute tw-right-0 tw-top-0 tw-z-[1] tw-p-1 btn-light tw-rounded-full tw-bg-neutral-07 tw-hidden"
+							>
+								<img
+									class=""
+									src="./assets/imgs/icons/times.svg"
+									alt=""
+									width="12"
+									height="12"
+								/>
+							</button>
+							<img
+								src="./assets/imgs/khai-vi.png"
+								alt="Khai vị"
+								width="80"
+								height="80"
+								class="tw-w-20 tw-h-20 md:tw-w-[100px] md:tw-h-[100px]"
+							/>
+							<figcaption>
+								<div class="tw-m-0 tw-text-center">Khai vị</div>
+							</figcaption>
+						</a>
+					</li>
+					<li
+						class="[&>.active]:md:tw-bg-neutral-07 [&>.active]:md:tw-rounded-lg [&>.active]:md:tw-border-b-0 [&>.active]:tw-border-b [&>.active]:tw-border-solid [&>.active]:tw-border-b-primary-01 [&>.active]:tw-border-0"
+					>
+						<a
+							class="tw-m-0 tw-no-underline tw-text-neutral-01 tw-inline-block tw-relative md:tw-py-4 md:tw-px-6 md:hover:tw-bg-neutral-07"
+							href="/filter.html?category=1"
+						>
+							<button
+								class="btn tw-leading-[0] tw-absolute tw-right-0 tw-top-0 tw-z-[1] tw-p-1 btn-light tw-rounded-full tw-bg-neutral-07 tw-hidden"
+							>
+								<img
+									class=""
+									src="./assets/imgs/icons/times.svg"
+									alt=""
+									width="12"
+									height="12"
+								/>
+							</button>
+							<img
+								src="./assets/imgs/khai-vi.png"
+								alt="Khai vị"
+								width="80"
+								height="80"
+								class="tw-w-20 tw-h-20 md:tw-w-[100px] md:tw-h-[100px]"
+							/>
+							<figcaption>
+								<div class="tw-m-0 tw-text-center">Khai vị</div>
+							</figcaption>
+						</a>
+					</li>
+					<li
+						class="[&>.active]:md:tw-bg-neutral-07 [&>.active]:md:tw-rounded-lg [&>.active]:md:tw-border-b-0 [&>.active]:tw-border-b [&>.active]:tw-border-solid [&>.active]:tw-border-b-primary-01 [&>.active]:tw-border-0"
+					>
+						<a
+							class="tw-m-0 tw-no-underline tw-text-neutral-01 tw-inline-block tw-relative md:tw-py-4 md:tw-px-6 md:hover:tw-bg-neutral-07"
+							href="/filter.html?category=1"
+						>
+							<button
+								class="btn tw-leading-[0] tw-absolute tw-right-0 tw-top-0 tw-z-[1] tw-p-1 btn-light tw-rounded-full tw-bg-neutral-07 tw-hidden"
+							>
+								<img
+									class=""
+									src="./assets/imgs/icons/times.svg"
+									alt=""
+									width="12"
+									height="12"
+								/>
+							</button>
+							<button
+								class="btn tw-leading-[0] tw-absolute tw-right-0 tw-top-0 tw-z-[1] tw-p-1 btn-light tw-rounded-full tw-bg-neutral-07 tw-hidden"
+							>
+								<img
+									class=""
+									src="./assets/imgs/icons/times.svg"
+									alt=""
+									width="12"
+									height="12"
+								/>
+							</button>
+
+							<div
+								class="tw-absolute tw-left-0 -tw-bottom-3 tw-h-0.5 tw-bg-primary-01 tw-w-full tw-hidden"
+							></div>
+
+							<img
+								src="./assets/imgs/SushiSet.png"
+								alt="Sushi Set"
+								width="80"
+								height="80"
+								class="tw-w-20 tw-h-20 md:tw-w-[100px] md:tw-h-[100px]"
+							/>
+							<figcaption>
+								<div class="tw-m-0 tw-text-center">Sushi Set</div>
+							</figcaption>
+						</a>
+					</li>
+					<li
+						class="[&>.active]:md:tw-bg-neutral-07 [&>.active]:md:tw-rounded-lg [&>.active]:md:tw-border-b-0 [&>.active]:tw-border-b [&>.active]:tw-border-solid [&>.active]:tw-border-b-primary-01 [&>.active]:tw-border-0"
+					>
+						<a
+							class="tw-m-0 tw-no-underline tw-text-neutral-01 tw-inline-block tw-relative md:tw-py-4 md:tw-px-6 md:hover:tw-bg-neutral-07"
+							href="/filter.html?category=1"
+						>
+							<button
+								class="btn tw-leading-[0] tw-absolute tw-right-0 tw-top-0 tw-z-[1] tw-p-1 btn-light tw-rounded-full tw-bg-neutral-07 tw-hidden"
+							>
+								<img
+									class=""
+									src="./assets/imgs/icons/times.svg"
+									alt=""
+									width="12"
+									height="12"
+								/>
+							</button>
+							<img
+								src="./assets/imgs/sashimi.png"
+								alt="Sashimi"
+								width="80"
+								height="80"
+								class="tw-w-20 tw-h-20 md:tw-w-[100px] md:tw-h-[100px]"
+							/>
+							<figcaption>
+								<div class="tw-m-0 tw-text-center">Sashimi</div>
+							</figcaption>
+						</a>
+					</li>
+					<li
+						class="[&>.active]:md:tw-bg-neutral-07 [&>.active]:md:tw-rounded-lg [&>.active]:md:tw-border-b-0 [&>.active]:tw-border-b [&>.active]:tw-border-solid [&>.active]:tw-border-b-primary-01 [&>.active]:tw-border-0"
+					>
+						<a
+							class="tw-m-0 tw-no-underline tw-text-neutral-01 tw-inline-block tw-relative md:tw-py-4 md:tw-px-6 md:hover:tw-bg-neutral-07"
+							href="/filter.html?category=1"
+						>
+							<button
+								class="btn tw-leading-[0] tw-absolute tw-right-0 tw-top-0 tw-z-[1] tw-p-1 btn-light tw-rounded-full tw-bg-neutral-07 tw-hidden"
+							>
+								<img
+									class=""
+									src="./assets/imgs/icons/times.svg"
+									alt=""
+									width="12"
+									height="12"
+								/>
+							</button>
+							<img
+								src="./assets/imgs/combo.png"
+								alt="Combo"
+								width="80"
+								height="80"
+								class="tw-w-20 tw-h-20 md:tw-w-[100px] md:tw-h-[100px]"
+							/>
+							<figcaption>
+								<div class="tw-m-0 tw-text-center">Combo</div>
+							</figcaption>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<nav
+			class="tw-hidden md:tw-block tw-py-3 tw-mb-5 tw-max-w-screen-xl tw-mx-auto"
+			aria-label="breadcrumb"
+		>
+			<ol class="breadcrumb tw-Body-TextB2---SemiBold !tw-mb-0">
+				<li class="breadcrumb-item">
+					<a class="tw-no-underline tw-text-neutral-03" href="/index.html">Trang chủ</a>
+				</li>
+				<li class="breadcrumb-item active" aria-current="page">
+					<span class="tw-text-neutral-01"> Tìm kiếm </span>
+				</li>
+			</ol>
+		</nav>
+
+		<div id="search-result" class="tw-hidden">
+			<div
+				id="search-result-count"
+				class="tw-py-3 tw-px-4 tw-border-0 tw-border-b tw-border-solid tw-border-neutral-06"
+			>
+				<p class="tw-mb-0 tw-CaptionC1---Medium tw-text-neutral-03">Tìm thấy 10 kết quả</p>
+			</div>
+
+			<div id="search-result-list">
+				<ul
+					class="tw-p-0 tw-list-none tw-mb-0 tw-px-4 tw-w-full tw-mx-0 tw-grid tw-grid-rows-2 tw-grid-cols-12 tw-gap-3"
+				>
+					<li class="tw-col-span-6 tw-col-start-auto">
+						<figure
+							class="card tw-rounded-[10px] tw-border-0 tw-mb-0 tw-p-0 tw-bg-neutral-08 md:tw-border md:tw-border-neutral-06 md:tw-w-auto md:tw-rounded-[0.625rem] md:tw-p-2"
+						>
+							<div class="tw-relative">
+								<img
+									src="./assets/imgs/food-1.png"
+									alt=""
+									class="card-img-top tw-bg-neutral-07 tw-mb-1 tw-rounded-md md:tw-w-[224px]"
+								/>
+
+								<img
+									src="./assets/imgs/icons/best-seller.svg"
+									width="30"
+									height="36"
+									class="tw-absolute tw-bottom-1 tw-left-1"
+									alt=""
+								/>
+							</div>
+							<div class="card-body tw-p-1 md:tw-max-w-[219px] md:tw-mx-auto">
+								<figcaption>
+									<p
+										class="card-title tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-0.5 tw-text-ellipsis tw-whitespace-nowrap tw-overflow-hidden"
+									>
+										Sushi Combo Family - Mix 4
+									</p>
+									<p
+										class="tw-text-neutral-03 tw-CaptionC2---Regular text-truncate tw-mb-1"
+									>
+										Lorem ipsum dolor sit amet consectetur ullamcorper.
+									</p>
+
+									<p
+										class="tw-flex tw-items-center tw-gap-2 tw-max-w-full tw-mb-0.5"
+									>
+										<span
+											class="tw-Body-TextB2---SemiBold !tw-font-bold tw-text-primary-01 tw-min-w-0 tw-text-ellipsis tw-overflow-hidden tw-whitespace-nowrap"
+										>
+											660.000<span class="tw-underline">đ</span>
+										</span>
+										<span
+											class="badge rounded-pill text-bg-danger tw-pl-1 tw-pr-1.5 tw-py-0.5 tw-CaptionC2---SemiBold"
+											>- 20%</span
+										>
+									</p>
+									<p
+										class="tw-mb-2 tw-line-through tw-CaptionC2---Medium !tw-italic tw-text-neutral-03"
+									>
+										-720.000đ
+									</p>
+									<button
+										type="button"
+										class="btn btn-danger tw-w-full tw-py-2.5 tw-CaptionC1---Medium tw-text-neutral-08"
+										data-bs-target="#product-order"
+										data-bs-toggle="modal"
+									>
+										Thêm vào giỏ
+									</button>
+								</figcaption>
+							</div>
+						</figure>
+					</li>
+
+					<li class="tw-col-span-6 tw-col-start-auto">
+						<figure
+							class="card tw-rounded-[10px] tw-border-0 tw-mb-0 tw-p-0 tw-bg-neutral-08 md:tw-border md:tw-border-neutral-06 md:tw-w-auto md:tw-rounded-[0.625rem] md:tw-p-2"
+						>
+							<div class="tw-relative">
+								<img
+									src="./assets/imgs/food-2.png"
+									alt=""
+									class="card-img-top tw-bg-neutral-07 tw-mb-1 tw-rounded-md md:tw-w-[224px]"
+								/>
+
+								<img
+									src="./assets/imgs/icons/best-seller.svg"
+									width="30"
+									height="36"
+									class="tw-absolute tw-bottom-1 tw-left-1"
+									alt=""
+								/>
+							</div>
+							<div class="card-body tw-p-1 md:tw-max-w-[219px] md:tw-mx-auto">
+								<figcaption>
+									<p
+										class="card-title tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-0.5 tw-text-ellipsis tw-whitespace-nowrap tw-overflow-hidden"
+									>
+										Sushi Combo Family - Mix 4
+									</p>
+									<p
+										class="tw-text-neutral-03 tw-CaptionC2---Regular text-truncate tw-mb-1"
+									>
+										Lorem ipsum dolor sit amet consectetur ullamcorper.
+									</p>
+
+									<p
+										class="tw-flex tw-items-center tw-gap-2 tw-max-w-full tw-mb-0.5"
+									>
+										<span
+											class="tw-Body-TextB2---SemiBold !tw-font-bold tw-text-primary-01 tw-min-w-0 tw-text-ellipsis tw-overflow-hidden tw-whitespace-nowrap"
+										>
+											660.000<span class="tw-underline">đ</span>
+										</span>
+										<span
+											class="badge rounded-pill text-bg-danger tw-pl-1 tw-pr-1.5 tw-py-0.5 tw-CaptionC2---SemiBold"
+											>- 20%</span
+										>
+									</p>
+									<p
+										class="tw-mb-2 tw-line-through tw-CaptionC2---Medium !tw-italic tw-text-neutral-03"
+									>
+										-720.000đ
+									</p>
+									<button
+										type="button"
+										class="btn btn-danger tw-w-full tw-py-2.5 tw-CaptionC1---Medium tw-text-neutral-08"
+										data-bs-target="#product-order"
+										data-bs-toggle="modal"
+									>
+										Thêm vào giỏ
+									</button>
+								</figcaption>
+							</div>
+						</figure>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div
+			id="search-area"
+			class="tw-min-h-screen tw-w-full tw-flex-col tw-gap-1 md:tw-max-w-7xl md:tw-mx-auto md:tw-my-10"
+		>
+			<div class="tw-flex-auto tw-bg-white tw-w-full">
+				<div id="search-result" class=" ">
+					<h2
+						class="tw-hidden md:tw-block tw-mb-6 tw-TitleT1---Bold !text-[28px] tw-text-neutral-01"
+					>
+						Sushi Set
+					</h2>
+					<h2
+						class="tw-hidden md:tw-block tw-mb-6 tw-TitleT1---Bold !text-[28px] tw-text-neutral-03"
+					>
+						Kết quả tìm kiếm <span class="tw-text-neutral-01"> “Sushi””</span>
+					</h2>
+
+					<div class="md:tw-hidden">
+						<form
+							id="search-form"
+							class="tw-bg-white tw-py-2 tw-px-4 tw-flex tw-items-center"
+						>
+							<div
+								class="input-group tw-px-4 tw-py-3 focus-within:tw-bg-white tw-bg-neutral-07 tw-rounded-lg tw-border tw-border-neutral-07 focus-within:tw-border-neutral-04 tw-border-solid tw-Body-TextB2---Regular tw-items-center"
+							>
+								<button
+									type="button"
+									class="input-group-text tw-border-0 tw-p-0 tw-mr-2"
+								>
+									<img
+										src="./assets/imgs/icons/search.svg"
+										alt=""
+										width="20"
+										height="20"
+										class="tw-w-5 tw-h-5"
+									/>
+								</button>
+								<input
+									type="text"
+									class="form-control tw-p-0 tw-border-0 tw-bg-transparent focus:[box-shadow:none] tw-Body-TextB2---Regular"
+									placeholder="Tìm kiếm món ăn"
+									aria-label="Tìm kiếm món ăn"
+								/>
+							</div>
+
+							<button
+								type="button"
+								class="btn tw-text-primary-01 tw-ml-4 tw-p-0"
+								id="go-back"
+							>
+								Huỷ
+							</button>
+						</form>
+
+						<div
+							id="search-result-count"
+							class="tw-py-3 tw-px-4 tw-border-0 tw-border-b tw-border-solid tw-border-neutral-06 md:tw-hidden"
+						>
+							<p class="tw-mb-0 tw-CaptionC1---Medium tw-text-neutral-03">
+								Tìm thấy 10 kết quả
+							</p>
+						</div>
+					</div>
+
+					<div id="search-result-list">
+						<ul
+							class="tw-p-0 tw-list-none tw-mb-0 tw-px-4 tw-flex tw-flex-wrap tw-w-full tw-gap-3 md:tw-px-0 md:tw-gap-4"
+						>
+							<li class="tw-w-[calc(50%-6px)] md:tw-w-auto">
+								<figure
+									class="card tw-rounded-[10px] tw-w-full tw-border-0 tw-mb-0 tw-p-1 tw-bg-neutral-08 md:tw-border md:tw-border-neutral-06 md:tw-w-auto md:tw-rounded-[0.625rem] md:tw-p-2"
+								>
+									<div class="tw-relative">
+										<img
+											src="./assets/imgs/sushi-combo-family.png"
+											alt=""
+											class="card-img-top tw-bg-neutral-07 tw-mb-1 tw-rounded-md md:tw-w-[224px]"
+										/>
+
+										<img
+											src="./assets/imgs/icons/best-seller.svg"
+											width="30"
+											height="36"
+											class="tw-absolute tw-bottom-1 tw-left-1"
+											alt=""
+										/>
+									</div>
+									<div class="card-body tw-p-1 md:tw-max-w-[219px] md:tw-mx-auto">
+										<figcaption>
+											<p
+												class="card-title tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-0.5 tw-line-clamp-2"
+											>
+												Sushi Combo Family - Mix 4
+											</p>
+											<p
+												class="tw-text-neutral-03 tw-CaptionC2---Regular text-truncate tw-mb-1 md:tw-max-w-52"
+											>
+												Lorem ipsum dolor sit amet consectetur ullamcorper.
+											</p>
+											<div
+												class="tw-flex tw-flex-col md:tw-flex-row md:tw-items-center"
+											>
+												<div class="md:tw-flex-auto">
+													<p
+														class="tw-flex tw-items-center tw-gap-2 tw-max-w-full tw-mb-0.5"
+													>
+														<span
+															class="tw-Body-TextB2---SemiBold !tw-font-bold tw-text-primary-01 tw-min-w-0 tw-text-ellipsis tw-overflow-hidden tw-whitespace-nowrap"
+														>
+															660.000<span class="tw-underline"
+																>đ</span
+															>
+														</span>
+														<span
+															class="badge rounded-pill text-bg-danger tw-pl-1 tw-pr-1.5 tw-py-0.5 tw-CaptionC2---SemiBold"
+															>- 20%</span
+														>
+													</p>
+													<p
+														class="tw-mb-2 tw-line-through tw-CaptionC2---Medium !tw-italic tw-text-neutral-03 md:tw-mb-0"
+													>
+														-720.000đ
+													</p>
+												</div>
+												<button
+													type="button"
+													class="btn btn-danger tw-w-full tw-py-2.5 tw-CaptionC1---Medium tw-text-neutral-08 md:tw-w-fit md:tw-leading-[0] md:tw-p-2.5"
+													data-bs-target="#product-order"
+													data-bs-toggle="modal"
+												>
+													<img
+														src="./assets/imgs/icons/shopping-basket-plus.svg"
+														alt=""
+														width="16"
+														height="16"
+													/>
+													<span class="md:tw-hidden"> Thêm vào giỏ </span>
+												</button>
+											</div>
+										</figcaption>
+									</div>
+								</figure>
+							</li>
+
+							<li class="tw-w-[calc(50%-6px)] md:tw-w-auto">
+								<figure
+									class="card tw-rounded-[10px] tw-w-full tw-border-0 tw-mb-0 tw-p-1 tw-bg-neutral-08 md:tw-border md:tw-border-neutral-06 md:tw-w-auto md:tw-rounded-[0.625rem] md:tw-p-2"
+								>
+									<div class="tw-relative">
+										<img
+											src="./assets/imgs/sushi-combo-family-2.png"
+											alt=""
+											class="card-img-top tw-bg-neutral-07 tw-mb-1 tw-rounded-md md:tw-w-[224px]"
+										/>
+
+										<img
+											src="./assets/imgs/icons/best-seller.svg"
+											width="30"
+											height="36"
+											class="tw-absolute tw-bottom-1 tw-left-1"
+											alt=""
+										/>
+									</div>
+									<div class="card-body tw-p-1 md:tw-max-w-[219px] md:tw-mx-auto">
+										<figcaption>
+											<p
+												class="card-title tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-0.5 tw-line-clamp-2"
+											>
+												Sushi Combo Family - Mix 4
+											</p>
+											<p
+												class="tw-text-neutral-03 tw-CaptionC2---Regular text-truncate tw-mb-1"
+											>
+												Lorem ipsum dolor sit amet consectetur ullamcorper.
+											</p>
+
+											<div
+												class="tw-flex tw-flex-col md:tw-flex-row md:tw-items-center"
+											>
+												<div class="md:tw-flex-auto">
+													<p
+														class="tw-flex tw-items-center tw-gap-2 tw-max-w-full tw-mb-0.5"
+													>
+														<span
+															class="tw-Body-TextB2---SemiBold !tw-font-bold tw-text-primary-01 tw-min-w-0 tw-text-ellipsis tw-overflow-hidden tw-whitespace-nowrap"
+														>
+															660.000<span class="tw-underline"
+																>đ</span
+															>
+														</span>
+														<span
+															class="badge rounded-pill text-bg-danger tw-pl-1 tw-pr-1.5 tw-py-0.5 tw-CaptionC2---SemiBold"
+															>- 20%</span
+														>
+													</p>
+													<p
+														class="tw-mb-2 tw-line-through tw-CaptionC2---Medium !tw-italic tw-text-neutral-03 md:tw-mb-0"
+													>
+														-720.000đ
+													</p>
+												</div>
+												<button
+													type="button"
+													class="btn btn-danger tw-w-full tw-py-2.5 tw-CaptionC1---Medium tw-text-neutral-08 md:tw-w-fit md:tw-leading-[0] md:tw-p-2.5"
+													data-bs-target="#product-order"
+													data-bs-toggle="modal"
+												>
+													<img
+														src="./assets/imgs/icons/shopping-basket-plus.svg"
+														alt=""
+														width="16"
+														height="16"
+													/>
+													<span class="md:tw-hidden"> Thêm vào giỏ </span>
+												</button>
+											</div>
+										</figcaption>
+									</div>
+								</figure>
+							</li>
+
+							<li class="tw-w-[calc(50%-6px)] md:tw-w-auto">
+								<figure
+									class="card tw-rounded-[10px] tw-w-full tw-border-0 tw-mb-0 tw-p-1 tw-bg-neutral-08 md:tw-border md:tw-border-neutral-06 md:tw-w-auto md:tw-rounded-[0.625rem] md:tw-p-2"
+								>
+									<div class="tw-relative">
+										<img
+											src="./assets/imgs/sushi-combo-family-3.png"
+											alt=""
+											class="card-img-top tw-bg-neutral-07 tw-mb-1 tw-rounded-md md:tw-w-[224px]"
+										/>
+
+										<img
+											src="./assets/imgs/icons/best-seller.svg"
+											width="30"
+											height="36"
+											class="tw-absolute tw-bottom-1 tw-left-1"
+											alt=""
+										/>
+									</div>
+									<div class="card-body tw-p-1 md:tw-max-w-[219px] md:tw-mx-auto">
+										<figcaption>
+											<p
+												class="card-title tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-0.5 tw-line-clamp-2"
+											>
+												Sushi Combo Family - Mix 4
+											</p>
+											<p
+												class="tw-text-neutral-03 tw-CaptionC2---Regular text-truncate tw-mb-1"
+											>
+												Lorem ipsum dolor sit amet consectetur ullamcorper.
+											</p>
+
+											<div
+												class="tw-flex tw-flex-col md:tw-flex-row md:tw-items-center"
+											>
+												<div class="md:tw-flex-auto">
+													<p
+														class="tw-flex tw-items-center tw-gap-2 tw-max-w-full tw-mb-0.5"
+													>
+														<span
+															class="tw-Body-TextB2---SemiBold !tw-font-bold tw-text-primary-01 tw-min-w-0 tw-text-ellipsis tw-overflow-hidden tw-whitespace-nowrap"
+														>
+															660.000<span class="tw-underline"
+																>đ</span
+															>
+														</span>
+														<span
+															class="badge rounded-pill text-bg-danger tw-pl-1 tw-pr-1.5 tw-py-0.5 tw-CaptionC2---SemiBold"
+															>- 20%</span
+														>
+													</p>
+													<p
+														class="tw-mb-2 tw-line-through tw-CaptionC2---Medium !tw-italic tw-text-neutral-03 md:tw-mb-0"
+													>
+														-720.000đ
+													</p>
+												</div>
+												<button
+													type="button"
+													class="btn btn-danger tw-w-full tw-py-2.5 tw-CaptionC1---Medium tw-text-neutral-08 md:tw-w-fit md:tw-leading-[0] md:tw-p-2.5"
+													data-bs-target="#product-order"
+													data-bs-toggle="modal"
+												>
+													<img
+														src="./assets/imgs/icons/shopping-basket-plus.svg"
+														alt=""
+														width="16"
+														height="16"
+													/>
+													<span class="md:tw-hidden"> Thêm vào giỏ </span>
+												</button>
+											</div>
+										</figcaption>
+									</div>
+								</figure>
+							</li>
+
+							<li class="tw-w-[calc(50%-6px)] md:tw-w-auto">
+								<figure
+									class="card tw-rounded-[10px] tw-w-full tw-border-0 tw-mb-0 tw-p-1 tw-bg-neutral-08 md:tw-border md:tw-border-neutral-06 md:tw-w-auto md:tw-rounded-[0.625rem] md:tw-p-2"
+								>
+									<div class="tw-relative">
+										<img
+											src="./assets/imgs/sushi-combo-family-4.png"
+											alt=""
+											class="card-img-top tw-bg-neutral-07 tw-mb-1 tw-rounded-md md:tw-w-[224px]"
+										/>
+
+										<img
+											src="./assets/imgs/icons/best-seller.svg"
+											width="30"
+											height="36"
+											class="tw-absolute tw-bottom-1 tw-left-1"
+											alt=""
+										/>
+									</div>
+									<div class="card-body tw-p-1 md:tw-max-w-[219px] md:tw-mx-auto">
+										<figcaption>
+											<p
+												class="card-title tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-0.5 tw-line-clamp-2"
+											>
+												Sushi Combo Family - Mix 4
+											</p>
+											<p
+												class="tw-text-neutral-03 tw-CaptionC2---Regular text-truncate tw-mb-1"
+											>
+												Lorem ipsum dolor sit amet consectetur ullamcorper.
+											</p>
+
+											<div
+												class="tw-flex tw-flex-col md:tw-flex-row md:tw-items-center"
+											>
+												<div class="md:tw-flex-auto">
+													<p
+														class="tw-flex tw-items-center tw-gap-2 tw-max-w-full tw-mb-0.5"
+													>
+														<span
+															class="tw-Body-TextB2---SemiBold !tw-font-bold tw-text-primary-01 tw-min-w-0 tw-text-ellipsis tw-overflow-hidden tw-whitespace-nowrap"
+														>
+															660.000<span class="tw-underline"
+																>đ</span
+															>
+														</span>
+														<span
+															class="badge rounded-pill text-bg-danger tw-pl-1 tw-pr-1.5 tw-py-0.5 tw-CaptionC2---SemiBold"
+															>- 20%</span
+														>
+													</p>
+													<p
+														class="tw-mb-2 tw-line-through tw-CaptionC2---Medium !tw-italic tw-text-neutral-03 md:tw-mb-0"
+													>
+														-720.000đ
+													</p>
+												</div>
+												<button
+													type="button"
+													class="btn btn-danger tw-w-full tw-py-2.5 tw-CaptionC1---Medium tw-text-neutral-08 md:tw-w-fit md:tw-leading-[0] md:tw-p-2.5"
+													data-bs-target="#product-order"
+													data-bs-toggle="modal"
+												>
+													<img
+														src="./assets/imgs/icons/shopping-basket-plus.svg"
+														alt=""
+														width="16"
+														height="16"
+													/>
+													<span class="md:tw-hidden"> Thêm vào giỏ </span>
+												</button>
+											</div>
+										</figcaption>
+									</div>
+								</figure>
+							</li>
+
+							<li class="tw-w-[calc(50%-6px)] md:tw-w-auto">
+								<figure
+									class="card tw-rounded-[10px] tw-w-full tw-border-0 tw-mb-0 tw-p-1 tw-bg-neutral-08 md:tw-border md:tw-border-neutral-06 md:tw-w-auto md:tw-rounded-[0.625rem] md:tw-p-2"
+								>
+									<div class="tw-relative">
+										<img
+											src="./assets/imgs/sushi-combo-family-4.png"
+											alt=""
+											class="card-img-top tw-bg-neutral-07 tw-mb-1 tw-rounded-md md:tw-w-[224px]"
+										/>
+
+										<img
+											src="./assets/imgs/icons/best-seller.svg"
+											width="30"
+											height="36"
+											class="tw-absolute tw-bottom-1 tw-left-1"
+											alt=""
+										/>
+									</div>
+									<div class="card-body tw-p-1 md:tw-max-w-[219px] md:tw-mx-auto">
+										<figcaption>
+											<p
+												class="card-title tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-0.5 tw-line-clamp-2"
+											>
+												Sushi Combo Family - Mix 4
+											</p>
+											<p
+												class="tw-text-neutral-03 tw-CaptionC2---Regular text-truncate tw-mb-1"
+											>
+												Lorem ipsum dolor sit amet consectetur ullamcorper.
+											</p>
+
+											<div
+												class="tw-flex tw-flex-col md:tw-flex-row md:tw-items-center"
+											>
+												<div class="md:tw-flex-auto">
+													<p
+														class="tw-flex tw-items-center tw-gap-2 tw-max-w-full tw-mb-0.5"
+													>
+														<span
+															class="tw-Body-TextB2---SemiBold !tw-font-bold tw-text-primary-01 tw-min-w-0 tw-text-ellipsis tw-overflow-hidden tw-whitespace-nowrap"
+														>
+															660.000<span class="tw-underline"
+																>đ</span
+															>
+														</span>
+														<span
+															class="badge rounded-pill text-bg-danger tw-pl-1 tw-pr-1.5 tw-py-0.5 tw-CaptionC2---SemiBold"
+															>- 20%</span
+														>
+													</p>
+													<p
+														class="tw-mb-2 tw-line-through tw-CaptionC2---Medium !tw-italic tw-text-neutral-03 md:tw-mb-0"
+													>
+														-720.000đ
+													</p>
+												</div>
+												<button
+													type="button"
+													class="btn btn-danger tw-w-full tw-py-2.5 tw-CaptionC1---Medium tw-text-neutral-08 md:tw-w-fit md:tw-leading-[0] md:tw-p-2.5"
+													data-bs-target="#product-order"
+													data-bs-toggle="modal"
+												>
+													<img
+														src="./assets/imgs/icons/shopping-basket-plus.svg"
+														alt=""
+														width="16"
+														height="16"
+													/>
+													<span class="md:tw-hidden"> Thêm vào giỏ </span>
+												</button>
+											</div>
+										</figcaption>
+									</div>
+								</figure>
+							</li>
+
+							<li class="tw-w-[calc(50%-6px)] md:tw-w-auto">
+								<figure
+									class="card tw-rounded-[10px] tw-w-full tw-border-0 tw-mb-0 tw-p-1 tw-bg-neutral-08 md:tw-border md:tw-border-neutral-06 md:tw-w-auto md:tw-rounded-[0.625rem] md:tw-p-2"
+								>
+									<div class="tw-relative">
+										<img
+											src="./assets/imgs/sushi-combo-family.png"
+											alt=""
+											class="card-img-top tw-bg-neutral-07 tw-mb-1 tw-rounded-md md:tw-w-[224px]"
+										/>
+
+										<img
+											src="./assets/imgs/icons/best-seller.svg"
+											width="30"
+											height="36"
+											class="tw-absolute tw-bottom-1 tw-left-1"
+											alt=""
+										/>
+									</div>
+									<div class="card-body tw-p-1 md:tw-max-w-[219px] md:tw-mx-auto">
+										<figcaption>
+											<p
+												class="card-title tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-0.5 tw-line-clamp-2"
+											>
+												Sushi Combo Family - Mix 4
+											</p>
+											<p
+												class="tw-text-neutral-03 tw-CaptionC2---Regular text-truncate tw-mb-1 md:tw-max-w-52"
+											>
+												Lorem ipsum dolor sit amet consectetur ullamcorper.
+											</p>
+
+											<div
+												class="tw-flex tw-flex-col md:tw-flex-row md:tw-items-center"
+											>
+												<div class="md:tw-flex-auto">
+													<p
+														class="tw-flex tw-items-center tw-gap-2 tw-max-w-full tw-mb-0.5"
+													>
+														<span
+															class="tw-Body-TextB2---SemiBold !tw-font-bold tw-text-primary-01 tw-min-w-0 tw-text-ellipsis tw-overflow-hidden tw-whitespace-nowrap"
+														>
+															660.000<span class="tw-underline"
+																>đ</span
+															>
+														</span>
+														<span
+															class="badge rounded-pill text-bg-danger tw-pl-1 tw-pr-1.5 tw-py-0.5 tw-CaptionC2---SemiBold"
+															>- 20%</span
+														>
+													</p>
+													<p
+														class="tw-mb-2 tw-line-through tw-CaptionC2---Medium !tw-italic tw-text-neutral-03 md:tw-mb-0"
+													>
+														-720.000đ
+													</p>
+												</div>
+												<button
+													type="button"
+													class="btn btn-danger tw-w-full tw-py-2.5 tw-CaptionC1---Medium tw-text-neutral-08 md:tw-w-fit md:tw-leading-[0] md:tw-p-2.5"
+													data-bs-target="#product-order"
+													data-bs-toggle="modal"
+												>
+													<img
+														src="./assets/imgs/icons/shopping-basket-plus.svg"
+														alt=""
+														width="16"
+														height="16"
+													/>
+													<span class="md:tw-hidden"> Thêm vào giỏ </span>
+												</button>
+											</div>
+										</figcaption>
+									</div>
+								</figure>
+							</li>
+
+							<li class="tw-w-[calc(50%-6px)] md:tw-w-auto">
+								<figure
+									class="card tw-rounded-[10px] tw-w-full tw-border-0 tw-mb-0 tw-p-1 tw-bg-neutral-08 md:tw-border md:tw-border-neutral-06 md:tw-w-auto md:tw-rounded-[0.625rem] md:tw-p-2"
+								>
+									<div class="tw-relative">
+										<img
+											src="./assets/imgs/sushi-combo-family-2.png"
+											alt=""
+											class="card-img-top tw-bg-neutral-07 tw-mb-1 tw-rounded-md md:tw-w-[224px]"
+										/>
+
+										<img
+											src="./assets/imgs/icons/best-seller.svg"
+											width="30"
+											height="36"
+											class="tw-absolute tw-bottom-1 tw-left-1"
+											alt=""
+										/>
+									</div>
+									<div class="card-body tw-p-1 md:tw-max-w-[219px] md:tw-mx-auto">
+										<figcaption>
+											<p
+												class="card-title tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-0.5 tw-line-clamp-2"
+											>
+												Sushi Combo Family - Mix 4
+											</p>
+											<p
+												class="tw-text-neutral-03 tw-CaptionC2---Regular text-truncate tw-mb-1"
+											>
+												Lorem ipsum dolor sit amet consectetur ullamcorper.
+											</p>
+
+											<div
+												class="tw-flex tw-flex-col md:tw-flex-row md:tw-items-center"
+											>
+												<div class="md:tw-flex-auto">
+													<p
+														class="tw-flex tw-items-center tw-gap-2 tw-max-w-full tw-mb-0.5"
+													>
+														<span
+															class="tw-Body-TextB2---SemiBold !tw-font-bold tw-text-primary-01 tw-min-w-0 tw-text-ellipsis tw-overflow-hidden tw-whitespace-nowrap"
+														>
+															660.000<span class="tw-underline"
+																>đ</span
+															>
+														</span>
+														<span
+															class="badge rounded-pill text-bg-danger tw-pl-1 tw-pr-1.5 tw-py-0.5 tw-CaptionC2---SemiBold"
+															>- 20%</span
+														>
+													</p>
+													<p
+														class="tw-mb-2 tw-line-through tw-CaptionC2---Medium !tw-italic tw-text-neutral-03 md:tw-mb-0"
+													>
+														-720.000đ
+													</p>
+												</div>
+												<button
+													type="button"
+													class="btn btn-danger tw-w-full tw-py-2.5 tw-CaptionC1---Medium tw-text-neutral-08 md:tw-w-fit md:tw-leading-[0] md:tw-p-2.5"
+													data-bs-target="#product-order"
+													data-bs-toggle="modal"
+												>
+													<img
+														src="./assets/imgs/icons/shopping-basket-plus.svg"
+														alt=""
+														width="16"
+														height="16"
+													/>
+													<span class="md:tw-hidden"> Thêm vào giỏ </span>
+												</button>
+											</div>
+										</figcaption>
+									</div>
+								</figure>
+							</li>
+
+							<li class="tw-w-[calc(50%-6px)] md:tw-w-auto">
+								<figure
+									class="card tw-rounded-[10px] tw-w-full tw-border-0 tw-mb-0 tw-p-1 tw-bg-neutral-08 md:tw-border md:tw-border-neutral-06 md:tw-w-auto md:tw-rounded-[0.625rem] md:tw-p-2"
+								>
+									<div class="tw-relative">
+										<img
+											src="./assets/imgs/sushi-combo-family-3.png"
+											alt=""
+											class="card-img-top tw-bg-neutral-07 tw-mb-1 tw-rounded-md md:tw-w-[224px]"
+										/>
+
+										<img
+											src="./assets/imgs/icons/best-seller.svg"
+											width="30"
+											height="36"
+											class="tw-absolute tw-bottom-1 tw-left-1"
+											alt=""
+										/>
+									</div>
+									<div class="card-body tw-p-1 md:tw-max-w-[219px] md:tw-mx-auto">
+										<figcaption>
+											<p
+												class="card-title tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-0.5 tw-line-clamp-2"
+											>
+												Sushi Combo Family - Mix 4
+											</p>
+											<p
+												class="tw-text-neutral-03 tw-CaptionC2---Regular text-truncate tw-mb-1"
+											>
+												Lorem ipsum dolor sit amet consectetur ullamcorper.
+											</p>
+
+											<div
+												class="tw-flex tw-flex-col md:tw-flex-row md:tw-items-center"
+											>
+												<div class="md:tw-flex-auto">
+													<p
+														class="tw-flex tw-items-center tw-gap-2 tw-max-w-full tw-mb-0.5"
+													>
+														<span
+															class="tw-Body-TextB2---SemiBold !tw-font-bold tw-text-primary-01 tw-min-w-0 tw-text-ellipsis tw-overflow-hidden tw-whitespace-nowrap"
+														>
+															660.000<span class="tw-underline"
+																>đ</span
+															>
+														</span>
+														<span
+															class="badge rounded-pill text-bg-danger tw-pl-1 tw-pr-1.5 tw-py-0.5 tw-CaptionC2---SemiBold"
+															>- 20%</span
+														>
+													</p>
+													<p
+														class="tw-mb-2 tw-line-through tw-CaptionC2---Medium !tw-italic tw-text-neutral-03 md:tw-mb-0"
+													>
+														-720.000đ
+													</p>
+												</div>
+												<button
+													type="button"
+													class="btn btn-danger tw-w-full tw-py-2.5 tw-CaptionC1---Medium tw-text-neutral-08 md:tw-w-fit md:tw-leading-[0] md:tw-p-2.5"
+													data-bs-target="#product-order"
+													data-bs-toggle="modal"
+												>
+													<img
+														src="./assets/imgs/icons/shopping-basket-plus.svg"
+														alt=""
+														width="16"
+														height="16"
+													/>
+													<span class="md:tw-hidden"> Thêm vào giỏ </span>
+												</button>
+											</div>
+										</figcaption>
+									</div>
+								</figure>
+							</li>
+
+							<li class="tw-w-[calc(50%-6px)] md:tw-w-auto">
+								<figure
+									class="card tw-rounded-[10px] tw-w-full tw-border-0 tw-mb-0 tw-p-1 tw-bg-neutral-08 md:tw-border md:tw-border-neutral-06 md:tw-w-auto md:tw-rounded-[0.625rem] md:tw-p-2"
+								>
+									<div class="tw-relative">
+										<img
+											src="./assets/imgs/sushi-combo-family-4.png"
+											alt=""
+											class="card-img-top tw-bg-neutral-07 tw-mb-1 tw-rounded-md md:tw-w-[224px]"
+										/>
+
+										<img
+											src="./assets/imgs/icons/best-seller.svg"
+											width="30"
+											height="36"
+											class="tw-absolute tw-bottom-1 tw-left-1"
+											alt=""
+										/>
+									</div>
+									<div class="card-body tw-p-1 md:tw-max-w-[219px] md:tw-mx-auto">
+										<figcaption>
+											<p
+												class="card-title tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-0.5 tw-line-clamp-2"
+											>
+												Sushi Combo Family - Mix 4
+											</p>
+											<p
+												class="tw-text-neutral-03 tw-CaptionC2---Regular text-truncate tw-mb-1"
+											>
+												Lorem ipsum dolor sit amet consectetur ullamcorper.
+											</p>
+
+											<div
+												class="tw-flex tw-flex-col md:tw-flex-row md:tw-items-center"
+											>
+												<div class="md:tw-flex-auto">
+													<p
+														class="tw-flex tw-items-center tw-gap-2 tw-max-w-full tw-mb-0.5"
+													>
+														<span
+															class="tw-Body-TextB2---SemiBold !tw-font-bold tw-text-primary-01 tw-min-w-0 tw-text-ellipsis tw-overflow-hidden tw-whitespace-nowrap"
+														>
+															660.000<span class="tw-underline"
+																>đ</span
+															>
+														</span>
+														<span
+															class="badge rounded-pill text-bg-danger tw-pl-1 tw-pr-1.5 tw-py-0.5 tw-CaptionC2---SemiBold"
+															>- 20%</span
+														>
+													</p>
+													<p
+														class="tw-mb-2 tw-line-through tw-CaptionC2---Medium !tw-italic tw-text-neutral-03 md:tw-mb-0"
+													>
+														-720.000đ
+													</p>
+												</div>
+												<button
+													type="button"
+													class="btn btn-danger tw-w-full tw-py-2.5 tw-CaptionC1---Medium tw-text-neutral-08 md:tw-w-fit md:tw-leading-[0] md:tw-p-2.5"
+													data-bs-target="#product-order"
+													data-bs-toggle="modal"
+												>
+													<img
+														src="./assets/imgs/icons/shopping-basket-plus.svg"
+														alt=""
+														width="16"
+														height="16"
+													/>
+													<span class="md:tw-hidden"> Thêm vào giỏ </span>
+												</button>
+											</div>
+										</figcaption>
+									</div>
+								</figure>
+							</li>
+
+							<li class="tw-w-[calc(50%-6px)] md:tw-w-auto">
+								<figure
+									class="card tw-rounded-[10px] tw-w-full tw-border-0 tw-mb-0 tw-p-1 tw-bg-neutral-08 md:tw-border md:tw-border-neutral-06 md:tw-w-auto md:tw-rounded-[0.625rem] md:tw-p-2"
+								>
+									<div class="tw-relative">
+										<img
+											src="./assets/imgs/sushi-combo-family-4.png"
+											alt=""
+											class="card-img-top tw-bg-neutral-07 tw-mb-1 tw-rounded-md md:tw-w-[224px]"
+										/>
+
+										<img
+											src="./assets/imgs/icons/best-seller.svg"
+											width="30"
+											height="36"
+											class="tw-absolute tw-bottom-1 tw-left-1"
+											alt=""
+										/>
+									</div>
+									<div class="card-body tw-p-1 md:tw-max-w-[219px] md:tw-mx-auto">
+										<figcaption>
+											<p
+												class="card-title tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-0.5 tw-line-clamp-2"
+											>
+												Sushi Combo Family - Mix 4
+											</p>
+											<p
+												class="tw-text-neutral-03 tw-CaptionC2---Regular text-truncate tw-mb-1"
+											>
+												Lorem ipsum dolor sit amet consectetur ullamcorper.
+											</p>
+
+											<div
+												class="tw-flex tw-flex-col md:tw-flex-row md:tw-items-center"
+											>
+												<div class="md:tw-flex-auto">
+													<p
+														class="tw-flex tw-items-center tw-gap-2 tw-max-w-full tw-mb-0.5"
+													>
+														<span
+															class="tw-Body-TextB2---SemiBold !tw-font-bold tw-text-primary-01 tw-min-w-0 tw-text-ellipsis tw-overflow-hidden tw-whitespace-nowrap"
+														>
+															660.000<span class="tw-underline"
+																>đ</span
+															>
+														</span>
+														<span
+															class="badge rounded-pill text-bg-danger tw-pl-1 tw-pr-1.5 tw-py-0.5 tw-CaptionC2---SemiBold"
+															>- 20%</span
+														>
+													</p>
+													<p
+														class="tw-mb-2 tw-line-through tw-CaptionC2---Medium !tw-italic tw-text-neutral-03 md:tw-mb-0"
+													>
+														-720.000đ
+													</p>
+												</div>
+												<button
+													type="button"
+													class="btn btn-danger tw-w-full tw-py-2.5 tw-CaptionC1---Medium tw-text-neutral-08 md:tw-w-fit md:tw-leading-[0] md:tw-p-2.5"
+													data-bs-target="#product-order"
+													data-bs-toggle="modal"
+												>
+													<img
+														src="./assets/imgs/icons/shopping-basket-plus.svg"
+														alt=""
+														width="16"
+														height="16"
+													/>
+													<span class="md:tw-hidden"> Thêm vào giỏ </span>
+												</button>
+											</div>
+										</figcaption>
+									</div>
+								</figure>
+							</li>
+						</ul>
+
+						<nav class="tw-mt-6 tw-pb-0.5 md:tw-pb-0">
+							<ul
+								class="pagination tw-justify-center tw-gap-2 tw-items-center [&>.active>.page-link]:tw-bg-transparent [&>.active>.page-link]:tw-text-primary-01"
+							>
+								<li class="page-item tw-mr-1">
+									<a
+										class="page-link btn btn-light !tw-rounded-full tw-p-1 tw-border-0 tw-leading-[0] tw-bg-neutral-07"
+										href="#"
+										aria-label="Previous"
+									>
+										<img
+											src="./assets/imgs/icons/angle-right-small.svg"
+											alt=""
+											class="tw-w-5 tw-h-5 tw-rotate-180"
+											width="20"
+											height="20"
+										/>
+									</a>
+								</li>
+								<li
+									class="page-item tw-w-5 hover:tw-bg-neutral-07 tw-h-5 tw-inline-flex tw-items-center tw-justify-center active"
+								>
+									<a
+										class="page-link tw-p-0 tw-border-0 tw-text-neutral-03 focus:tw-bg-transparent focus:[box-shadow:none] hover:tw-bg-transparent"
+										href="#"
+										>1</a
+									>
+								</li>
+								<li
+									class="page-item tw-w-5 hover:tw-bg-neutral-07 tw-h-5 tw-inline-flex tw-items-center tw-justify-center"
+								>
+									<a
+										class="page-link tw-p-0 tw-border-0 tw-text-neutral-03 focus:tw-bg-transparent focus:[box-shadow:none] hover:tw-bg-transparent"
+										href="#"
+										>2</a
+									>
+								</li>
+								<li
+									class="page-item tw-w-5 hover:tw-bg-neutral-07 tw-h-5 tw-inline-flex tw-items-center tw-justify-center"
+								>
+									<a
+										class="page-link tw-p-0 tw-border-0 tw-text-neutral-03 focus:tw-bg-transparent focus:[box-shadow:none] hover:tw-bg-transparent"
+										href="#"
+										>3</a
+									>
+								</li>
+								<li class="page-item tw-ml-1">
+									<a
+										class="page-link btn btn-light !tw-rounded-full tw-p-1 tw-border-0 tw-leading-[0] tw-bg-neutral-07"
+										href="#"
+										aria-label="Next"
+									>
+										<img
+											src="./assets/imgs/icons/angle-right-small.svg"
+											alt=""
+											class="tw-w-5 tw-h-5"
+											width="20"
+											height="20"
+										/>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- FOOTER -->
+		<footer
+			class="tw-py-5 tw-px-4 tw-bg-neutral-08 md:tw-border-0 md:tw-border-t md:tw-border-solid md:tw-border-neutral-06"
+		>
+			<div class="md:tw-max-w-7xl md:tw-mb-0 md:tw-mx-auto">
+				<div class="tw-mb-3 md:tw-mb-0.5">
+					<img
+						src="./assets/imgs/logo.svg"
+						alt=""
+						height="80"
+						class="tw-h-20 md:tw-h-[107px]"
+					/>
+				</div>
+				<h3 class="tw-Body-TextB1---Bold !tw-font-semibold tw-mb-4 md:tw-mb-6">
+					Công ty TNHH Thương mại quốc tế FBC
+				</h3>
+				<div
+					class="md:tw-flex md:tw-flex-row-reverse md:tw-justify-between md:tw-items-start"
+				>
+					<div
+						class="tw-grid tw-grid-rows-1 tw-grid-cols-12 tw-gap-3 md:tw-flex md:tw-flex-row md:tw-gap-4"
+					>
+						<div class="tw-col-span-6 tw-col-start-auto">
+							<h4 class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-3">
+								Chính sách & Quy định
+							</h4>
+
+							<div class="tw-flex tw-gap-2 tw-flex-col">
+								<a
+									href="#"
+									class="tw-CaptionC1---Regular tw-text-neutral-02 !tw-decoration-current link-underline-primary"
+								>
+									Chính sách & Quy định chung</a
+								>
+								<a
+									href="#"
+									class="tw-CaptionC1---Regular tw-text-neutral-02 !tw-decoration-current link-underline-primary"
+									>Chính sách thanh toán</a
+								>
+								<a
+									href="#"
+									class="tw-CaptionC1---Regular tw-text-neutral-02 !tw-decoration-current link-underline-primary"
+									>Chính sách & Quy định E-Voucher</a
+								>
+							</div>
+						</div>
+
+						<div class="tw-col-span-6 tw-col-start-auto">
+							<h4 class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-3">
+								Dịch vụ khách hàng
+							</h4>
+
+							<div class="tw-flex tw-gap-2 tw-flex-col">
+								<a
+									href="#"
+									class="tw-CaptionC1---Regular tw-text-neutral-02 !tw-decoration-current link-underline-primary"
+								>
+									Chính sách giao hàng</a
+								>
+								<a
+									href="#"
+									class="tw-CaptionC1---Regular tw-text-neutral-02 !tw-decoration-current link-underline-primary"
+									>Chính sách đổi trả và hoàn tiền</a
+								>
+							</div>
+						</div>
+					</div>
+
+					<hr class="tw-text-neutral-06 md:tw-hidden" />
+
+					<div
+						class="tw-grid tw-grid-rows-1 tw-grid-cols-12 tw-gap-3 md:tw-flex md:tw-flex-col md:tw-max-w-[307px] md:tw-gap-4"
+					>
+						<div class="tw-col-span-6 tw-col-start-auto">
+							<div class="tw-mb-3 md:tw-mb-0">
+								<h4 class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-2">
+									Giấy chứng nhận CSĐĐKATTP
+								</h4>
+
+								<p class="tw-CaptionC1---Regular tw-text-neutral-02 tw-mb-0">
+									Số 2895/2018/ATTP-CNĐK do Ban Quản lý An toàn thực phẩm thành
+									phố Hà Nội cấp ngày 05/07/2018
+								</p>
+							</div>
+
+							<div class="tw-mb-3 md:tw-hidden">
+								<h4 class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-2">
+									Địa chỉ
+								</h4>
+
+								<p class="tw-CaptionC1---Regular tw-text-neutral-02 tw-mb-0">
+									04-LK6C, P. Nguyễn Văn Lộc, P. Mộ Lao, Hà Đông, Hà Nội
+								</p>
+							</div>
+						</div>
+
+						<div class="tw-col-span-6 tw-col-start-auto">
+							<div class="tw-mb-3 md:tw-mb-0">
+								<h4 class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-2">
+									Giấy chứng nhận ĐKKD
+								</h4>
+
+								<p class="tw-CaptionC1---Regular tw-text-neutral-02 tw-mb-0">
+									Số ĐKKD 0107098534 cấp ngày 12/11/2015 do Sở Kế Hoạch và Đầu Tư
+									Hà Nội
+								</p>
+							</div>
+
+							<div class="tw-mb-3 md:tw-hidden">
+								<h4 class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-2">
+									Email liên hệ
+								</h4>
+
+								<p
+									class="tw-CaptionC1---Regular tw-text-neutral-02 tw-mb-0 tw-underline"
+								>
+									info@sushigo.com
+								</p>
+							</div>
+
+							<div class="tw-mb-3 md:tw-hidden">
+								<h4 class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-2">
+									Email phản hồi
+								</h4>
+
+								<p
+									class="tw-CaptionC1---Regular tw-text-neutral-02 tw-mb-0 tw-underline"
+								>
+									feedback@sushigo.com
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="tw-hidden md:tw-block tw-max-w-96">
+						<div>
+							<h4 class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-2">
+								Địa chỉ
+							</h4>
+
+							<p class="tw-CaptionC1---Regular tw-text-neutral-02 tw-mb-0">
+								04-LK6C, P. Nguyễn Văn Lộc, P. Mộ Lao, Hà Đông, Hà Nội
+							</p>
+						</div>
+
+						<div class="tw-flex tw-gap-x-4 tw-mt-4">
+							<div class="tw-w-1/2">
+								<h4 class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-2">
+									Email liên hệ
+								</h4>
+
+								<p
+									class="tw-CaptionC1---Regular tw-text-neutral-02 tw-mb-0 tw-underline"
+								>
+									info@sushigo.com
+								</p>
+							</div>
+
+							<div class="tw-w-1/2">
+								<h4 class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-2">
+									Email phản hồi
+								</h4>
+
+								<p
+									class="tw-CaptionC1---Regular tw-text-neutral-02 tw-mb-0 tw-underline"
+								>
+									feedback@sushigo.com
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tw-mb-4 md:tw-mb-0">
+					<img src="./assets/imgs/verified.png" alt="" height="52" />
+				</div>
+
+				<div
+					class="tw-py-4 tw-CaptionC2---Medium tw-text-neutral-02 tw-text-center md:tw-py-0"
+				>
+					Copyrights © 2016 - 2024 Gofood. All Rights Reserved
+				</div>
+			</div>
+		</footer>
+
+		<!-- MODALS -->
+
+		<div
+			class="modal fade"
+			id="user-address-search"
+			data-bs-keyboard="false"
+			tabindex="-1"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-fullscreen-sm-down">
+				<div class="modal-content tw-bg-neutral-07">
+					<div
+						class="modal-header tw-flex tw-justify-between tw-items-center tw-p-4 tw-border-b-neutral-07 tw-bg-neutral-08"
+					>
+						<div class="tw-flex tw-justify-between tw-items-center tw-w-full">
+							<div class="tw-flex tw-items-center tw-justify-start tw-gap-3">
+								<button
+									data-bs-dismiss="modal"
+									class="btn tw-p-0 tw-border-0 tw-leading-[0]"
+								>
+									<object
+										class="svg-icon tw-pointer-events-none"
+										type="image/svg+xml"
+										data="/assets/imgs/icons/arrow-left-small.svg"
+										width="24"
+										height="24"
+										data-attributes='{"path":{"fill":"neutral.02"}}'
+									>
+										<img
+											src="/assets/imgs/icons/arrow-left-small.svg"
+											alt=""
+											width="24"
+											height="24"
+										/>
+									</object>
+								</button>
+
+								<p
+									class="tw-m-0 tw-TitleT2---Bold !tw-font-semibold tw-text-neutral-01"
+								>
+									Địa chỉ của bạn
+								</p>
+							</div>
+
+							<button
+								class="btn tw-p-0 tw-border-0 tw-Body-TextB2---Medium tw-text-neutral-03"
+								data-bs-target="#map-location-search"
+								data-bs-toggle="modal"
+							>
+								Chọn trên bản đồ
+							</button>
+						</div>
+					</div>
+
+					<div class="modal-body tw-p-0">
+						<div class="tw-flex tw-h-full tw-flex-col">
+							<div class="tw-pt-2 tw-pb-4 tw-px-4 tw-bg-neutral-08 tw-mb-1">
+								<div
+									class="input-group tw-px-4 tw-py-3 focus-within:tw-bg-white tw-bg-neutral-07 tw-rounded-lg tw-border tw-border-neutral-07 focus-within:tw-border-neutral-04 tw-border-solid tw-Body-TextB2---Regular tw-items-center"
+								>
+									<button
+										type="button"
+										class="input-group-text tw-border-0 tw-p-0 tw-mr-2"
+									>
+										<img
+											src="./assets/imgs/icons/location-pin-2.svg"
+											alt=""
+											width="20"
+											height="20"
+											class="tw-w-5 tw-h-5"
+										/>
+									</button>
+									<input
+										type="text"
+										class="form-control tw-p-0 tw-border-0 tw-bg-transparent focus:[box-shadow:none] tw-Body-TextB2---Regular"
+										placeholder="Địa chỉ nhận hàng"
+										aria-label="Địa chỉ nhận hàng"
+									/>
+								</div>
+							</div>
+
+							<div id="user-search-address-suggest" class="tw-p-4">
+								<p class="tw-mb-4 tw-text-neutral-04 tw-Body-TextB2---SemiBold">
+									Địa chỉ hiện tại
+								</p>
+
+								<ul
+									class="tw-flex tw-flex-col tw-gap-4 tw-list-none tw-pl-0 tw-Body-TextB2---Medium tw-text-neutral-01"
+								>
+									<li class="tw-py-4 tw-flex tw-items-center tw-gap-3">
+										<img
+											src="./assets/imgs/icons/location-arrow-circle-2.svg"
+											alt=""
+											width="28"
+											height="28"
+											class="tw-w-7 tw-h-7"
+										/>
+
+										<a class="tw-text-inherit tw-no-underline" href="#"
+											>32 Ngách 5/72, Đ.Hoàng Quốc Việt, P.Nghĩa Đô, Q.Cầu
+											Giấy, Hà Nội</a
+										>
+									</li>
+								</ul>
+							</div>
+							<div id="user-search-address-suggest" class="tw-p-4">
+								<p class="tw-mb-4 tw-text-neutral-04 tw-Body-TextB2---SemiBold">
+									Đề xuất gợi ý
+								</p>
+
+								<ul
+									class="tw-flex tw-flex-col tw-gap-4 tw-list-none tw-pl-0 tw-Body-TextB2---Medium tw-text-neutral-01"
+								>
+									<li class="tw-py-4 tw-flex tw-items-center tw-gap-3">
+										<img
+											src="./assets/imgs/icons/map-pin.svg"
+											alt=""
+											width="28"
+											height="28"
+											class="tw-w-7 tw-h-7"
+										/>
+
+										<a class="tw-text-inherit tw-no-underline" href="#"
+											>120 Trần Cung, Phường Cổ Nhuế 1, Quận Bắc Từ Liêm,
+											Thành phố Hà Nội</a
+										>
+									</li>
+									<li class="tw-py-4 tw-flex tw-items-center tw-gap-3">
+										<img
+											src="./assets/imgs/icons/map-pin.svg"
+											alt=""
+											width="28"
+											height="28"
+											class="tw-w-7 tw-h-7"
+										/>
+
+										<a class="tw-text-inherit tw-no-underline" href="#"
+											>120 Trần Cung, Phường Cổ Nhuế 1, Quận Bắc Từ Liêm,
+											Thành phố Hà Nội</a
+										>
+									</li>
+									<li class="tw-py-4 tw-flex tw-items-center tw-gap-3">
+										<img
+											src="./assets/imgs/icons/map-pin.svg"
+											alt=""
+											width="28"
+											height="28"
+											class="tw-w-7 tw-h-7"
+										/>
+
+										<a class="tw-text-inherit tw-no-underline" href="#"
+											>120 Trần Cung, Phường Cổ Nhuế 1, Quận Bắc Từ Liêm,
+											Thành phố Hà Nội</a
+										>
+									</li>
+								</ul>
+							</div>
+
+							<button
+								class="btn tw-text-primary-01 tw-w-full tw-mt-auto tw-py-4 tw-px-4 tw-border-0 tw-border-t tw-border-solid tw-border-t-neutral-07"
+								data-bs-target="#map-location-search"
+								data-bs-toggle="modal"
+							>
+								<span>Sử dụng vị trí của tôi</span>
+								<img src="./assets/imgs/icons/map-location.svg" alt="" />
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="modal fade"
+			id="map-location-search"
+			data-bs-keyboard="false"
+			tabindex="-1"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-fullscreen-sm-down tw-max-w-[39.5rem]">
+				<div class="modal-content tw-bg-neutral-08">
+					<div
+						class="modal-header tw-flex tw-justify-between tw-items-center tw-p-4 tw-border-b-neutral-07 tw-bg-neutral-08"
+					>
+						<div class="tw-flex tw-justify-between tw-items-center tw-w-full">
+							<div class="tw-flex tw-items-center tw-justify-start tw-gap-3">
+								<button
+									data-bs-dismiss="modal"
+									class="btn tw-p-0 tw-border-0 tw-leading-[0] md:tw-hidden"
+								>
+									<object
+										class="svg-icon tw-pointer-events-none"
+										type="image/svg+xml"
+										data="/assets/imgs/icons/arrow-left-small.svg"
+										width="24"
+										height="24"
+										data-attributes='{"path":{"fill":"neutral.02"}}'
+									>
+										<img
+											src="/assets/imgs/icons/arrow-left-small.svg"
+											alt=""
+											width="24"
+											height="24"
+										/>
+									</object>
+								</button>
+
+								<p
+									class="tw-m-0 tw-TitleT2---Bold !tw-font-semibold tw-text-neutral-01"
+								>
+									Địa chỉ của bạn
+								</p>
+							</div>
+
+							<div>
+								<button
+									data-bs-dismiss="modal"
+									class="btn btn-light tw-p-0 tw-border-0 tw-leading-[0] tw-hidden md:tw-inline-block tw-bg-transparent"
+								>
+									<img
+										src="/assets/imgs/icons/times.svg"
+										alt=""
+										width="24"
+										height="24"
+									/>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="modal-body tw-p-0 md:tw-p-5">
+						<div class="tw-flex tw-h-full tw-flex-col">
+							<div
+								class="tw-pt-2 tw-pb-4 tw-px-4 tw-bg-neutral-08 tw-mb-1 md:tw-pt-0 md:tw-mb-0 md:tw-px-0"
+							>
+								<div
+									class="input-group tw-px-4 tw-py-3 focus-within:tw-bg-white tw-bg-neutral-07 tw-rounded-lg tw-border tw-border-neutral-07 focus-within:tw-border-neutral-04 tw-border-solid tw-Body-TextB2---Regular tw-items-center"
+								>
+									<button
+										type="button"
+										class="input-group-text tw-border-0 tw-p-0 tw-mr-2"
+									>
+										<img
+											src="./assets/imgs/icons/location-pin-2.svg"
+											alt=""
+											width="20"
+											height="20"
+											class="tw-w-5 tw-h-5"
+										/>
+									</button>
+									<input
+										type="text"
+										class="form-control tw-p-0 tw-border-0 tw-bg-transparent focus:[box-shadow:none] tw-Body-TextB2---Regular"
+										placeholder="Địa chỉ nhận hàng"
+										aria-label="Địa chỉ nhận hàng"
+									/>
+								</div>
+							</div>
+
+							<div class="tw-hidden md:tw-block">
+								<hr
+									class="after:tw-content-['Hoặc'] after:tw-relative after:-tw-top-4 after:tw-px-2 tw-text-center tw-border-0 tw-border-t tw-border-t-neutral-06 tw-opacity-100 after:tw-CaptionC1---Medium after:tw-text-neutral-03 tw-overflow-visible after:tw-bg-neutral-08 tw-h-0 tw-my-7 md:tw-mt-0"
+								/>
+
+								<div class="tw-flex tw-gap-3">
+									<input
+										type="radio"
+										class="btn-check [&:checked+.btn]:tw-bg-transparent [&:checked+.btn]:tw-text-neutral-01"
+										name="receive-method"
+										id="method-delivery"
+										autocomplete="off"
+										checked
+									/>
+									<label
+										class="btn btn-outline-danger tw-py-3 tw-flex tw-items-center tw-justify-center tw-gap-2 tw-border-neutral-06 !tw-rounded-lg tw-w-1/2 tw-Body-TextB2---Medium tw-text-neutral-01"
+										for="method-delivery"
+									>
+										<img
+											src="./assets/imgs/icons/location-arrow-circle-red.svg"
+											alt=""
+										/>
+										<span>Sử dụng vị trí của tôi</span>
+									</label>
+
+									<input
+										type="radio"
+										class="btn-check [&:checked+.btn]:tw-bg-transparent [&:checked+.btn]:tw-text-neutral-01"
+										name="receive-method"
+										id="method-self"
+										autocomplete="off"
+									/>
+									<label
+										class="btn btn-outline-danger tw-py-3 tw-flex tw-items-center tw-justify-center tw-gap-2 tw-border-neutral-06 !tw-rounded-lg tw-w-1/2 tw-Body-TextB2---Medium tw-text-neutral-01"
+										for="method-self"
+									>
+										<img
+											src="./assets/imgs/icons/map-location-gray.svg"
+											alt=""
+										/>
+										<span>Chọn vị trí trên bản đồ</span></label
+									>
+								</div>
+
+								<div class="tw-w-full tw-h-[596px]"></div>
+
+								<button
+									class="btn btn-danger tw-bg-primary-01 tw-text-neutral-08 tw-w-full tw-mt-auto tw-py-3 tw-px-4 tw-border-0 tw-border-t tw-border-solid tw-border-t-neutral-07"
+									data-bs-dismiss="modal"
+								>
+									Xác nhận
+								</button>
+							</div>
+
+							<div class="tw-p-4 md:tw-hidden">
+								<button
+									class="btn tw-bg-primary-01 tw-text-neutral-08 tw-w-full tw-mt-auto tw-py-4 tw-px-4 tw-border-0 tw-border-t tw-border-solid tw-border-t-neutral-07"
+								>
+									<span>Sử dụng địa chỉ này</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="modal fade"
+			id="product-order"
+			data-bs-keyboard="false"
+			tabindex="-1"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-fullscreen-sm-down md:tw-max-w-screen-sm">
+				<div class="modal-content tw-overflow-hidden tw-bg-neutral-07">
+					<div class="modal-body tw-p-0 tw-relative tw-max-h-[832px] tw-overflow-auto">
+						<button
+							class="btn btn-light tw-bg-transparent tw-leading-[0] tw-border-0 tw-p-1 tw-absolute tw-top-4 tw-left-4 tw-z-10 md:tw-left-[unset] md:tw-right-4 md:tw-bg-black/50 tw-rounded-full"
+							data-bs-dismiss="modal"
+						>
+							<img
+								src="./assets/imgs/icons/times-white.svg"
+								alt=""
+								width="16"
+								height="16"
+								class="tw-w-4 tw-h-4"
+							/>
+						</button>
+
+						<img
+							src="./assets/imgs/product-order-sample.png"
+							alt=""
+							width="100%"
+							height="232"
+							class="tw-w-full tw-h-[232px] tw-object-cover"
+						/>
+
+						<div class="tw-p-4 tw-bg-neutral-08 tw-mb-1 md:tw-p-5">
+							<div class="tw-flex tw-items-center tw-justify-between tw-mb-4">
+								<div>
+									<p class="tw-Body-TextB1---Bold tw-text-neutral-01 tw-mb-1">
+										Combo Temari 4 món
+									</p>
+
+									<p class="tw-flex tw-items-center tw-max-w-full tw-mb-0.5">
+										<span
+											class="badge rounded-pill text-bg-danger tw-pl-1 tw-pr-1.5 tw-py-0.5 tw-CaptionC2---SemiBold tw-mr-2"
+											>- 20%</span
+										>
+										<span
+											class="tw-Body-TextB2---SemiBold !tw-font-bold tw-text-primary-01 tw-min-w-0 tw-text-ellipsis tw-overflow-hidden tw-mr-1 tw-whitespace-nowrap"
+										>
+											660.000<span class="tw-underline">đ</span>
+										</span>
+
+										<span
+											class="tw-mb-0 tw-line-through tw-CaptionC2---Medium !tw-italic tw-text-neutral-03"
+										>
+											-720.000đ
+										</span>
+									</p>
+								</div>
+
+								<div class="tw-flex tw-gap-3 tw-items-center">
+									<button
+										class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+									>
+										<img
+											src="./assets/imgs/icons/minus.svg"
+											alt=""
+											width="16"
+											height="16"
+											class="tw-w-4 tw-h-4"
+										/>
+									</button>
+									<span class="tw-Body-TextB1---Bold"> 1 </span>
+									<button
+										class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+									>
+										<img
+											src="./assets/imgs/icons/plus-black.svg"
+											alt=""
+											width="16"
+											height="16"
+											class="tw-w-4 tw-h-4"
+										/>
+									</button>
+								</div>
+							</div>
+
+							<div>
+								<p class="tw-CaptionC1---Medium tw-text-neutral-01 tw-mb-2">
+									Lorem ipsum dolor sit amet consectetur. Magna elementum nibh sed
+									quis dui velit augue sed pharetra. Rhoncus in commodo rutrum
+									dui. Gravida egestas amet aenean quam at egestas tincidunt duis
+									adipiscing.
+								</p>
+
+								<ul
+									class="tw-CaptionC1---Regular tw-flex tw-flex-col tw-gap-1 tw-text-neutral-01 tw-mb-0"
+								>
+									<li>
+										Lorem ipsum dolor sit amet consectetur. Magna elementum nibh
+										sed quis dui velit augue sed pharetra.
+									</li>
+									<li>
+										Lorem ipsum dolor sit amet consectetur. Ultrices dui gravida
+										morbi enim vestibulum faucibus lectus. Elementum etiam
+										vestibulum purus fames sit viverra tincidunt.
+									</li>
+									<li>
+										Lorem ipsum dolor sit amet consectetur. Id non phasellus
+										egestas eget. Mauris nullam mauris cursus diam elit
+										scelerisque.
+									</li>
+								</ul>
+
+								<button
+									class="btn tw-w-full tw-p-0 tw-border-0 tw-text-primary-01 tw-CaptionC1---Medium tw-mt-3 md:tw-mt-4"
+								>
+									<span> Xem thêm </span>
+									<img
+										src="./assets/imgs/icons/angle-up-small.svg"
+										width="16"
+										height="16"
+										class="tw-w-4 tw-h-4"
+										alt=""
+									/>
+								</button>
+							</div>
+						</div>
+
+						<div class="tw-bg-neutral-08 tw-mb-1">
+							<div
+								class="tw-px-4 tw-py-3.5 tw-border-0 tw-border-b tw-border-solid tw-border-b-neutral-06 md:tw-border-b-0 md:tw-px-5 md:tw-pt-5 md:tw-pb-0"
+							>
+								<p class="tw-Body-TextB2---SemiBold tw-text-neutral-01 tw-mb-0">
+									Thường được mua kèm
+								</p>
+							</div>
+
+							<ul
+								class="tw-list-none tw-px-4 tw-py-3.5 tw-flex tw-flex-col tw-gap-3 tw-mb-0 md:tw-px-5 md:tw-py-5 md:tw-gap-4"
+							>
+								<li class="tw-flex tw-items-center tw-gap-3">
+									<img
+										src="./assets/imgs/sample-related-product.png"
+										alt=""
+										width="52"
+										height="52"
+										class="tw-rounded-lg"
+									/>
+
+									<div class="tw-flex-auto tw-min-w-0">
+										<p
+											class="tw-Body-TextB1---Bold !tw-font-semibold tw-mb-1 tw-text-ellipsis tw-overflow-hidden tw-whitespace-nowrap"
+										>
+											Trà gạo nhật bản
+										</p>
+										<p
+											class="tw-mb-0 tw-CaptionC1---SemiBold tw-text-neutral-01"
+										>
+											30.000<span class="tw-underline">đ</span>
+										</p>
+									</div>
+
+									<div class="tw-flex tw-gap-3 tw-items-center">
+										<button
+											class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+										>
+											<img
+												src="./assets/imgs/icons/minus.svg"
+												alt=""
+												width="16"
+												height="16"
+												class="tw-w-4 tw-h-4"
+											/>
+										</button>
+										<span class="tw-Body-TextB1---Bold"> 0 </span>
+										<button
+											class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+										>
+											<img
+												src="./assets/imgs/icons/plus-black.svg"
+												alt=""
+												width="16"
+												height="16"
+												class="tw-w-4 tw-h-4"
+											/>
+										</button>
+									</div>
+								</li>
+
+								<li class="tw-flex tw-items-center tw-gap-3">
+									<img
+										src="./assets/imgs/sample-related-product.png"
+										alt=""
+										width="52"
+										height="52"
+										class="tw-rounded-lg"
+									/>
+
+									<div class="tw-flex-auto tw-min-w-0">
+										<p
+											class="tw-Body-TextB1---Bold !tw-font-semibold tw-mb-1 tw-text-ellipsis tw-overflow-hidden tw-whitespace-nowrap"
+										>
+											Trà gạo nhật bản
+										</p>
+										<p
+											class="tw-mb-0 tw-CaptionC1---SemiBold tw-text-neutral-01"
+										>
+											30.000<span class="tw-underline">đ</span>
+										</p>
+									</div>
+
+									<div class="tw-flex tw-gap-3 tw-items-center">
+										<button
+											class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+										>
+											<img
+												src="./assets/imgs/icons/minus.svg"
+												alt=""
+												width="16"
+												height="16"
+												class="tw-w-4 tw-h-4"
+											/>
+										</button>
+										<span class="tw-Body-TextB1---Bold"> 0 </span>
+										<button
+											class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+										>
+											<img
+												src="./assets/imgs/icons/plus-black.svg"
+												alt=""
+												width="16"
+												height="16"
+												class="tw-w-4 tw-h-4"
+											/>
+										</button>
+									</div>
+								</li>
+
+								<li class="tw-flex tw-items-center tw-gap-3">
+									<img
+										src="./assets/imgs/sample-related-product.png"
+										alt=""
+										width="52"
+										height="52"
+										class="tw-rounded-lg"
+									/>
+
+									<div class="tw-flex-auto tw-min-w-0">
+										<p
+											class="tw-Body-TextB1---Bold !tw-font-semibold tw-mb-1 tw-text-ellipsis tw-overflow-hidden tw-whitespace-nowrap"
+										>
+											Trà gạo nhật bản
+										</p>
+										<p
+											class="tw-mb-0 tw-CaptionC1---SemiBold tw-text-neutral-01"
+										>
+											30.000<span class="tw-underline">đ</span>
+										</p>
+									</div>
+
+									<div class="tw-flex tw-gap-3 tw-items-center">
+										<button
+											class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+										>
+											<img
+												src="./assets/imgs/icons/minus.svg"
+												alt=""
+												width="16"
+												height="16"
+												class="tw-w-4 tw-h-4"
+											/>
+										</button>
+										<span class="tw-Body-TextB1---Bold"> 0 </span>
+										<button
+											class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+										>
+											<img
+												src="./assets/imgs/icons/plus-black.svg"
+												alt=""
+												width="16"
+												height="16"
+												class="tw-w-4 tw-h-4"
+											/>
+										</button>
+									</div>
+								</li>
+
+								<li class="tw-flex tw-items-center tw-gap-3">
+									<img
+										src="./assets/imgs/sample-related-product.png"
+										alt=""
+										width="52"
+										height="52"
+										class="tw-rounded-lg"
+									/>
+
+									<div class="tw-flex-auto tw-min-w-0">
+										<p
+											class="tw-Body-TextB1---Bold !tw-font-semibold tw-mb-1 tw-text-ellipsis tw-overflow-hidden tw-whitespace-nowrap"
+										>
+											Trà gạo nhật bản
+										</p>
+										<p
+											class="tw-mb-0 tw-CaptionC1---SemiBold tw-text-neutral-01"
+										>
+											30.000<span class="tw-underline">đ</span>
+										</p>
+									</div>
+
+									<div class="tw-flex tw-gap-3 tw-items-center">
+										<button
+											class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+										>
+											<img
+												src="./assets/imgs/icons/minus.svg"
+												alt=""
+												width="16"
+												height="16"
+												class="tw-w-4 tw-h-4"
+											/>
+										</button>
+										<span class="tw-Body-TextB1---Bold"> 0 </span>
+										<button
+											class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+										>
+											<img
+												src="./assets/imgs/icons/plus-black.svg"
+												alt=""
+												width="16"
+												height="16"
+												class="tw-w-4 tw-h-4"
+											/>
+										</button>
+									</div>
+								</li>
+
+								<li class="tw-flex tw-items-center tw-gap-3">
+									<img
+										src="./assets/imgs/sample-related-product.png"
+										alt=""
+										width="52"
+										height="52"
+										class="tw-rounded-lg"
+									/>
+
+									<div class="tw-flex-auto tw-min-w-0">
+										<p
+											class="tw-Body-TextB1---Bold !tw-font-semibold tw-mb-1 tw-text-ellipsis tw-overflow-hidden tw-whitespace-nowrap"
+										>
+											Trà gạo nhật bản
+										</p>
+										<p
+											class="tw-mb-0 tw-CaptionC1---SemiBold tw-text-neutral-01"
+										>
+											30.000<span class="tw-underline">đ</span>
+										</p>
+									</div>
+
+									<div class="tw-flex tw-gap-3 tw-items-center">
+										<button
+											class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+										>
+											<img
+												src="./assets/imgs/icons/minus.svg"
+												alt=""
+												width="16"
+												height="16"
+												class="tw-w-4 tw-h-4"
+											/>
+										</button>
+										<span class="tw-Body-TextB1---Bold"> 0 </span>
+										<button
+											class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+										>
+											<img
+												src="./assets/imgs/icons/plus-black.svg"
+												alt=""
+												width="16"
+												height="16"
+												class="tw-w-4 tw-h-4"
+											/>
+										</button>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<div class="tw-bg-neutral-08 tw-mb-1">
+							<div
+								class="tw-px-4 tw-py-3.5 tw-border-0 tw-border-b tw-border-solid tw-border-b-neutral-06 md:tw-p-5 md:tw-border-0 md:tw-pb-0"
+							>
+								<p class="tw-Body-TextB2---SemiBold tw-text-neutral-01 tw-mb-0">
+									Thêm ghi chú
+								</p>
+							</div>
+
+							<div class="tw-px-4 tw-py-3.5 md:tw-p-5">
+								<textarea
+									class="tw-max-h-28 tw-w-full tw-resize-none tw-px-4 tw-py-3 tw-border-0 tw-bg-neutral-07 focus:tw-bg-neutral-08"
+									placeholder="Nhập nội dung ghi chú"
+								></textarea>
+							</div>
+						</div>
+
+						<div
+							class="tw-bg-neutral-08 tw-sticky tw-bottom-0 tw-left-0 tw-px-4 tw-py-3 tw-flex tw-gap-4 tw-items-center md:tw-px-5 md:tw-py-4"
+						>
+							<div class="tw-flex-auto tw-min-w-0">
+								<p
+									class="tw-mb-0.5 tw-CaptionC2---Medium tw-text-neutral-03 md:tw-CaptionC1---SemiBold md:tw-mb-1"
+								>
+									Thành tiền
+								</p>
+								<p
+									class="tw-mb-0 tw-text-ellipsis tw-overflow-hidden tw-whitespace-nowrap tw-Body-TextB2---SemiBold tw-text-neutral-01 md:tw-Body-TextB1---Bold md:!tw-font-semibold"
+								>
+									800.000<span class="tw-underline">đ</span>
+								</p>
+							</div>
+
+							<button
+								class="btn btn-danger tw-py-3 tw-px-5 tw-Body-TextB2---Medium tw-text-neutral-08 tw-rounded-lg"
+								data-bs-dismiss="modal"
+							>
+								Thêm vào giỏ
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="modal fade"
+			id="signInAlertModal"
+			data-bs-keyboard="false"
+			tabindex="-1"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="tw-flex tw-flex-col tw-items-center tw-gap-5">
+							<img
+								src="./assets/imgs/icons/sign-in-required.svg"
+								alt=""
+								width="80"
+								height="80"
+							/>
+
+							<div class="tw-text-center">
+								<h4 class="tw-Body-TextB1---Bold tw-text-neutral-01 tw-mb-2">
+									Đăng nhập ngay
+								</h4>
+								<p class="tw-mb-0 tw-Body-TextB2---Regular tw-text-neutral-03">
+									Vui lòng đăng nhập để sử dụng tính năng này
+								</p>
+							</div>
+
+							<button
+								data-bs-target="#sign-in-modal"
+								data-bs-toggle="modal"
+								class="sign-in btn btn-danger tw-Body-TextB2---Medium tw-text-neutral-08 tw-px-4 tw-py-3"
+							>
+								Đăng nhập
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="modal fade"
+			id="sign-in-modal"
+			data-bs-keyboard="false"
+			tabindex="-1"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-body tw-p-0 tw-pb-10">
+						<div
+							class="tw-flex tw-justify-between tw-flex-row-reverse tw-items-center tw-p-4"
+						>
+							<button
+								data-bs-dismiss="modal"
+								class="btn tw-p-0 tw-border-0 tw-leading-[0]"
+							>
+								<object
+									class="svg-icon tw-pointer-events-none"
+									data="/assets/imgs/icons/times.svg"
+									width="24"
+									height="24"
+									data-attributes='{"path":{"fill":"neutral.02"}}'
+								>
+									<img
+										src="/assets/imgs/icons/times.svg"
+										alt=""
+										width="24"
+										height="24"
+									/>
+								</object>
+							</button>
+
+							<p
+								class="tw-m-0 tw-TitleT2---Bold !tw-font-semibold tw-text-neutral-01"
+							>
+								Đăng nhập
+							</p>
+						</div>
+
+						<div>
+							<div class="tw-flex tw-justify-center tw-items-center tw-py-20">
+								<img
+									src="./assets/imgs/logo.svg"
+									alt=""
+									width="120"
+									height="164"
+									class="tw-h-[120px] tw-w-[164px]"
+								/>
+							</div>
+
+							<form id="sign-in-form" action="/index.html" class="tw-px-4">
+								<div class="mb-4">
+									<label
+										for="phone-number"
+										class="form-label tw-Body-TextB2---Medium tw-text-neutral-02"
+										>Số điện thoại <span class="tw-text-primary-01">*</span>
+									</label>
+									<input
+										type="text"
+										class="form-control tw-Body-TextB2---Regular placeholder:tw-text-neutral-03 tw-text-neutral-01 tw-bg-neutral-07 tw-border tw-border-neutral-07 tw-px-4 tw-py-3 tw-rounded-lg focus:[box-shadow:none] focus:tw-bg-white focus:tw-border-neutral-04"
+										name="phone-number"
+										id="phone-number"
+										placeholder="Nhập số điện thoại"
+									/>
+								</div>
+
+								<div class="mb-5">
+									<label
+										for="password"
+										class="form-label tw-Body-TextB2---Medium tw-text-neutral-02"
+										>Mật khẩu <span class="tw-text-primary-01">*</span>
+									</label>
+
+									<div
+										class="input-group tw-px-4 tw-py-3 focus-within:tw-bg-white tw-bg-neutral-07 tw-rounded-lg tw-border tw-border-neutral-07 focus-within:tw-border-neutral-04 tw-border-solid tw-Body-TextB2---Regular tw-items-center"
+									>
+										<input
+											type="password"
+											class="form-control tw-p-0 tw-Body-TextB2---Regular placeholder:tw-text-neutral-03 tw-text-neutral-01 tw-bg-transparent tw-border-0 focus:[box-shadow:none]"
+											name="password"
+											id="password"
+											placeholder="Nhập mật khẩu"
+										/>
+
+										<button
+											id="password-visibility-toggle"
+											type="button"
+											class="input-group-text tw-border-0 tw-p-0"
+										>
+											<img
+												src="./assets/imgs/icons/eye-slash.svg"
+												alt=""
+												width="20"
+												height="20"
+											/>
+										</button>
+									</div>
+								</div>
+
+								<button
+									class="btn btn-danger tw-w-full tw-py-3 tw-px-4 tw-Body-TextB2---Medium tw-rounded-lg"
+									type="submit"
+								>
+									Đăng nhập
+								</button>
+
+								<hr
+									class="after:tw-content-['Hoặc'] after:tw-relative after:-tw-top-4 after:tw-px-2 tw-text-center tw-border-0 tw-border-t tw-border-t-neutral-06 tw-opacity-100 after:tw-CaptionC1---Medium after:tw-text-neutral-03 tw-overflow-visible after:tw-bg-neutral-08 tw-h-0 tw-my-7"
+								/>
+
+								<div class="tw-text-center">
+									<p class="tw-Body-TextB2---Regular tw-text-neutral-02 tw-mb-4">
+										Bạn chưa có tài khoản?
+										<span
+											class="tw-font-bold tw-no-underline tw-text-primary-01 tw-cursor-pointer"
+											data-bs-target="#sign-up-modal"
+											data-bs-toggle="modal"
+										>
+											Đăng ký ngay
+										</span>
+									</p>
+
+									<a
+										href="#"
+										class="tw-Body-TextB2---SemiBold tw-text-neutral-01 tw-no-underline"
+										>Quên mật khẩu?</a
+									>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="modal fade"
+			id="sign-up-modal"
+			data-bs-keyboard="false"
+			tabindex="-1"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-body tw-p-0 tw-pb-10">
+						<div
+							class="tw-flex tw-justify-between tw-flex-row-reverse tw-items-center tw-p-4 tw-pb-0"
+						>
+							<button
+								data-bs-dismiss="modal"
+								class="btn tw-p-0 tw-border-0 tw-leading-[0]"
+							>
+								<object
+									class="svg-icon tw-pointer-events-none"
+									data="/assets/imgs/icons/times.svg"
+									width="24"
+									height="24"
+									data-attributes='{"path":{"fill":"neutral.02"}}'
+								>
+									<img
+										src="/assets/imgs/icons/times.svg"
+										alt=""
+										width="24"
+										height="24"
+									/>
+								</object>
+							</button>
+
+							<p
+								class="tw-m-0 tw-TitleT2---Bold !tw-font-semibold tw-text-neutral-01"
+							>
+								Đăng ký
+							</p>
+						</div>
+
+						<div>
+							<div class="tw-flex tw-justify-center tw-items-center tw-py-20">
+								<img
+									src="./assets/imgs/logo.svg"
+									alt=""
+									width="120"
+									height="164"
+									class="tw-h-[120px] tw-w-[164px]"
+								/>
+							</div>
+
+							<form
+								id="sign-up-form"
+								action="/sign-up-user-info.html"
+								class="tw-px-4"
+							>
+								<div class="mb-4">
+									<label
+										for="phone-number"
+										class="form-label tw-Body-TextB2---Medium tw-text-neutral-02"
+										>Số điện thoại <span class="tw-text-primary-01">*</span>
+									</label>
+									<input
+										type="text"
+										class="form-control tw-Body-TextB2---Regular placeholder:tw-text-neutral-03 tw-text-neutral-01 tw-bg-neutral-07 tw-border tw-border-neutral-07 tw-px-4 tw-py-3 tw-rounded-lg focus:[box-shadow:none] focus:tw-bg-white focus:tw-border-neutral-04"
+										name="phone-number"
+										id="phone-number"
+										placeholder="Nhập số điện thoại"
+									/>
+								</div>
+
+								<button
+									type="button"
+									class="btn btn-danger tw-w-full tw-py-3 tw-px-4 tw-Body-TextB2---Medium tw-rounded-lg"
+									data-bs-target="#sign-up-user-info-modal"
+									data-bs-toggle="modal"
+								>
+									Tiếp tục
+								</button>
+
+								<hr
+									class="after:tw-content-['Hoặc'] after:tw-relative after:-tw-top-4 after:tw-px-2 tw-text-center tw-border-0 tw-border-t tw-border-t-neutral-06 tw-opacity-100 after:tw-CaptionC1---Medium after:tw-text-neutral-03 tw-overflow-visible after:tw-bg-neutral-08 tw-h-0 tw-my-7"
+								/>
+
+								<div class="tw-text-center">
+									<p class="tw-Body-TextB2---Regular tw-text-neutral-02 tw-mb-4">
+										Bạn đã có tài khoản rồi?
+
+										<span
+											data-bs-target="#sign-in-modal"
+											data-bs-toggle="modal"
+											class="tw-font-bold tw-no-underline tw-text-primary-01 tw-cursor-pointer"
+										>
+											Đăng nhập ngay
+										</span>
+									</p>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="modal fade"
+			id="sign-up-user-info-modal"
+			data-bs-keyboard="false"
+			tabindex="-1"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-body tw-p-0 tw-relative">
+						<div
+							class="tw-flex tw-justify-between tw-flex-row-reverse tw-items-center tw-p-4 tw-border-0 tw-border-b tw-border-solid tw-border-b-neutral-06"
+						>
+							<button
+								data-bs-dismiss="modal"
+								class="btn tw-p-0 tw-border-0 tw-leading-[0]"
+							>
+								<object
+									class="svg-icon tw-pointer-events-none"
+									data="/assets/imgs/icons/times.svg"
+									width="24"
+									height="24"
+									data-attributes='{"path":{"fill":"neutral.02"}}'
+								>
+									<img
+										src="/assets/imgs/icons/times.svg"
+										alt=""
+										width="24"
+										height="24"
+									/>
+								</object>
+							</button>
+
+							<p
+								class="tw-m-0 tw-TitleT2---Bold !tw-font-semibold tw-text-neutral-01"
+							>
+								Thông tin tài khoản
+							</p>
+						</div>
+
+						<div class="tw-max-h-[75vh] tw-overflow-auto [scrollbar-width:none]">
+							<form id="info-form" class="form tw-px-5 tw-pt-5">
+								<section class="tw-bg-neutral-08">
+									<h4
+										class="tw-Body-TextB1---Medium !tw-font-semibold tw-text-neutral-01 tw-mb-4"
+									>
+										Thông tin cá nhân
+									</h4>
+
+									<div class="mb-4">
+										<label
+											for="fullname"
+											class="form-label tw-Body-TextB2---Medium tw-text-neutral-02"
+											>Họ và tên <span class="tw-text-primary-01">*</span>
+										</label>
+										<input
+											type="text"
+											class="form-control tw-Body-TextB2---Regular placeholder:tw-text-neutral-03 tw-text-neutral-01 tw-bg-neutral-07 tw-border tw-border-neutral-07 tw-px-4 tw-py-3 tw-rounded-lg focus:[box-shadow:none] focus:tw-bg-white focus:tw-border-neutral-04"
+											name="fullname"
+											id="fullname"
+											placeholder="Nhập thông tin"
+										/>
+									</div>
+
+									<div class="mb-4">
+										<label
+											for="birthday"
+											class="form-label tw-Body-TextB2---Medium tw-text-neutral-02"
+											>Sinh nhật <span class="tw-text-primary-01">*</span>
+										</label>
+										<input
+											type="text"
+											class="form-control tw-Body-TextB2---Regular placeholder:tw-text-neutral-03 tw-text-neutral-01 tw-bg-neutral-07 tw-border tw-border-neutral-07 tw-px-4 tw-py-3 tw-rounded-lg focus:[box-shadow:none] focus:tw-bg-white focus:tw-border-neutral-04"
+											name="birthday"
+											id="birthday"
+											placeholder="DD/MM/YYYY"
+										/>
+									</div>
+
+									<div class="mb-4">
+										<label
+											for="email"
+											class="form-label tw-Body-TextB2---Medium tw-text-neutral-02"
+											>Email
+										</label>
+										<input
+											type="text"
+											class="form-control tw-Body-TextB2---Regular placeholder:tw-text-neutral-03 tw-text-neutral-01 tw-bg-neutral-07 tw-border tw-border-neutral-07 tw-px-4 tw-py-3 tw-rounded-lg focus:[box-shadow:none] focus:tw-bg-white focus:tw-border-neutral-04"
+											name="email"
+											id="email"
+											placeholder="Nhập email"
+										/>
+									</div>
+
+									<div>
+										<label
+											for="gender"
+											class="form-label tw-Body-TextB2---Medium tw-text-neutral-02"
+											>Giới tính <span class="tw-text-primary-01">*</span>
+										</label>
+
+										<div class="tw-flex tw-justify-start tw-gap-4">
+											<div class="tw-flex tw-items-center tw-gap-2">
+												<input
+													type="radio"
+													class="form-check-input tw-w-3 tw-h-3 ratio-input -tw-mt-0.5"
+													id="gender-male"
+													name="gender"
+													value="male"
+												/>
+												<label
+													class="form-check-label tw-Body-TextB2---Regular tw-text-neutral-01"
+													for="gender-male"
+													>Nam</label
+												>
+											</div>
+											<div class="tw-flex tw-items-center tw-gap-2">
+												<input
+													type="radio"
+													class="form-check-input tw-w-3 tw-h-3 ratio-input -tw-mt-0.5"
+													id="gender-female"
+													name="gender"
+													value="female"
+												/>
+												<label
+													class="form-check-label tw-Body-TextB2---Regular tw-text-neutral-01"
+													for="gender-female"
+													>Nữ</label
+												>
+											</div>
+										</div>
+									</div>
+								</section>
+
+								<hr class="tw-my-5 tw-border-neutral-06" />
+
+								<section class="tw-bg-neutral-08">
+									<h4
+										class="tw-Body-TextB1---Medium !tw-font-semibold tw-text-neutral-01 tw-mb-4"
+									>
+										Thiết lập mật khẩu
+									</h4>
+
+									<div class="mb-4">
+										<label
+											for="password"
+											class="form-label tw-Body-TextB2---Medium tw-text-neutral-02"
+											>Mật khẩu <span class="tw-text-primary-01">*</span>
+										</label>
+										<input
+											type="text"
+											class="form-control tw-Body-TextB2---Regular placeholder:tw-text-neutral-03 tw-text-neutral-01 tw-bg-neutral-07 tw-border tw-border-neutral-07 tw-px-4 tw-py-3 tw-rounded-lg focus:[box-shadow:none] focus:tw-bg-white focus:tw-border-neutral-04"
+											name="password"
+											id="password"
+											placeholder="Nhập mật khẩu"
+										/>
+									</div>
+
+									<div>
+										<label
+											for="confirm-password"
+											class="form-label tw-Body-TextB2---Medium tw-text-neutral-02"
+											>Nhập lại mật khẩu
+											<span class="tw-text-primary-01">*</span>
+										</label>
+										<input
+											type="text"
+											class="form-control tw-Body-TextB2---Regular placeholder:tw-text-neutral-03 tw-text-neutral-01 tw-bg-neutral-07 tw-border tw-border-neutral-07 tw-px-4 tw-py-3 tw-rounded-lg focus:[box-shadow:none] focus:tw-bg-white focus:tw-border-neutral-04"
+											name="confirm-password"
+											id="confirm-password"
+											placeholder="Nhập mật khẩu"
+										/>
+									</div>
+								</section>
+
+								<section class="tw-bg-neutral-08">
+									<div class="form-check">
+										<input
+											class="form-check-input ratio-input !tw-h-4 !tw-w-4 !tw-outline-0 !tw-outline-offset-0 checked:![background-image:var(--bs-form-check-bg-image)]"
+											type="checkbox"
+											value=""
+											name="confirm-policy"
+											id="confirm-policy"
+										/>
+										<label
+											class="form-check-label tw-Body-TextB2---Regular tw-text-neutral-01"
+											for="confirm-policy"
+										>
+											Bằng việc bấm Đăng ký tài khoản, tôi đồng ý với
+											<span class="tw-underline">
+												Chính sách và quy định chung
+											</span>
+										</label>
+									</div>
+								</section>
+
+								<section
+									class="tw-bg-neutral-08 tw-pt-3 tw-pb-4 tw-px-5 tw-sticky tw-bottom-0 tw-left-0 tw-w-full"
+								>
+									<button
+										type="button"
+										data-bs-target="#user-phone-verify"
+										data-bs-toggle="modal"
+										class="btn btn-danger tw-w-full tw-py-3 tw-px-4 tw-Body-TextB2---Medium tw-rounded-lg"
+									>
+										Đăng ký
+									</button>
+
+									<hr
+										class="after:tw-content-['Hoặc'] after:tw-relative after:-tw-top-4 after:tw-px-2 tw-text-center tw-border-0 tw-border-t tw-border-t-neutral-06 tw-opacity-100 after:tw-CaptionC1---Medium after:tw-text-neutral-03 tw-overflow-visible after:tw-bg-neutral-08 tw-h-0 tw-my-7"
+									/>
+
+									<div class="tw-text-center">
+										<p
+											class="tw-Body-TextB2---Regular tw-text-neutral-02 tw-mb-4"
+										>
+											Bạn đã có tài khoản rồi?
+											<button
+												data-bs-target="#sign-in-modal"
+												data-bs-toggle="modal"
+												class="btn tw-p-0 tw-border-0 tw-bg-transparent !tw-font-bold tw-no-underline tw-text-primary-01 [font:inherit]"
+											>
+												Đăng nhập ngay
+											</button>
+										</p>
+									</div>
+								</section>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="modal fade"
+			id="user-phone-verify"
+			data-bs-keyboard="false"
+			tabindex="-1"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered tw-max-w-sm">
+				<div class="modal-content">
+					<div class="modal-header tw-border-b-0">
+						<h1 class="modal-title fs-5" id="staticBackdropLabel">
+							Xác minh số điện thoại
+						</h1>
+						<button
+							type="button"
+							class="btn-close !tw-p-1"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+
+					<div class="modal-body tw-pt-2">
+						<div class="phone-number tw-Body-TextB2---Regular tw-mb-3">
+							Vui lòng nhập mã OTP được gửi tới số điện thoại
+							<strong> 0855 073 564 </strong>
+						</div>
+
+						<div
+							id="pincode-input"
+							class="tw-mb-6 [&_.otp-fake-input.otpdesigner\_\_focus\_\_]:tw-border-primary-01"
+						></div>
+
+						<button
+							class="btn btn-danger tw-w-full tw-bg-primary-01 tw-py-3 tw-Body-TextB2---Medium tw-mb-4 tw-rounded-lg"
+							id="confirm-verify"
+							data-bs-target="#signUpSuccessModal"
+							data-bs-toggle="modal"
+						>
+							Xác nhận
+						</button>
+
+						<p
+							class="tw-text-center tw-Body-TextB2---Regular tw-text-neutral-02 tw-mb-0"
+						>
+							<span> Bạn chưa nhận được mã? </span>
+							<button
+								class="btn tw-Body-TextB2---SemiBold tw-text-primary-01 tw-border-0 tw-p-0"
+							>
+								Gửi lại
+							</button>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="modal fade"
+			id="signUpSuccessModal"
+			data-bs-keyboard="false"
+			tabindex="-1"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered tw-max-w-sm">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="tw-flex tw-flex-col tw-items-center tw-gap-5">
+							<img
+								src="./assets/imgs/icons/sign-up-success.svg"
+								alt=""
+								width="80"
+								height="80"
+								class="tw-w-20 tw-h-20"
+							/>
+
+							<div class="tw-text-center">
+								<h4 class="tw-Body-TextB1---Bold tw-text-neutral-01 tw-mb-2">
+									Đăng ký thành công
+								</h4>
+								<p class="tw-mb-0 tw-Body-TextB2---Regular tw-text-neutral-03">
+									Đăng nhập ngay và khám phá các món ngon cùng các ưu đãi dành cho
+									bạn!
+								</p>
+							</div>
+
+							<button
+								data-bs-target="#sign-in-modal"
+								data-bs-toggle="modal"
+								class="sign-in btn btn-danger tw-Body-TextB2---Medium tw-text-neutral-08 tw-px-5 tw-py-3"
+							>
+								Đăng nhập
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- OFF-CANVAS -->
+		<div
+			class="offcanvas offcanvas-end [--bs-offcanvas-width:420px]"
+			tabindex="-1"
+			id="shopping-cart"
+		>
+			<div
+				class="offcanvas-header tw-justify-between tw-border-0 tw-border-b tw-border-solid tw-border-neutral-06"
+			>
+				<h5
+					class="offcanvas-title tw-TitleT2---Bold tw-text-neutral-01 tw-flex tw-items-center tw-gap-3"
+				>
+					<img
+						src="./assets/imgs/icons/shopping-basket-red.svg"
+						alt=""
+						width="24"
+						height="24"
+						class="tw-w-6 tw-h-6"
+					/>
+					<span> Giỏ hàng </span>
+				</h5>
+				<button
+					type="button"
+					class="btn btn-light tw-bg-transparent tw-leading-[0] tw-p-0 tw-border-0"
+					data-bs-dismiss="offcanvas"
+				>
+					<img src="./assets/imgs/icons/times.svg" alt="" />
+				</button>
+			</div>
+			<div class="offcanvas-body tw-p-0">
+				<div
+					id="shopping-cart-no-items"
+					class="tw-my-60 tw-flex tw-justify-center tw-items-center"
+				>
+					<div class="tw-flex tw-flex-col tw-items-center tw-gap-5 tw-w-[294px]">
+						<img
+							src="./assets/imgs/icons/empty-cart.svg"
+							alt=""
+							width="80"
+							height="80"
+							class="tw-w-20 tw-h-20"
+						/>
+
+						<div class="tw-text-center">
+							<p class="tw-Body-TextB1---Bold tw-text-neutral-01 tw-mb-2">
+								Giỏ hàng hiện đang trống
+							</p>
+							<p class="tw-Body-TextB2---Medium tw-text-neutral-03 tw-mb-0">
+								Các món ngon dành cho bạn! Chờ chi tham khảo ngay món ăn từ
+								<span class="tw-text-primary-01"> Sushi GO </span>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div id="cart-items" class="tw-flex tw-flex-col tw-h-full tw-relative">
+					<ul
+						class="tw-list-none tw-py-0 tw-px-5 [&>li:last-child]:tw-border-b-0 [&>li:last-child]:tw-mb-0 [&>li:last-child]:tw-pb-0 tw-flex-auto"
+					>
+						<li
+							class="tw-py-4 tw-mb-4 tw-border-0 tw-border-b tw-border-solid tw-border-b-neutral-06"
+						>
+							<div class="tw-flex tw-gap-3 tw-items-center">
+								<img
+									src="./assets/imgs/order-sample.png"
+									alt=""
+									width="56"
+									height="56"
+									class="tw-w-14 tw-h-14 tw-rounded-lg"
+								/>
+
+								<div class="tw-flex-auto tw-min-w-0">
+									<p
+										class="tw-Body-TextB2---SemiBold tw-text-neutral-01 tw-mb-0.5 tw-line-clamp-2 tw-text-ellipsis"
+									>
+										Combo Temari 4 món
+									</p>
+									<p
+										class="tw-CaptionC2---Regular tw-text-neutral-03 tw-mb-1 tw-whitespace-nowrap tw-overflow-hidden tw-text-ellipsis"
+									>
+										Lorem ipsum dolor sit amet consectetur ullamcorper.
+									</p>
+
+									<p class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-0">
+										660.000<span class="tw-underline">đ</span>
+									</p>
+								</div>
+
+								<div class="tw-flex tw-gap-3 tw-items-center">
+									<button
+										class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+									>
+										<img
+											src="./assets/imgs/icons/minus.svg"
+											alt=""
+											width="16"
+											height="16"
+											class="tw-w-4 tw-h-4"
+										/>
+									</button>
+									<span class="tw-Body-TextB1---Bold"> 0 </span>
+									<button
+										class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+									>
+										<img
+											src="./assets/imgs/icons/plus-black.svg"
+											alt=""
+											width="16"
+											height="16"
+											class="tw-w-4 tw-h-4"
+										/>
+									</button>
+								</div>
+							</div>
+
+							<div class="tw-mt-3 input-group">
+								<span
+									class="input-group-text tw-bg-transparent tw-border-0 tw-p-0 tw-items-start"
+								>
+									<img
+										src="./assets/imgs/icons/clipboard-list.svg"
+										alt=""
+										width="16"
+										height="16"
+										class="tw-w-4 tw-h-4"
+									/>
+								</span>
+
+								<textarea
+									class="form-control tw-CaptionC1---Medium placeholder:tw-text-neutral-03 tw-resize-none tw-border-0 tw-bg-transparent focus:[box-shadow:none] tw-py-0 tw-overflow-y-hidden"
+									rows="1"
+									data-autogrow="true"
+									placeholder="Thêm ghi chú..."
+								></textarea>
+							</div>
+						</li>
+
+						<li
+							class="tw-py-4 tw-mb-4 tw-border-0 tw-border-b tw-border-solid tw-border-b-neutral-06"
+						>
+							<div class="tw-flex tw-gap-3 tw-items-center">
+								<img
+									src="./assets/imgs/order-sample.png"
+									alt=""
+									width="56"
+									height="56"
+									class="tw-w-14 tw-h-14 tw-rounded-lg"
+								/>
+
+								<div class="tw-flex-auto tw-min-w-0">
+									<p
+										class="tw-Body-TextB2---SemiBold tw-text-neutral-01 tw-mb-0.5 tw-line-clamp-2 tw-text-ellipsis"
+									>
+										Combo Temari 4 món
+									</p>
+									<p
+										class="tw-CaptionC2---Regular tw-text-neutral-03 tw-mb-1 tw-whitespace-nowrap tw-overflow-hidden tw-text-ellipsis"
+									>
+										Lorem ipsum dolor sit amet consectetur ullamcorper.
+									</p>
+
+									<p class="tw-CaptionC1---SemiBold tw-text-neutral-01 tw-mb-0">
+										660.000<span class="tw-underline">đ</span>
+									</p>
+								</div>
+
+								<div class="tw-flex tw-gap-3 tw-items-center">
+									<button
+										class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+									>
+										<img
+											src="./assets/imgs/icons/minus.svg"
+											alt=""
+											width="16"
+											height="16"
+											class="tw-w-4 tw-h-4"
+										/>
+									</button>
+									<span class="tw-Body-TextB1---Bold"> 0 </span>
+									<button
+										class="btn tw-rounded-lg tw-leading-[0] tw-border-0 tw-bg-neutral-07 tw-p-1.5"
+									>
+										<img
+											src="./assets/imgs/icons/plus-black.svg"
+											alt=""
+											width="16"
+											height="16"
+											class="tw-w-4 tw-h-4"
+										/>
+									</button>
+								</div>
+							</div>
+
+							<div class="tw-mt-3 input-group tw-flex-nowrap">
+								<span
+									class="input-group-text tw-bg-transparent tw-border-0 tw-p-0 tw-items-start"
+								>
+									<img
+										src="./assets/imgs/icons/clipboard-list.svg"
+										alt=""
+										width="16"
+										height="16"
+										class="tw-w-4 tw-h-4"
+									/>
+								</span>
+
+								<p
+									class="tw-w-full tw-mb-0 tw-px-2 tw-CaptionC1---Regular tw-text-neutral-02"
+								>
+									<strong class="tw-font-bold">Ghi chú:</strong> dolor sit amet
+									consectetur. Sed id arcu semper morbi alimn justo a sit. Mi
+									turpis volutpat pretium.
+								</p>
+							</div>
+						</li>
+					</ul>
+
+					<div
+						class="tw-py-3 tw-px-5 tw-bg-neutral-08 tw-w-full tw-sticky tw-bottom-0 tw-left-0"
+					>
+						<p
+							class="tw-Body-TextB1---Medium tw-py-2 tw-flex tw-justify-between tw-mb-2"
+						>
+							<span> Tổng tiền </span>
+							<span class="tw-font-bold"> 1.200.000đ </span>
+						</p>
+
+						<a
+							href="/order.html"
+							class="btn btn-danger tw-bg-primary-01 tw-Body-TextB2---Medium tw-py-3 tw-rounded-lg tw-w-full"
+						>
+							Đặt hàng ngay
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

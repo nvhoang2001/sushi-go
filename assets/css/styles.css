@@ -1,0 +1,28 @@
+.carousel .custom-indicator {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	margin-left: 0.25rem;
+	margin-right: 0.25rem;
+}
+.form .ratio-input:checked {
+	background-color: #d92d2d;
+	border-color: #d92d2d;
+	box-shadow: none;
+	background-image: none;
+	outline-offset: 2px;
+	width: 0.5rem;
+	height: 0.5rem;
+	outline: 1px solid #d92d2d;
+}
+
+.ratio-check:checked {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+	content: url(/assets/imgs/icons/angle-right-small.svg);
+	line-height: 0;
+	height: 20px;
+	width: 28px;
+}
