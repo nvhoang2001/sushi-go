@@ -21,7 +21,7 @@
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
-	content: url(/assets/imgs/icons/angle-right-small.svg);
+	content: url(../imgs/icons/angle-right-small.svg);
 	line-height: 0;
 	height: 20px;
 	width: 28px;

@@ -367,7 +367,7 @@
 
 				<div class="tw-max-w-screen-xl tw-mx-auto tw-flex tw-items-start tw-gap-4">
 					<ul
-						class="nav flex-column tw-px-4 [&_.active]:tw-text-primary-01 tw-bg-neutral-08 tw-rounded-xl [&>li]:tw-border-0 [&>li]:tw-border-b [&>li]:tw-border-solid [&>li]:tw-border-neutral-06 [&>li:last-child]:tw-border-b-0"
+						class="nav flex-column tw-px-4 [&_.active]:tw-text-primary-01 tw-bg-neutral-08 tw-rounded-xl [&>li]:tw-border-0 [&>li]:tw-border-b [&>li]:tw-border-solid [&>li]:tw-border-neutral-06 [&>li:last-child]:tw-border-b-0 [&_button:hover_img]:[filter:invert(33%)_sepia(75%)_saturate(3272%)_hue-rotate(206deg)_brightness(97%)_contrast(106%)] [&_button.active_img]:![filter:invert(26%)_sepia(65%)_saturate(2604%)_hue-rotate(341deg)_brightness(89%)_contrast(97%)]"
 						id="pills-tab"
 						role="tablist"
 					>
@@ -382,9 +382,13 @@
 								aria-controls="user-info"
 								aria-selected="true"
 							>
-								<span
-									class="tw-inline-block [mask-image:url(./assets/imgs/icons/user-fill.svg)] tw-w-5 tw-h-5 [mask-size:cover] tw-bg-current [mask-repeat:no-repeat] [mask-position:center]"
-								></span>
+								<img
+									src="./assets/imgs/icons/user-fill.svg"
+									alt=""
+									width="20"
+									height="20"
+									class="icon"
+								/>
 
 								<span> Thông tin cá nhân </span>
 							</button>
@@ -400,9 +404,13 @@
 								aria-controls="user-addresses"
 								aria-selected="false"
 							>
-								<span
-									class="tw-inline-block [mask-image:url(./assets/imgs/icons/location-arrow-circle.svg)] tw-w-5 tw-h-5 [mask-size:cover] tw-bg-current [mask-repeat:no-repeat] [mask-position:center]"
-								></span>
+								<img
+									src="./assets/imgs/icons/location-arrow-circle.svg"
+									alt=""
+									width="20"
+									height="20"
+									class="icon"
+								/>
 
 								<span> Địa chỉ của tôi </span>
 							</button>
@@ -418,10 +426,13 @@
 								aria-controls="user-order-history"
 								aria-selected="false"
 							>
-								<span
-									class="tw-inline-block [mask-image:url(./assets/imgs/icons/time-past.svg)] tw-w-5 tw-h-5 [mask-size:cover] tw-bg-current [mask-repeat:no-repeat] [mask-position:center]"
-								></span>
-
+								<img
+									src="./assets/imgs/icons/time-past.svg"
+									alt=""
+									width="20"
+									height="20"
+									class="icon"
+								/>
 								<span> Lịch sử đặt hàng </span>
 							</button>
 						</li>
@@ -430,9 +441,13 @@
 							<button
 								class="nav-link tw-text-neutral-01 tw-flex tw-justify-start tw-gap-3 tw-items-center tw-py-4 tw-w-full tw-text-left fw-semibold position-relative"
 							>
-								<span
-									class="tw-inline-block [mask-image:url(./assets/imgs/icons/log-out-fill.svg)] tw-w-5 tw-h-5 [mask-size:cover] tw-bg-current [mask-repeat:no-repeat] [mask-position:center]"
-								></span>
+								<img
+									src="./assets/imgs/icons/log-out-fill.svg"
+									alt=""
+									width="20"
+									height="20"
+									class="icon"
+								/>
 								<span> Đăng xuất </span>
 							</button>
 						</li>
@@ -659,9 +674,18 @@
 									>
 										<span> Thêm địa chỉ </span>
 
-										<span
-											class="tw-inline-block [mask-image:url(./assets/imgs/icons/plus.svg)] tw-w-5 tw-h-5 [mask-size:cover] tw-bg-current [mask-repeat:no-repeat] [mask-position:center]"
-										></span>
+										<img
+											style="
+												filter: brightness(0) saturate(100%) invert(100%)
+													sepia(43%) saturate(145%) hue-rotate(186deg)
+													brightness(122%) contrast(100%);
+											"
+											src="./assets/imgs/icons/plus.svg"
+											alt=""
+											class="tw-pointer-events-none tw-w-5 tw-h-5"
+											width="20"
+											height="20"
+										/>
 									</button>
 								</li>
 							</ul>
@@ -2542,9 +2566,13 @@
 								data-bs-dismiss="modal"
 								class="btn tw-p-0 tw-border-0 tw-leading-[0]"
 							>
-								<span
-									class="tw-inline-block md:[mask-image:url(./assets/imgs/icons/times.svg)] [mask-image:url(./assets/imgs/icons/arrow-left-small.svg)] tw-w-5 tw-h-5 [mask-size:cover] tw-bg-current [mask-repeat:no-repeat] [mask-position:center]"
-								></span>
+								<img
+									src="./assets/imgs/icons/times.svg"
+									alt=""
+									class="tw-h-5 tw-w-5"
+									width="20"
+									height="20"
+								/>
 							</button>
 
 							<p
@@ -2669,9 +2697,13 @@
 								data-bs-dismiss="modal"
 								class="btn tw-p-0 tw-border-0 tw-leading-[0]"
 							>
-								<span
-									class="tw-inline-block md:[mask-image:url(./assets/imgs/icons/times.svg)] [mask-image:url(./assets/imgs/icons/arrow-left-small.svg)] tw-w-5 tw-h-5 [mask-size:cover] tw-bg-current [mask-repeat:no-repeat] [mask-position:center]"
-								></span>
+								<img
+									src="./assets/imgs/icons/times.svg"
+									alt=""
+									class="tw-h-5 tw-w-5"
+									width="20"
+									height="20"
+								/>
 							</button>
 
 							<p
@@ -2763,9 +2795,13 @@
 							data-bs-dismiss="modal"
 							class="btn tw-p-0 tw-border-0 tw-leading-[0]"
 						>
-							<span
-								class="tw-inline-block md:[mask-image:url(./assets/imgs/icons/times.svg)] [mask-image:url(./assets/imgs/icons/arrow-left-small.svg)] tw-w-5 tw-h-5 [mask-size:cover] tw-bg-current [mask-repeat:no-repeat] [mask-position:center]"
-							></span>
+							<img
+								src="./assets/imgs/icons/times.svg"
+								alt=""
+								class="tw-w-5 tw-h-5"
+								width="20"
+								height="20"
+							/>
 						</button>
 
 						<p class="tw-m-0 tw-TitleT2---Bold !tw-font-semibold tw-text-neutral-01">
