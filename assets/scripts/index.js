@@ -103,3 +103,28 @@ phoneNumberVerifyModalEl.addEventListener("show.bs.modal", () => {
 });
 
 $('textarea[data-autogrow="true"]').autogrow();
+
+$("#product-carousel").slick({
+	dots: false,
+	infinite: false,
+	speed: 300,
+	slidesToShow: 2,
+	slidesToScroll: 1,
+	arrows: false,
+	responsive: [
+		{
+			breakpoint: 768,
+			settings: {
+				arrows: true,
+				slidesToShow: 5,
+				slidesToScroll: 5,
+				infinite: false,
+			},
+			refresh: true,
+		},
+	],
+	prevArrow: "#product-carousel__prev",
+	nextArrow: "#product-carousel__next",
+	zIndex: 10,
+	variableWidth: true,
+});

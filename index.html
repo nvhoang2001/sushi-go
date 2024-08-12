@@ -35,7 +35,11 @@
 			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
 			rel="stylesheet"
 		/>
-
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+		/>
 		<link rel="stylesheet" href="./assets/css/styles.css" />
 		<script src="https://cdn.tailwindcss.com"></script>
 		<script
@@ -54,6 +58,11 @@
 			defer
 		></script>
 		<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js" defer></script>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+			defer
+		></script>
 		<script src="./assets/scripts/pin-input.js" defer></script>
 
 		<script defer src="./assets/scripts/index.js"></script>
@@ -660,7 +669,7 @@
 
 			<!-- FLASH SALE -->
 			<div
-				class="tw-bg-primary-01 tw-bg-cover tw-bg-no-repeat tw-bg-center tw-py-5 tw-mb-1 md:tw-max-w-7xl md:tw-mx-auto md:tw-rounded-xl"
+				class="tw-bg-primary-01 tw-bg-cover tw-bg-no-repeat tw-bg-center tw-py-5 tw-mb-1 md:tw-max-w-7xl md:tw-mx-auto md:tw-rounded-xl tw-relative"
 				style="background-image: url(./assets/imgs/flash-sale-bg.svg)"
 			>
 				<div
@@ -704,31 +713,8 @@
 
 				<ul
 					class="tw-p-0 tw-list-none tw-mb-0 tw-px-4 tw-flex tw-w-full tw-overflow-auto tw-gap-3 md:tw-px-5 md:tw-gap-4 md:tw-max-w-full md:tw-overflow-hidden md:tw-relative"
+					id="product-carousel"
 				>
-					<button
-						class="tw-hidden md:tw-inline-block btn btn-light tw-absolute tw-top-1/2 -tw-translate-y-1/2 tw-left-0 tw-translate-x-1.5 tw-p-2 tw-border-0 tw-rounded-full tw-leading-[0] tw-z-[1]"
-					>
-						<img
-							src="./assets/imgs/icons/angle-right-small.svg"
-							alt=""
-							class="tw-rotate-180 tw-w-4 tw-h-4"
-							width="16"
-							height="16"
-						/>
-					</button>
-
-					<button
-						class="tw-hidden md:tw-inline-block btn btn-light tw-absolute tw-top-1/2 tw-right-0 -tw-translate-y-1/2 -tw-translate-x-1.5 tw-p-2 tw-border-0 tw-rounded-full tw-leading-[0] tw-z-[1]"
-					>
-						<img
-							src="./assets/imgs/icons/angle-right-small.svg"
-							alt=""
-							class="tw-w-4 tw-h-4"
-							width="16"
-							height="16"
-						/>
-					</button>
-
 					<li>
 						<figure
 							class="card tw-rounded-[10px] tw-w-40 tw-border-0 tw-mb-0 tw-p-1 md:tw-w-auto md:tw-p-2"
@@ -795,6 +781,7 @@
 												alt=""
 												width="16"
 												height="16"
+												class="!tw-hidden md:!tw-block"
 											/>
 											<span class="md:tw-hidden"> Thêm vào giỏ </span>
 										</button>
@@ -870,6 +857,7 @@
 												alt=""
 												width="16"
 												height="16"
+												class="!tw-hidden md:!tw-block"
 											/>
 											<span class="md:tw-hidden"> Thêm vào giỏ </span>
 										</button>
@@ -945,6 +933,7 @@
 												alt=""
 												width="16"
 												height="16"
+												class="!tw-hidden md:!tw-block"
 											/>
 											<span class="md:tw-hidden"> Thêm vào giỏ </span>
 										</button>
@@ -1020,6 +1009,7 @@
 												alt=""
 												width="16"
 												height="16"
+												class="!tw-hidden md:!tw-block"
 											/>
 											<span class="md:tw-hidden"> Thêm vào giỏ </span>
 										</button>
@@ -1095,6 +1085,7 @@
 												alt=""
 												width="16"
 												height="16"
+												class="!tw-hidden md:!tw-block"
 											/>
 											<span class="md:tw-hidden"> Thêm vào giỏ </span>
 										</button>
@@ -1104,6 +1095,32 @@
 						</figure>
 					</li>
 				</ul>
+
+				<button
+					class="carousel-arrows tw-hidden md:tw-inline-block btn btn-light tw-absolute tw-top-1/2 -tw-translate-y-1/2 tw-left-0 tw-translate-x-1.5 tw-p-2 tw-border-0 tw-rounded-full tw-leading-[0] tw-z-[1]"
+					id="product-carousel__prev"
+				>
+					<img
+						src="./assets/imgs/icons/angle-right-small.svg"
+						alt=""
+						class="tw-rotate-180 tw-w-4 tw-h-4"
+						width="16"
+						height="16"
+					/>
+				</button>
+
+				<button
+					class="carousel-arrows tw-hidden md:tw-inline-block btn btn-light tw-absolute tw-top-1/2 tw-right-0 -tw-translate-y-1/2 -tw-translate-x-1.5 tw-p-2 tw-border-0 tw-rounded-full tw-leading-[0] tw-z-[1]"
+					id="product-carousel__next"
+				>
+					<img
+						src="./assets/imgs/icons/angle-right-small.svg"
+						alt=""
+						class="tw-w-4 tw-h-4"
+						width="16"
+						height="16"
+					/>
+				</button>
 			</div>
 
 			<!-- LUNCH RECOMMENDATION -->
@@ -1184,6 +1201,7 @@
 												alt=""
 												width="16"
 												height="16"
+												class="tw-hidden md:tw-block"
 											/>
 											<span class="md:tw-hidden"> Thêm vào giỏ </span>
 										</button>
@@ -1259,6 +1277,7 @@
 												alt=""
 												width="16"
 												height="16"
+												class="tw-hidden md:tw-block"
 											/>
 											<span class="md:tw-hidden"> Thêm vào giỏ </span>
 										</button>
@@ -1334,6 +1353,7 @@
 												alt=""
 												width="16"
 												height="16"
+												class="tw-hidden md:tw-block"
 											/>
 											<span class="md:tw-hidden"> Thêm vào giỏ </span>
 										</button>
@@ -1409,6 +1429,7 @@
 												alt=""
 												width="16"
 												height="16"
+												class="tw-hidden md:tw-block"
 											/>
 											<span class="md:tw-hidden"> Thêm vào giỏ </span>
 										</button>
@@ -1484,6 +1505,7 @@
 												alt=""
 												width="16"
 												height="16"
+												class="tw-hidden md:tw-block"
 											/>
 											<span class="md:tw-hidden"> Thêm vào giỏ </span>
 										</button>
@@ -1559,6 +1581,7 @@
 												alt=""
 												width="16"
 												height="16"
+												class="tw-hidden md:tw-block"
 											/>
 											<span class="md:tw-hidden"> Thêm vào giỏ </span>
 										</button>
@@ -1633,6 +1656,7 @@
 												src="./assets/imgs/icons/shopping-basket-plus.svg"
 												alt=""
 												width="16"
+												class="tw-hidden md:tw-block"
 												height="16"
 											/>
 											<span class="md:tw-hidden"> Thêm vào giỏ </span>
@@ -1709,6 +1733,7 @@
 												alt=""
 												width="16"
 												height="16"
+												class="tw-hidden md:tw-block"
 											/>
 											<span class="md:tw-hidden"> Thêm vào giỏ </span>
 										</button>
@@ -1784,6 +1809,7 @@
 												alt=""
 												width="16"
 												height="16"
+												class="tw-hidden md:tw-block"
 											/>
 											<span class="md:tw-hidden"> Thêm vào giỏ </span>
 										</button>
@@ -1859,6 +1885,7 @@
 												alt=""
 												width="16"
 												height="16"
+												class="tw-hidden md:tw-block"
 											/>
 											<span class="md:tw-hidden"> Thêm vào giỏ </span>
 										</button>
@@ -1950,6 +1977,7 @@
 												alt=""
 												width="16"
 												height="16"
+												class="tw-hidden md:tw-block"
 											/>
 											<span class="md:tw-hidden"> Thêm vào giỏ </span>
 										</button>
@@ -2022,6 +2050,7 @@
 										>
 											<img
 												src="./assets/imgs/icons/shopping-basket-plus.svg"
+												class="tw-hidden md:tw-block"
 												alt=""
 												width="16"
 												height="16"
@@ -2096,6 +2125,7 @@
 										>
 											<img
 												src="./assets/imgs/icons/shopping-basket-plus.svg"
+												class="tw-hidden md:tw-block"
 												alt=""
 												width="16"
 												height="16"
@@ -2171,6 +2201,7 @@
 										>
 											<img
 												src="./assets/imgs/icons/shopping-basket-plus.svg"
+												class="tw-hidden md:tw-block"
 												alt=""
 												width="16"
 												height="16"
@@ -2245,6 +2276,7 @@
 										>
 											<img
 												src="./assets/imgs/icons/shopping-basket-plus.svg"
+												class="tw-hidden md:tw-block"
 												alt=""
 												width="16"
 												height="16"
@@ -2320,6 +2352,7 @@
 										>
 											<img
 												src="./assets/imgs/icons/shopping-basket-plus.svg"
+												class="tw-hidden md:tw-block"
 												alt=""
 												width="16"
 												height="16"
@@ -2394,6 +2427,7 @@
 										>
 											<img
 												src="./assets/imgs/icons/shopping-basket-plus.svg"
+												class="tw-hidden md:tw-block"
 												alt=""
 												width="16"
 												height="16"
@@ -2469,6 +2503,7 @@
 										>
 											<img
 												src="./assets/imgs/icons/shopping-basket-plus.svg"
+												class="tw-hidden md:tw-block"
 												alt=""
 												width="16"
 												height="16"
@@ -2543,6 +2578,7 @@
 										>
 											<img
 												src="./assets/imgs/icons/shopping-basket-plus.svg"
+												class="tw-hidden md:tw-block"
 												alt=""
 												width="16"
 												height="16"
@@ -2618,6 +2654,7 @@
 										>
 											<img
 												src="./assets/imgs/icons/shopping-basket-plus.svg"
+												class="tw-hidden md:tw-block"
 												alt=""
 												width="16"
 												height="16"
