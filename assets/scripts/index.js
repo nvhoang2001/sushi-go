@@ -104,6 +104,8 @@ phoneNumberVerifyModalEl.addEventListener("show.bs.modal", () => {
 
 $('textarea[data-autogrow="true"]').autogrow();
 
+// $(document).ready(() => {
+// });
 $("#product-carousel").slick({
 	dots: false,
 	infinite: false,
@@ -111,6 +113,8 @@ $("#product-carousel").slick({
 	slidesToShow: 2,
 	slidesToScroll: 1,
 	arrows: false,
+	centerPadding: 0,
+	mobileFirst: true,
 	responsive: [
 		{
 			breakpoint: 768,
@@ -123,8 +127,30 @@ $("#product-carousel").slick({
 			refresh: true,
 		},
 	],
-	prevArrow: "#product-carousel__prev",
-	nextArrow: "#product-carousel__next",
+	prevArrow: `<button
+						class="carousel-arrows tw-hidden md:tw-inline-block btn btn-light tw-absolute tw-top-1/2 -tw-translate-y-1/2 tw-left-0 -tw-translate-x-1/2 tw-p-2 tw-border-0 tw-rounded-full tw-leading-[0] tw-z-[1]"
+						id="product-carousel__prev"
+					>
+						<img
+							src="./assets/imgs/icons/angle-right-small.svg"
+							alt=""
+							class="tw-rotate-180 tw-w-4 tw-h-4"
+							width="16"
+							height="16"
+						/>
+					</button>`,
+	nextArrow: `<button
+						class="carousel-arrows tw-hidden md:tw-inline-block btn btn-light tw-absolute tw-top-1/2 tw-right-0 -tw-translate-y-1/2 tw-translate-x-1/2 tw-p-2 tw-border-0 tw-rounded-full tw-leading-[0] tw-z-[1]"
+						id="product-carousel__next"
+					>
+						<img
+							src="./assets/imgs/icons/angle-right-small.svg"
+							alt=""
+							class="tw-w-4 tw-h-4"
+							width="16"
+							height="16"
+						/>
+					</button>`,
 	zIndex: 10,
 	variableWidth: true,
 });
